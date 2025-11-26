@@ -395,13 +395,19 @@ html, body {
     }
 
     .hamburger {
-        display: block !important; /* On force l'affichage */
-        font-size: 1.8rem;
-        color: #ffffff; 
-        cursor: pointer;
-        z-index: 2000;
-        /* Pas de margin-left auto ici pour garder le logo à gauche et burger à droite */
-    }
+    display: block !important;
+    font-size: 1.8rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 2000;
+    
+    /* --- AJOUTE CES LIGNES POUR LE RENDRE VISIBLE À COUP SÛR --- */
+    width: 40px;         /* Force une largeur */
+    height: 40px;        /* Force une hauteur */
+    text-align: center;  /* Centre l'icône */
+    line-height: 40px;   /* Centre verticalement */
+    /* background: red;  <-- Décommente ça si tu ne le vois toujours pas ! */
+}
 
     /* Le menu qui s'ouvre */
     .nav-links {
