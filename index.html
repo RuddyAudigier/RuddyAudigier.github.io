@@ -8,26 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logoLion.png" alt="Logo Ruddy">
-            </div>
-            <ul class="nav-links">
-                <li><a href="accueil.html" class="active">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Réalisations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                <!-- AJOUT CV : Bouton spécial dans le menu -->
-                <li>
-                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-                        <i class="fas fa-file-download"></i> CV
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        
+<header>
+    <nav>
+        <div class="logo">
+            <img src="img/logoLion.png" alt="Logo Ruddy">
+        </div>
+
+        <!-- C'est ce bouton qui manquait pour que le menu apparaisse ! -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- J'ai ajouté id="navLinks" ici pour le script JS -->
+        <ul class="nav-links" id="navLinks">
+            <!-- Ajout de onclick="toggleMenu()" pour fermer le menu quand on clique sur un lien -->
+            <li><a href="accueil.html" onclick="toggleMenu()" class="active">Accueil</a></li>
+            <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Réalisations</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            
+            <li>
+                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                    <i class="fas fa-file-download"></i> CV
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+  
 
     <main>
         <!-- Section Héros -->
