@@ -96,5 +96,24 @@
             <p>&copy; 2025 Ruddy Audigier.</p>
         </div>
     </footer>
+
+    <script>
+    function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+    const hamburgerIcon = document.querySelector('.hamburger i'); 
+
+    navLinks.classList.toggle('mobile-active');
+
+    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+    if (navLinks.classList.contains('mobile-active')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+    } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+    }
+}
+</script>
 </body>
 </html>

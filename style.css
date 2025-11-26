@@ -355,3 +355,149 @@ footer {
 @media (max-width: 768px) {
     .nav-btn-cv { margin-top: 10px; justify-content: center; }
 }
+
+/* =========================================
+   10. RESPONSIVE DESIGN (MOBILE & TABLETTE)
+   ========================================= */
+
+/* --- 1. SÉCURITÉ SCROLL HORIZONTAL --- */
+html, body {
+    overflow-x: hidden; /* Empêche le scroll gauche-droite */
+    width: 100%;
+    position: relative;
+}
+
+/* --- 2. LOGIQUE MENU MOBILE (Hamburger) --- */
+/* Par défaut sur PC : on cache le hamburger */
+.hamburger {
+    display: none;
+}
+
+/* --- ÉCRANS < 900px (Tablettes & Mobiles) --- */
+@media (max-width: 900px) {
+
+    /* --- A. NAVIGATION DYNAMIQUE --- */
+    nav {
+        padding: 1rem 1.5rem; /* Réduit un peu le padding */
+    }
+
+    .hamburger {
+        display: block !important;
+        font-size: 1.8rem;
+        color: var(--text-main);
+        cursor: pointer;
+        z-index: 2000; /* Au-dessus de tout */
+        transition: transform 0.3s ease;
+    }
+    
+    /* Animation au clic (optionnel, si géré par JS) */
+    .hamburger:active {
+        transform: scale(0.9);
+    }
+
+    /* Le Menu Plein Écran */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Caché à droite de l'écran */
+        width: 100%;
+        height: 100vh; /* Toute la hauteur */
+        background: rgba(15, 23, 42, 0.98); /* Fond très foncé */
+        backdrop-filter: blur(15px); /* Effet flou moderne */
+        -webkit-backdrop-filter: blur(15px);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre les liens verticalement */
+        align-items: center;     /* Centre les liens horizontalement */
+        gap: 2.5rem;             /* Espace entre les liens */
+        
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); /* Animation fluide */
+        z-index: 1500; /* Juste en dessous du bouton hamburger */
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* Classe ajoutée par JS pour ouvrir le menu */
+    .nav-links.mobile-active {
+        right: 0;
+    }
+
+    /* Style des liens dans le menu mobile */
+    .nav-links a {
+        font-size: 1.5rem; /* Plus gros pour le tactile */
+        font-weight: 600;
+    }
+    
+    /* Bouton CV dans le menu mobile */
+    .nav-btn-cv {
+        margin-top: 1rem;
+        padding: 12px 30px;
+        font-size: 1.2rem !important;
+    }
+
+    /* --- B. HERO SECTION (Bien en haut) --- */
+    .project-hero, .hero {
+        /* Ajustement vital pour que le texte ne soit pas caché par le header fixe */
+        padding-top: 140px; 
+        padding-bottom: 60px;
+        
+        /* On enlève la hauteur forcée pour éviter les grands vides ou le contenu poussé en bas */
+        min-height: auto; 
+        height: auto;
+        
+        /* On s'assure que le contenu est centré */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Aligne en haut (après le padding) */
+    }
+
+    .project-hero h1, .hero-content h1 {
+        font-size: 2.5rem; /* Titre plus petit sur mobile */
+        padding: 0 10px;   /* Marge de sécurité sur les bords */
+    }
+
+    .project-hero p, .hero-content p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* --- C. LAYOUT GÉNÉRAL (Passage en 1 colonne) --- */
+    .about-grid, 
+    .project-meta-grid, 
+    .contact-layout,
+    .skills-grid {
+        display: flex;
+        flex-direction: column; /* Tout s'empile verticalement */
+        gap: 3rem;
+    }
+    
+    /* --- D. SIDEBAR (Remonter les infos importantes) --- */
+    .project-sidebar {
+        /* L'astuce : order -1 fait remonter la sidebar AVANT le texte principal */
+        /* Si tu préfères le texte avant, enlève cette ligne */
+        order: -1; 
+        
+        width: 100%;
+        position: static; /* Plus de sticky sur mobile */
+        margin-bottom: 2rem;
+    }
+
+    /* Ajustement des modales sur mobile */
+    .modal-content, .modal-large {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 10px;
+    }
+    
+    /* Ajustement formulaire contact */
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* --- ÉCRANS TRÈS PETITS (Mobiles étroits < 400px) --- */
+@media (max-width: 400px) {
+    .section-title { font-size: 2rem; }
+    .hero-content h1, .project-hero h1 { font-size: 2rem; }
+    .logo img { height: 50px; } /* Logo plus petit */
+}
