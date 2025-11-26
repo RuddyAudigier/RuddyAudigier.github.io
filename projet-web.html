@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Web - Ruddy Audigier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoLion.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Projet site web - BUT 2</span>
+            <h1>Développement Web & Méthode Agile</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une application client complète avec focus sur la sécurité et la maintenabilité.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="project-meta-grid">
+            
+            <!-- Contenu Principal -->
+            <div class="project-main-content">
+                
+                <div class="content-block">
+                    <h2>Contexte et Enjeux</h2>
+                    <p>Ce projet s'inscrit dans une commande académique simulant une situation professionnelle réelle. En équipe de 4, nous devions livrer au client une application web fonctionnelle connectée à une base de données relationnelle.</p>
+                    <p><strong>Les contraintes techniques étaient strictes :</strong> utilisation native de PHP, implémentation d'un framework CSS, et application rigoureuse de la méthodologie Scrum.</p>
+                </div>
+
+                <div class="content-block" id="roles">
+                    <h2>Ma Contribution et mes Responsabilités</h2>
+                    
+                    <h3>1. Gestion de Projet & Relation Client</h3>
+                    <p>J'ai endossé le rôle clé de <strong>Product Owner</strong>. Ma mission consistait à faire l'interface entre mon équipe et le client :</p>
+                    <ul>
+                        <li>Organisation et conduite des réunions avec le client.</li>
+                        <li>Collecte des besoins et clarification des questions de mon équipe sur le projet.</li>
+                        <li>Traduction des besoins clients en spécifications techniques claires (User Stories) pour faciliter l'implémentation.</li>
+                    </ul>
+                    <p>J'ai également agi en tant que <strong>Scrum Master</strong> sur un sprint complet. Ma mission consistait à faire respecter la méthode Scrum à mon équipe :</p>
+                    <ul>
+                        <li>Distribution des tâches selon les forces de chacun.</li>
+                        <li>Organisation de réunion quotidienne (Daily meeting) afin de suivre l'avancement de chacun.</li>
+                        <li>Relever les problèmes rencontrées par les membres de l'équipe sur leurs tâches respectives.</li>
+                    </ul>
+
+                    <h3>2. Architecture Technique & Qualité du Code</h3>
+                    <p>Sur le plan technique, je me suis concentré sur la robustesse du backend :</p>
+                    <ul>
+                        <li><strong>Refactoring & Clean Code :</strong> J'ai restructuré le code après chaque sprint pour respecter les principes <strong>SOLID</strong> et rendre l'application évolutive. Utilisation de Design Patterns pour découpler les composants.</li>
+                        <li><strong>Sécurité Avancée :</strong> Implémentation d'un système d'authentification robuste avec hachage des mots de passe (technique du "Sel et Poivre") et gestion des droits d'accès (RBAC) selon les rôles utilisateurs.</li>
+                        <li><strong>Optimisation BDD :</strong> Restructuration du schéma SQL et ajout d'index stratégiques pour accélérer les temps de réponse des requêtes complexes.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Compétences Acquises</h2>
+                    <p>Ce projet m'a appris à :</p>
+                    <ul>
+                        <li>Gérer la pression et les deadlines strictes inhérentes aux projets longs.</li>
+                        <li>Discuter et négocier avec le client en fonction de ses demandes.</li>
+                        <li>Retranscrire les besoins du client à mon équipe de manière compréhensible et claire.</li>
+                        <li>Comprendre l'intérêt vital des principes SOLID : un code propre aujourd'hui est un code maintenable demain.</li>
+                        <li>Maîtriser les bonnes pratiques de versionning sous <strong>GitLab</strong> (Merge Requests, Code Review, Refactoring de branche).</li>
+                        <li>Sécuriser une application web contre les failles courantes.</li>
+                    </ul>
+                </div>
+
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
+            </div>
+
+            <!-- Sidebar Info -->
+            <aside class="project-sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Rôles</span>
+                        <span class="sidebar-value">Dev fullstack, <a href="#roles">Scrum Master & Product Owner</a> </span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Durée</span>
+                        <span class="sidebar-value">Projet Long (3 mois)</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Équipe</span>
+                        <span class="sidebar-value">4 Développeurs</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <span class="sidebar-label">Compétences majeures</span>
+                    <div class="card-tags" style="margin-top: 1rem;">
+                        <span class="tag">PHP</span>
+                        <span class="tag">BootStrap</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Principes SOLID</span>
+                        <span class="tag">Design pattern</span>
+                        <span class="tag">PhpMyAdmin</span>
+                        <span class="tag">GitLab</span>
+                        <span class="tag">Méthode Scrum</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier.</p>
+        </div>
+    </footer>
+</body>
+</html>

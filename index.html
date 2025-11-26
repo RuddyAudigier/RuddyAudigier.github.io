@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruddy Audigier - Développeur Informatique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                <!-- AJOUT CV : Bouton spécial dans le menu -->
+                <li>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download"></i> CV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Héros -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span style="color: var(--primary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Portfolio Étudiant</span>
+                    <h1>Ruddy <br> <span class="highlight">Audigier</span></h1>
+                    <p>Étudiant en <strong>BUT Informatique</strong> (Parcours RACDV). Passionné par la logique, l'optimisation et le développement de jeux vidéo. En quête constante de nouveaux défis techniques.</p>
+                    
+                    <div class="hero-actions">
+                        <!-- Bouton Principal -->
+                        <a href="#projects" class="btn">Voir mes projets</a>
+                        
+                       
+                    <!-- NOUVEAU BOUTON : Ouvre la modale au lieu de télécharger -->
+                    <button class="btn btn-outline" onclick="openModal('cvModal')"  style="padding: 1.4rem 2.2rem; font-size:14px ">
+                        <i class="fas fa-eye"></i> &nbsp; Voir mon CV
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À Propos -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">À propos de moi</h2>
+                
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Bonjour, je m'appelle <strong>Ruddy Audigier</strong>, j'ai 18 ans. Je me définis avant tout comme quelqu'un de curieux et déterminé. J'aime explorer de nouveaux domaines, comprendre comment les choses fonctionnent et repousser mes limites.</p>
+
+                        <div class="about-highlight">
+                            "Mon parcours débute par une passion pour l'E-sport (Rocket League, Apex Legends), qui a éveillé ma curiosité pour le mécanisme interne des jeux vidéo."
+                        </div>
+
+                        <p>Cette curiosité s'est confirmée lors de mon stage de 3ème en géomatique, où j'ai découvert l'importance des bases de données cachées derrière les interfaces utilisateurs. J'ai ensuite approfondi ma logique en spécialité NSI (Numérique et Sciences Informatiques), trouvant une réelle satisfaction à résoudre des problèmes algorithmiques complexes.</p>
+
+                        <p>J'ai fait le choix stratégique de l'<strong>IUT</strong> pour son approche pragmatique. Je ne voulais pas d'un apprentissage par cœur, mais d'une formation basée sur la pratique et les projets concrets. Après une première année à Dijon, j'ai transféré mon dossier à <strong>l'IUT de Montpellier</strong> pour intégrer le parcours <em>RACDV (Réalisation d'Applications)</em>, en parfaite adéquation avec mon projet professionnel.</p>
+
+                        <p><strong>Mon objectif ?</strong> 
+                            Me spécialiser dans la programmation de jeux vidéo (Gameplay ou Engine Programmer). 
+                        </p>
+                        <div class="about-highlight">
+                            "C'est ma vocation, et je souhaite voir les gens s'amuser avec les jeux vidéos que j'aurai programmés."
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Années d'études sup.</span>
+                        </div>
+                            
+                        <div class="stat-card interactable" onclick="openModal('langModal')" style="cursor: pointer;">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label">Langages maîtrisés</span>
+                            <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Projets majeurs</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Investissement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Mes Réalisations</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Carte SAE 3 -->
+                    <a href="projet-web.html" class="card">
+                        <div class="card-header" style="background-image: url('img/971.jpg');">
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet site web - BUT 2</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Application Web & Gestion Agile</h3>
+                            <p style="color: var(--text-muted)">Développement complet d'une solution client avec authentification sécurisée et architecture maintenable.</p>
+                            <div class="card-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">SQL/PhpMyAdmin</span>
+                                <span class="tag">Principes SOLID</span>
+                                <span class="tag">Responsable client</span>
+                                <span class="tag">Scrum Master</span>
+                                <span class="tag">Sécurité</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Carte Projet IA -->
+                    <a href="projet-ia.html" class="card">
+                        <div class="card-header" style="background-image: url('img/971.jpg');">
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet IA - BUT 1</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">IA jouant à un jeu</h3>
+                            <p style="color: var(--text-muted)">Création d'une IA qui réalise le meilleur chemin possible sur un jeu donné. Objectif : ramasser les diamants et atteindre la sortie.</p>
+                            <div class="card-tags">
+                                <span class="tag">Programmation d'IA</span>
+                                <span class="tag">Architecture MVC</span>
+                                <span class="tag">Communication inter-processus</span>
+                                <span class="tag">Code Legacy</span>
+                            </div>
+                        </div>
+                    </a>
+
+                     <!-- Carte SAE 1.2 -->
+                    <a href="projet-optimisation.html" class="card">
+                        <div class="card-header" style="background-image: url('img/971.jpg');">
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet Optimisation - BUT 1</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Optimisation Algorithmique</h3>
+                            <p style="color: var(--text-muted)">Analyse de performance et implémentation de structures de données en C# sur du code existant.</p>
+                            <div class="card-tags">
+                                <span class="tag">C#</span>
+                                <span class="tag">Algorithmique</span>
+                                <span class="tag">Data Analyse</span>
+                                <span class="tag">Complexité</span>
+                                <span class="tag">Prise de décision</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+        </div>
+    </footer>
+            
+    <!-- MODALE LANGAGES (Déjà intégrée et stylée par le CSS précédent) -->
+    <div id="langModal" class="modal-overlay" onclick="closeModal(event, 'langModal')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mes Langages</h3>
+                <span class="close-btn" onclick="closeModal(event, 'langModal')">&times;</span>
+            </div>
+                
+            <div class="modal-body">
+                <!-- Catégorie 1 : Web -->
+                <h4 class="category-title" style="--d: 0s">Développement Web</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1; --color: #e34f26;">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML / CSS</span>
+                    </div>
+                    <div class="skill-item" style="--i:2; --color: #8993be;">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 2 : POO -->
+                <h4 class="category-title" style="--d: 0.2s">Orienté Objet (POO)</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:3; --color: #3776ab;">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" style="--i:4; --color: #5382a1;">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item" style="--i:5; --color: #68217a;">
+                        <i class="fas fa-code"></i>
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-item" style="--i:6; --color: #00599c;">
+                        <i class="fas fa-code-branch"></i>
+                        <span>C++</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 3 : Data -->
+                <h4 class="category-title" style="--d: 0.4s">Bases de Données</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:7; --color: #f29111;">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-item" style="--i:8; --color: #c60000;">
+                        <i class="fas fa-server"></i>
+                        <span>PL/SQL</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 4 : Système -->
+                <h4 class="category-title" style="--d: 0.6s">Système & Bas niveau</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:9; --color: #283593;">
+                        <i class="fas fa-microchip"></i>
+                        <span>C</span>
+                    </div>
+                    <div class="skill-item" style="--i:10; --color: #4eaa25;">
+                        <i class="fas fa-terminal"></i>
+                        <span>Bash</span>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
+        
+    <!-- MODALE CV (Visionneuse PDF) -->
+    <div id="cvModal" class="modal-overlay" onclick="closeModal(event, 'cvModal')">
+        <!-- J'ajoute la classe 'modal-large' pour qu'elle soit plus grande que celle des langages -->
+        <div class="modal-content modal-large"> 
+            
+            <div class="modal-header">
+                <h3>Mon Curriculum Vitae</h3>
+                <div class="header-actions">
+                    <!-- Petit bouton de téléchargement discret si l'utilisateur veut le garder -->
+                    <a href="doc/CV_Audigier_Web.pdf" download class="icon-btn" title="Télécharger le PDF">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <span class="close-btn" onclick="closeModal(event, 'cvModal')">&times;</span>
+                </div>
+            </div>
+                
+            <div class="modal-body-cv">
+                <!-- La balise object permet d'afficher le PDF directement -->
+                <object data="doc/CV_Audigier_Web.pdf" type="application/pdf" width="100%" height="100%">
+                    <!-- Fallback pour les vieux navigateurs ou certains mobiles -->
+                    <div class="pdf-fallback">
+                        <p>Votre navigateur ne peut pas afficher ce PDF directement.</p>
+                        <a href="doc/CV_Audigier_Web.pdf" class="btn">Télécharger le CV</a>
+                    </div>
+                </object>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if(modal) {
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 50);
+            }
+        }
+
+        function closeModal(event, modalId) {
+            if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('close-btn')) {
+                const modal = document.getElementById(modalId);
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>

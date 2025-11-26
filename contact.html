@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ruddy Audigier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoLion.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contactez-moi</h1>
+        </section>
+
+        <section class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h2>Mes Coordonnées</h2>
+                    <p>Je suis actuellement à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter !</p>
+                    <br>
+                    <p><strong>Email :</strong> ruddy.audigier@etu.umontpellier.fr </p>
+                    <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/ruddy-audigier/"> mon compte Linkedin </a> </p>
+                    <p><strong>GitHub :</strong>  <a href="https://github.com/RuddyAudigier"> mon compte GitHub </a> </p>
+                    <p><strong>GitLab :</strong>  <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/audigierr1"> mon compte GitLab </a></p>
+                </div>
+
+                    
+                <div class="contact-form">
+                    <h2>Envoyer un message</h2>
+                    
+                    <!-- Remplacer l'URL ci-dessous par VOTRE lien Formspree -->
+                    <form action="https://formspree.io/f/xdkvabpz" method="POST">
+                        
+                        <label for="name">Nom</label>
+                        <!-- L'attribut 'name' est important, c'est ce qui s'affichera dans le mail -->
+                        <input type="text" id="name" name="nom" placeholder="Votre nom" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+                        <input type="hidden" name="_next" value="http://ton-site.com/contact.html">
+                        
+                        <!-- Champ caché pour le sujet du mail (Optionnel) -->
+                        <input type="hidden" name="_subject" value="Nouveau message de mon Portfolio !">
+
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+        </div>
+    </footer>
+            
+</body>
+</html>

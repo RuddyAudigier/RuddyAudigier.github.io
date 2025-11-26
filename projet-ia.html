@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA de Jeu - Ruddy Audigier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoLion.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet IA - BUT 1</span>
+            <h1>Intelligence Artificielle lié à un jeu vidéo</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une IA autonome capable de communiquer avec un moteur de jeu externe.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="project-meta-grid">
+            
+            <div class="project-main-content">
+                <div class="content-block">
+                    <h2>Le Concept du Jeu</h2>
+                    <p>Il s'agit d'un jeu de stratégie et de collecte. L'objectif de l'IA est de naviguer sur une carte générée aléatoirement, de localiser et récupérer un maximum de diamants, puis d'atteindre la sortie avant la fin du temps imparti.</p>
+                    <p>Ce projet s'est étalé sur <strong>4 mois</strong>, demandant une rigueur constante, une autonomie totale ainsi qu'une compréhension .</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Architecture Technique</h2>
+                    <p>La contrainte la plus forte était l'interdiction de modifier le code source du jeu lui-même. Notre IA devait être un programme externe communiquant avec le jeu.</p>
+                    
+                    <h3>1. Communication Inter-Processus</h3>
+                    <p>J'ai mis en place un protocole de communication pour échanger des données (position du joueur, emplacement des diamants) entre le processus du jeu et mon IA développée en C#. Cela m'a appris à faire dialoguer deux programmes distincts.</p>
+
+                    <h3>2. Pattern MVC (Modèle-Vue-Contrôleur)</h3>
+                    <p>Pour garantir un code maintenable et évolutif, j'ai strictement appliqué le pattern MVC :</p>
+                    <ul>
+                        <li><strong>Modèle :</strong> Logique décisionnelle, calcul de trajectoire, état de la mémoire de l'IA.</li>
+                        <li><strong>Vue :</strong> Gestion des entrées/sorties avec le protocole de communication.</li>
+                        <li><strong>Contrôleur :</strong> Orchestration des actions et mise à jour de l'état.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Bilan Personnel</h2>
+                    <p>Ce projet a confirmé mon désir de travailler dans le jeu vidéo. Au-delà de l'aspect ludique, j'ai aimé la complexité architecturale et technique.</p>
+                    <p>J'ai développé des compétences solides en :</p>
+                    <ul>
+                        <li><strong>Architecture Logicielle :</strong> Séparation des différentes responsabilités.</li>
+                        <li><strong>Principes SOLID :</strong> Utilisation d'interfaces, énumération, design pattern et respect des principes SOLID.</li>
+                        <li><strong>Algorithmique :</strong> Pathfinding et optimisation de déplacements.</li>
+                        <li><strong>Rigueur :</strong> Gestion de version (Git) propre et code documenté.</li>
+                    </ul>
+                </div>
+                
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Technologie</span>
+                        <span class="sidebar-value">C# (Native)</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Type de projet</span>
+                        <span class="sidebar-value">Tutoré</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Focus</span>
+                        <span class="sidebar-value">Communication Inter-App</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Durée</span>
+                        <span class="sidebar-value">4 Mois</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimisation C# - Ruddy Audigier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoLion.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet 2 - BUT 1</span>
+            <h1>Optimisation Algorithmique</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Analyse de performance et implémentation de structures de données sur du code Legacy.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="project-meta-grid">
+            
+            <div class="project-main-content">
+                <div class="content-block">
+                    <h2>Le Défi Technique</h2>
+                    <p>Le but de cette SAÉ était d'intervenir sur une application existante en C# pour y ajouter une fonctionnalité de gestion de recettes de cuisine, tout en optimisant les performances globales.</p>
+                    <p><strong>La contrainte majeure :</strong> Interdiction de modifier le code existant (Legacy Code) en dehors des points d'extension prévus. Il fallait également n'utiliser aucun Framework externe pour comprendre les mécanismes bas niveau.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Approche et Méthodologie</h2>
+                    <h3>1. Analyse Statistique</h3>
+                    <p>Avant d'écrire la moindre ligne de code, j'ai mené une phase de recherche de données statistiques pour comprendre les cas d'utilisation fréquents de l'application. "Optimiser à l'aveugle est une erreur".</p>
+                    
+                    <h3>2. Choix des Structures de Données</h3>
+                    <p>J'ai dû arbitrer entre différentes structures de données. Mon choix s'est porté sur les <strong>Listes Doublement Chaînées</strong> (Doubly Linked Lists) pour la gestion des recettes.</p>
+                    <ul>
+                        <li>Réalisation de diagrammes comparatifs pour visualiser les gains de performance.</li>
+                        <li>Benchmark entre Tableaux statiques et Listes chaînées.</li>
+                    </ul>
+                    <p>Ce choix permettait des insertions et suppressions en O(1) une fois l'élément localisé, ce qui était crucial pour notre cas d'usage, contrairement aux tableaux nécessitant des décalages coûteux en mémoire.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Résultats et Apprentissages</h2>
+                    <p>Le projet a abouti à une application plus performante, accompagnée d'un dossier technique justifiant chaque décision par des preuves chiffrées.</p>
+                    <p>J'ai appris à :</p>
+                    <ul>
+                        <li>Coder proprement en respectant des conventions strictes.</li>
+                        <li>Utiliser GitHub de manière collaborative (gestion des conflits, branches).</li>
+                        <li>Planifier une phase de conception avant l'implémentation.</li>
+                        <li>Comprendre qu'une optimisation ne vaut que si elle est mesurable.</li>
+                    </ul>
+                </div>
+                
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Langage</span>
+                        <span class="sidebar-value">C# (.NET)</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Equipe</span>
+                        <span class="sidebar-value">3 Développeurs</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Livrables</span>
+                        <span class="sidebar-value">Code & Dossier Technique</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier.</p>
+        </div>
+    </footer>
+</body>
+</html>
