@@ -36,14 +36,22 @@ header {
 }
 
 nav {
-    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem;
+    max-width: 1200px; margin: 0 auto; 
+    /* Padding standard pour PC */
+    padding: 1rem 2rem;
     display: flex; justify-content: space-between; align-items: center;
+    transition: all 0.3s ease; /* Animation fluide si on redimensionne la fenêtre */
 }
 
+/* --- LOGO VERSION PC --- */
 .logo img {
-    height: 150px; width: auto; margin-bottom: -40px;
+    height: 150px; 
+    width: auto; 
+    margin-bottom: -40px; /* Ton effet de dépassement actuel */
+    transition: all 0.3s ease;
 }
 
+/* --- LIENS VERSION PC --- */
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
     color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 23px;
@@ -56,7 +64,7 @@ nav {
 }
 .nav-links a:hover::after { width: 100%; }
 
-/* Bouton CV Spécifique (Doit être après les liens généraux pour la priorité) */
+/* --- BOUTON CV --- */
 .nav-btn-cv {
     display: flex; align-items: center; gap: 8px; padding: 8px 20px;
     background: rgba(59, 130, 246, 0.1); border: 1px solid var(--primary);
@@ -70,6 +78,25 @@ nav {
     box-shadow: 0 0 15px var(--primary-glow); transform: translateY(-2px);
 }
 .nav-btn-cv i { font-size: 1.1rem; }
+
+
+/* =========================================
+   AJUSTEMENT MOBILE (C'est ici que ça réduit)
+   ========================================= */
+@media (max-width: 900px) {
+    nav {
+        /* On réduit l'espace en haut et en bas (0.8rem au lieu de 1rem) */
+        padding: 0.8rem 1.5rem; 
+    }
+
+    .logo img {
+        /* On réduit fortement le logo pour qu'il rentre dans la barre */
+        height: 60px; /* Taille adaptée mobile */
+        margin-bottom: 0; /* On enlève le dépassement qui casse le design mobile */
+    }
+    
+    /* Le reste du menu hamburger est géré dans la section 10. RESPONSIVE */
+}
 
 /* =========================================
    3. STRUCTURE & COMPOSANTS
