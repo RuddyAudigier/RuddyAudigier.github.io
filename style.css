@@ -52,6 +52,9 @@ nav {
 }
 
 /* --- LIENS VERSION PC --- */
+.hamburger {
+    display: none; /* C'est LA ligne importante : caché par défaut */
+}
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
     color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 23px;
