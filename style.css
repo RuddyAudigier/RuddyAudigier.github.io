@@ -1,4 +1,30 @@
 /* =========================================
+   0. RESET & GLOBAL (A mettre tout en haut)
+   ========================================= */
+
+/* 1. Applique le calcul de largeur incluant les bordures/padding */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. LA solution pour bloquer le scroll horizontal */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* C'est cette ligne qui coupe tout ce qui dépasse sur les côtés */
+    position: relative; /* Aide à stabiliser le positionnement */
+}
+
+/* 3. Sécurité pour que les images/vidéos ne déforment pas la page */
+img, video, iframe {
+    max-width: 100%; /* L'image ne sera jamais plus large que son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: block;
+}
+
+/* =========================================
    1. CONFIGURATION GÉNÉRALE & FONTS
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
