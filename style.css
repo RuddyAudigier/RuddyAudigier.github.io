@@ -475,14 +475,6 @@ footer {
     .modal-content, .modal-large { width: 90%; margin: 0 auto; padding: 1.5rem; max-height: 80vh; }
 }
 
-body {
-            margin: 0;
-            background: #0a0e1a;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
         .hero-section {
             position: relative;
             min-height: 100vh;
@@ -788,12 +780,6 @@ body {
             }
         }
 
-        /* Contenu principal */
-        .content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
 
         .label {
             color: #5865F2;
@@ -804,12 +790,6 @@ body {
             animation: fadeInUp 0.8s ease-out;
         }
 
-        h1 {
-            font-size: 4.5rem;
-            margin: 0;
-            line-height: 1.1;
-            animation: fadeInUp 1s ease-out 0.2s backwards;
-        }
 
         .name-highlight {
             color: #5865F2;
