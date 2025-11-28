@@ -474,3 +474,101 @@ footer {
     .project-sidebar { order: -1; width: 100%; position: static; margin-bottom: 2rem; }
     .modal-content, .modal-large { width: 90%; margin: 0 auto; padding: 1.5rem; max-height: 80vh; }
 }
+
+/* --- Configuration de base --- */
+.birds-container {
+    display: none; /* Caché par défaut (mobile) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 0; /* Derrière le texte si possible, sinon gérer avec pointer-events */
+    pointer-events: none; /* IMPORTANT : permet de cliquer au travers */
+}
+
+/* Affichage uniquement sur PC (écrans > 1024px) */
+@media screen and (min-width: 1024px) {
+    .birds-container {
+        display: block;
+    }
+}
+
+/* --- Le design de l'oiseau (Style Chevron Futuriste) --- */
+.bird {
+    width: 20px;
+    height: 20px;
+    /* Création de la forme en V */
+    border-top: 3px solid #8b5cf6; /* Violet */
+    border-left: 3px solid #3b82f6; /* Bleu */
+    border-radius: 2px;
+    /* Gradient simulé via border-image (optionnel, sinon couleur unie) */
+    border-image: linear-gradient(to right, #8b5cf6, #3b82f6) 1;
+    
+    /* Positionnement pour le vol */
+    transform: rotate(45deg); /* Oriente le V vers l'avant */
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.6)); /* Lueur néon */
+    
+    /* Animation de battement d'ailes subtil */
+    animation: flap 0.5s infinite alternate ease-in-out;
+}
+
+/* Wrapper pour gérer l'orbite */
+.bird-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* L'animation d'orbite est appliquée ici */
+}
+
+/* --- Configuration des 3 oiseaux différents --- */
+
+/* OISEAU 1 : Orbite moyenne, vitesse normale */
+.bird-1 {
+    animation: fly-orbit-1 15s linear infinite;
+}
+.bird-1 .bird {
+    /* Éloigne l'oiseau du centre (Rayon de 350px) */
+    margin-left: 350px; 
+}
+
+/* OISEAU 2 : Orbite large, sens inverse, plus lent */
+.bird-2 {
+    animation: fly-orbit-2 25s linear infinite;
+}
+.bird-2 .bird {
+    margin-left: 500px; /* Rayon plus large */
+    border-top-color: #a855f7; /* Violet plus clair */
+    transform: rotate(45deg) scale(0.8); /* Un peu plus petit */
+}
+
+/* OISEAU 3 : Orbite elliptique (plus complexe) */
+.bird-3 {
+    animation: fly-orbit-1 20s linear infinite reverse;
+}
+.bird-3 .bird {
+    margin-left: 420px;
+    border-left-color: #60a5fa; /* Bleu plus clair */
+    animation-duration: 0.3s; /* Bat des ailes plus vite */
+}
+
+/* --- Les Keyframes (Animations) --- */
+
+/* Orbite Standard */
+@keyframes fly-orbit-1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Orbite Inverse */
+@keyframes fly-orbit-2 {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* Battement d'ailes (effet de compression du V) */
+@keyframes flap {
+    0% { transform: rotate(45deg) scale(1); }
+    100% { transform: rotate(45deg) scaleX(0.8) scaleY(0.8); }
+}
