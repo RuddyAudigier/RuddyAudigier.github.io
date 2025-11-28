@@ -326,18 +326,30 @@
     </script>
 </body>
     
-<!-- À placer juste après <body> dans ton fichier HTML -->
-<div class="birds-container">
-    <div class="bird-wrapper bird-1">
-        <div class="bird"></div>
+    
+<!-- La Nuée Cybernétique -->
+<div class="swarm-container">
+    <!-- On génère plusieurs oiseaux avec des classes pour les différencier -->
+    <!-- Oiseau 1 -->
+    <div class="bird-wrapper">
+        <svg class="bird-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <!-- Forme d'oiseau origami stylisée -->
+            <path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path>
+            <path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path>
+        </svg>
     </div>
-    <div class="bird-wrapper bird-2">
-        <div class="bird"></div>
-    </div>
-    <div class="bird-wrapper bird-3">
-        <div class="bird"></div>
-    </div>
+    
+    <!-- Dupliquez pour la densité (j'en mets 8 ici pour l'effet de nuée) -->
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
+    <div class="bird-wrapper"><svg class="bird-svg" viewBox="0 0 100 100"><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-left"></path><path d="M0,50 L40,40 L100,50 L40,60 Z" class="wing-right"></path></svg></div>
 </div>
+
+  
 
   
 </html>

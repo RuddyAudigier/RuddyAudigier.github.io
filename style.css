@@ -475,100 +475,133 @@ footer {
     .modal-content, .modal-large { width: 90%; margin: 0 auto; padding: 1.5rem; max-height: 80vh; }
 }
 
-/* --- Configuration de base --- */
-.birds-container {
-    display: none; /* Caché par défaut (mobile) */
+/* =========================================
+   ANIMATION CYBER-SWARM (PREMIUM 3D)
+   ========================================= */
+
+.swarm-container {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     width: 0;
     height: 0;
-    z-index: 0; /* Derrière le texte si possible, sinon gérer avec pointer-events */
-    pointer-events: none; /* IMPORTANT : permet de cliquer au travers */
+    z-index: 10;
+    /* Crée un espace 3D pour la profondeur */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    pointer-events: none;
 }
 
-/* Affichage uniquement sur PC (écrans > 1024px) */
 @media screen and (min-width: 1024px) {
-    .birds-container {
-        display: block;
-    }
+    .swarm-container { display: block; }
 }
 
-/* --- Le design de l'oiseau (Style Chevron Futuriste) --- */
-.bird {
-    width: 20px;
-    height: 20px;
-    /* Création de la forme en V */
-    border-top: 3px solid #8b5cf6; /* Violet */
-    border-left: 3px solid #3b82f6; /* Bleu */
-    border-radius: 2px;
-    /* Gradient simulé via border-image (optionnel, sinon couleur unie) */
-    border-image: linear-gradient(to right, #8b5cf6, #3b82f6) 1;
-    
-    /* Positionnement pour le vol */
-    transform: rotate(45deg); /* Oriente le V vers l'avant */
-    opacity: 0.8;
-    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.6)); /* Lueur néon */
-    
-    /* Animation de battement d'ailes subtil */
-    animation: flap 0.5s infinite alternate ease-in-out;
-}
-
-/* Wrapper pour gérer l'orbite */
+/* Le conteneur individuel de chaque oiseau (l'axe de rotation) */
 .bird-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    /* L'animation d'orbite est appliquée ici */
+    transform-style: preserve-3d;
 }
 
-/* --- Configuration des 3 oiseaux différents --- */
-
-/* OISEAU 1 : Orbite moyenne, vitesse normale */
-.bird-1 {
-    animation: fly-orbit-1 15s linear infinite;
-}
-.bird-1 .bird {
-    /* Éloigne l'oiseau du centre (Rayon de 350px) */
-    margin-left: 350px; 
-}
-
-/* OISEAU 2 : Orbite large, sens inverse, plus lent */
-.bird-2 {
-    animation: fly-orbit-2 25s linear infinite;
-}
-.bird-2 .bird {
-    margin-left: 500px; /* Rayon plus large */
-    border-top-color: #a855f7; /* Violet plus clair */
-    transform: rotate(45deg) scale(0.8); /* Un peu plus petit */
+/* Le design de l'oiseau SVG */
+.bird-svg {
+    width: 60px; /* Plus grand pour voir les détails */
+    height: 60px;
+    overflow: visible;
+    opacity: 0.9;
+    /* Effet néon puissant via filtre CSS */
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6)) 
+            drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
 }
 
-/* OISEAU 3 : Orbite elliptique (plus complexe) */
-.bird-3 {
-    animation: fly-orbit-1 20s linear infinite reverse;
-}
-.bird-3 .bird {
-    margin-left: 420px;
-    border-left-color: #60a5fa; /* Bleu plus clair */
-    animation-duration: 0.3s; /* Bat des ailes plus vite */
-}
-
-/* --- Les Keyframes (Animations) --- */
-
-/* Orbite Standard */
-@keyframes fly-orbit-1 {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* Les ailes (formes SVG) */
+.bird-svg path {
+    fill: rgba(139, 92, 246, 0.2); /* Intérieur transparent */
+    stroke: #a78bfa; /* Contour lumineux */
+    stroke-width: 2;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
 }
 
-/* Orbite Inverse */
-@keyframes fly-orbit-2 {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
+/* Animation du battement d'ailes (Morphing via scale) */
+.bird-svg {
+    animation: wing-flap 0.8s ease-in-out infinite alternate;
 }
 
-/* Battement d'ailes (effet de compression du V) */
-@keyframes flap {
-    0% { transform: rotate(45deg) scale(1); }
-    100% { transform: rotate(45deg) scaleX(0.8) scaleY(0.8); }
+/* --- LOGIQUE DE DÉPLACEMENT ALÉATOIRE (AUTOMATISÉE) --- */
+
+/* On utilise nth-child pour donner à chaque oiseau une orbite unique
+   sans copier-coller 50 animations différentes */
+
+/* Oiseau 1 : Orbite à plat, large */
+.bird-wrapper:nth-child(1) { animation: orbit-1 20s linear infinite; }
+.bird-wrapper:nth-child(1) .bird-svg { transform: translateX(450px) rotateZ(90deg) rotateY(90deg); }
+
+/* Oiseau 2 : Orbite inclinée, rapide */
+.bird-wrapper:nth-child(2) { animation: orbit-2 15s linear infinite; }
+.bird-wrapper:nth-child(2) .bird-svg { transform: translateX(380px) rotateZ(90deg) rotateY(90deg) scale(0.8); }
+
+/* Oiseau 3 : Orbite inverse, très large */
+.bird-wrapper:nth-child(3) { animation: orbit-3 25s linear infinite; }
+.bird-wrapper:nth-child(3) .bird-svg { transform: translateX(550px) rotateZ(90deg) rotateY(90deg) scale(1.2); }
+
+/* Oiseau 4 : Orbite verticale (passe au dessus/dessous) */
+.bird-wrapper:nth-child(4) { animation: orbit-4 18s linear infinite; }
+.bird-wrapper:nth-child(4) .bird-svg { transform: translateX(420px) rotateZ(90deg) rotateY(90deg); stroke: #3b82f6; }
+
+/* Oiseau 5 à 8 : Variations aléatoires */
+.bird-wrapper:nth-child(5) { animation: orbit-1 22s linear infinite reverse; }
+.bird-wrapper:nth-child(5) .bird-svg { transform: translateX(480px) translateY(50px) rotateZ(90deg) rotateY(90deg) scale(0.9); }
+
+.bird-wrapper:nth-child(6) { animation: orbit-2 19s linear infinite reverse; }
+.bird-wrapper:nth-child(6) .bird-svg { transform: translateX(400px) translateY(-50px) rotateZ(90deg) rotateY(90deg); }
+
+.bird-wrapper:nth-child(7) { animation: orbit-3 28s linear infinite; }
+.bird-wrapper:nth-child(7) .bird-svg { transform: translateX(600px) rotateZ(90deg) rotateY(90deg) scale(0.6); }
+
+.bird-wrapper:nth-child(8) { animation: orbit-4 24s linear infinite reverse; }
+.bird-wrapper:nth-child(8) .bird-svg { transform: translateX(350px) rotateZ(90deg) rotateY(90deg); }
+
+
+/* --- DEFINITION DES ORBITES 3D --- */
+
+/* Rotation simple (Plan horizontal) */
+@keyframes orbit-1 {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Rotation inclinée (Diagonale 1) */
+@keyframes orbit-2 {
+    from { transform: rotateY(0deg) rotateX(45deg); }
+    to { transform: rotateY(360deg) rotateX(45deg); }
+}
+
+/* Rotation inclinée inverse (Diagonale 2) */
+@keyframes orbit-3 {
+    from { transform: rotateY(0deg) rotateX(-30deg); }
+    to { transform: rotateY(360deg) rotateX(-30deg); }
+}
+
+/* Rotation verticale (Plan Y) */
+@keyframes orbit-4 {
+    from { transform: rotateZ(0deg) rotateX(90deg); }
+    to { transform: rotateZ(360deg) rotateX(90deg); }
+}
+
+/* --- BATTEMENT D'AILES (FLUIDE) --- */
+@keyframes wing-flap {
+    0% { transform: translateX(var(--radius)) rotateZ(90deg) rotateY(90deg) scaleY(1); }
+    100% { transform: translateX(var(--radius)) rotateZ(90deg) rotateY(90deg) scaleY(0.6); }
+}
+
+/* Petite astuce : on surcharge l'animation de battement définie plus haut 
+   pour garder la position définie dans les nth-child.
+   Pour faire simple, on va juste animer l'échelle interne du SVG */
+@keyframes wing-flap {
+    0% { transform: scaleY(1); }
+    100% { transform: scaleY(0.5); } 
+    /* Cela écrase l'oiseau sur lui même pour simuler le battement */
 }
