@@ -5,19 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Web - Ruddy Audigier</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logoLion.png" alt="">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#projects">Projets</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="img/logoLion.png" alt="Logo Ruddy">
+    </a>
+
+    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+
+      <li class="nav-item-dropdown">
+        <a href="index.html#projects" class="nav-link">Réalisations</a>
+        <ul class="dropdown-menu">
+            <li class="proj proj-web">
+            <a href="projet-web.html" class="nav-link menu-active">
+                <span class="proj-icon">&lt;/&gt;</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet site web - BUT 2</span>
+                <span class="proj-tag">Front-end · UI néon</span>
+                </span>
+            </a>
+            </li>
+            <li class="proj proj-ia">
+            <a href="projet-ia.html">
+                <span class="proj-icon">🧠</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet IA - BUT 1</span>
+                <span class="proj-tag">Logique · Algorithmes</span>
+                </span>
+            </a>
+            </li>
+            <li class="proj proj-opt">
+            <a href="projet-optimisation.html">
+                <span class="proj-icon">⚙️</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet Optimisation - BUT 1</span>
+                <span class="proj-tag">Performance · Maths</span>
+                </span>
+            </a>
+            </li>
+                        </ul>
+         <li>
+            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+            <i class="fas fa-file-download" aria-hidden="true"></i>
+            <span>CV</span>
+            </a>
+        </li>
+    </nav>
+</header>
+
 
     <section class="project-hero">
         <div class="container">

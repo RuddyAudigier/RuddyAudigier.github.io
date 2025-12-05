@@ -3,28 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimisation C# - Ruddy Audigier</title>
+    <title>Exploration Algorithmique - Ruddy Audigier</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logoLion.png" alt="">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#projects">Projets</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="img/logoLion.png" alt="Logo Ruddy">
+    </a>
+
+    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+
+      <li class="nav-item-dropdown">
+        <a href="index.html#projects" class="nav-link">Réalisations</a>
+        <ul class="dropdown-menu">
+            <li class="proj proj-web">
+            <a href="projet-web.html">
+                <span class="proj-icon">&lt;/&gt;</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet site web - BUT 2</span>
+                <span class="proj-tag">Front-end · UI néon</span>
+                </span>
+            </a>
+            </li>
+            <li class="proj proj-ia">
+            <a href="projet-ia.html">
+                <span class="proj-icon">🧠</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet IA - BUT 1</span>
+                <span class="proj-tag">Logique · Algorithmes</span>
+                </span>
+            </a>
+            </li>
+            <li class="proj proj-opt">
+            <a href="projet-optimisation.html" class="nav-link menu-active">
+                <span class="proj-icon">⚙️</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet Optimisation - BUT 1</span>
+                <span class="proj-tag">Performance · Maths</span>
+                </span>
+            </a>
+             <li>
+                            </ul>
+            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+            <i class="fas fa-file-download" aria-hidden="true"></i>
+            <span>CV</span>
+            </a>
+        </li>
+    </nav>
+</header>
+
 
     <section class="project-hero">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet 2 - BUT 1</span>
-            <h1>Optimisation Algorithmique</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Analyse de performance et implémentation de structures de données sur du code Legacy.</p>
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet optimisation - BUT 1</span>
+            <h1>Exploration Algorithmique & Matchmaking</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une application C# de constitution d'équipes optimisées avec contraintes de rôles et de niveaux.</p>
         </div>
+        <a href="doc/S2.02_compteRendu.pdf" class="btn btn-outline" target="_blank" style="padding: 1rem 2rem; font-size: 14px; margin-top: 30px ;display: inline-flex; align-items: center;">
+            <i class="fas fa-eye" style="margin-right: 8px;"></i> Voir mon compte rendu
+        </a>
     </section>
 
     <div class="container">
@@ -32,35 +79,82 @@
             
             <div class="project-main-content">
                 <div class="content-block">
-                    <h2>Le Défi Technique</h2>
-                    <p>Le but de cette SAÉ était d'intervenir sur une application existante en C# pour y ajouter une fonctionnalité de gestion de recettes de cuisine, tout en optimisant les performances globales.</p>
-                    <p><strong>La contrainte majeure :</strong> Interdiction de modifier le code existant (Legacy Code) en dehors des points d'extension prévus. Il fallait également n'utiliser aucun Framework externe pour comprendre les mécanismes bas niveau.</p>
+                    <h2>Le Contexte : Matchmaking Avancé</h2>
+                    <p>L'objectif de cette SAE était de développer une application dotée d'une interface graphique (IHM) permettant de tester et comparer des algorithmes de création d'équipes. Le défi consistait à répartir une liste de X joueurs (de niveau 0 à 100) en équipes de 4 équilibrées.</p>
+                    <p><strong>Les critères de réussite (Score) :</strong></p>
+                    <ul>
+                        <li>La moyenne de l'équipe doit être la plus proche possible de 50.</li>
+                        <li>Un malus important est appliqué pour chaque joueur laissé sur le carreau (non assigné).</li>
+                    </ul>
                 </div>
 
                 <div class="content-block">
-                    <h2>Approche et Méthodologie</h2>
-                    <h3>1. Analyse Statistique</h3>
-                    <p>Avant d'écrire la moindre ligne de code, j'ai mené une phase de recherche de données statistiques pour comprendre les cas d'utilisation fréquents de l'application. "Optimiser à l'aveugle est une erreur".</p>
+                    <h2>Les 3 Niveaux de Contraintes</h2>
+                    <p>Le projet imposait une complexité croissante pour simuler un vrai matchmaking de jeu vidéo </p>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>Niveau 1 (Basique) :</strong> On équilibre uniquement selon le <em>niveau</em> global des joueurs (de 0 à 100).</li>
+                        <li><strong>Niveau 2 (Rôles) :</strong> Chaque équipe doit contenir 1 Tank, 1 Support et 1 DPS (le 4ème est libre).</li>
+                        <li><strong>Niveau 3 (Complet) :</strong> On prend en compte le rôle principal ET le rôle secondaire pour une synergie parfaite.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Stratégie et Heuristiques</h2>
+                    <p>Nous devions implémenter 4 algorithmes classiques, en inventer un, et en adapter certains aux niveaux supérieurs. Voici ma sélection :</p>
                     
-                    <h3>2. Choix des Structures de Données</h3>
-                    <p>J'ai dû arbitrer entre différentes structures de données. Mon choix s'est porté sur les <strong>Listes Doublement Chaînées</strong> (Doubly Linked Lists) pour la gestion des recettes.</p>
-                    <ul>
-                        <li>Réalisation de diagrammes comparatifs pour visualiser les gains de performance.</li>
-                        <li>Benchmark entre Tableaux statiques et Listes chaînées.</li>
-                    </ul>
-                    <p>Ce choix permettait des insertions et suppressions en O(1) une fois l'élément localisé, ce qui était crucial pour notre cas d'usage, contrairement aux tableaux nécessitant des décalages coûteux en mémoire.</p>
+                    <h3>1. Les Algorithmes Rapides</h3>
+                    <p>J'ai utilisé <strong>"Les Extrêmes en Premier"</strong> (adapté au Niveau 2). L'idée est de trier les joueurs et d'associer les plus forts avec les plus faibles.
+                    <br><em>Résultat :</em> Exécution quasi instantanée (4ms pour 250 joueurs) mais score moyen.</p>
+
+                    <h3>2. Les Algorithmes d'Optimisation</h3>
+                    <p>J'ai implémenté le <strong>"N-OPT"</strong> (adapté aux Niveaux 2 et 3). Il recombine totalement les membres de deux équipes pour trouver la meilleure configuration.
+                    <br><em>Résultat :</em> C'est le plus performant. Au niveau 3, il traite 100 joueurs en 1 seconde avec un score d'équipe quasi parfait (écart de 0 à 1 point).</p>
+
+                    <h3>3. L'Algorithme Inventé : "Le Draft"</h3>
+                    <p>Mon concept était de remplir les équipes une par une en scannant la liste pour trouver le "meilleur candidat" à l'instant T. Bien que l'idée semblait bonne sur le papier, les tests ont montré des résultats mitigés comparés au N-OPT.</p>
                 </div>
 
                 <div class="content-block">
-                    <h2>Résultats et Apprentissages</h2>
-                    <p>Le projet a abouti à une application plus performante, accompagnée d'un dossier technique justifiant chaque décision par des preuves chiffrées.</p>
-                    <p>J'ai appris à :</p>
+                    <h2>Analyse des Performances</h2>
+                    <p>L'application permettait de générer des jeux de tests (répartition aléatoire ou biaisée) et de tracer des graphiques de performance.</p>
+                    <p><strong>Conclusion du dossier technique :</strong></p>
                     <ul>
-                        <li>Coder proprement en respectant des conventions strictes.</li>
-                        <li>Utiliser GitHub de manière collaborative (gestion des conflits, branches).</li>
-                        <li>Planifier une phase de conception avant l'implémentation.</li>
-                        <li>Comprendre qu'une optimisation ne vaut que si elle est mesurable.</li>
+                        <li>Pour une volumétrie faible (< 100 joueurs), tous les algos se valent.</li>
+                        <li>Pour une forte volumétrie (> 200 joueurs), le <strong>N-Swap</strong> devient trop lent (complexité exponentielle).</li>
+                        <li>Le meilleur compromis est le <strong>N-OPT</strong>, qui offre une qualité de matchmaking excellente tout en restant raisonnable en temps d'exécution (contrairement au N-Swap qui explose les compteurs).</li>
                     </ul>
+                </div>
+                <div class="content-block">
+                    <h2>Preuves visuelles</h2>
+                    
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            
+                            <!-- Image 1 -->
+                            <div class="carousel-card active">
+                                <img src="img/preuves/DiagrammeExtremeEnPremier.png" alt="Diagramme d'analyse Extremes En Premier">
+                                <div class="card-caption">Diagramme de la vitesse d'execution des Extremes En Premier</div>
+                            </div>
+
+                            <!-- Image 2 -->
+                            <div class="carousel-card">
+                                <img src="img/preuves/DiagrammeNSwap.png" alt="Diagramme d'analyse de l'algorithme N-SWAP">
+                                <div class="card-caption">Diagramme de la vitesse d'execution du N-Swap</div>
+                            </div>
+
+                            <!-- Image 3 -->
+                            <div class="carousel-card">
+                                <img src="img/preuves/Diagramme1erJeuTest.png" alt="Diagramme d'analyse du 1er jeu de test">
+                                <div class="card-caption">Graphique du 1er jeu de test</div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-nav">
+                            <button class="nav-btn prev"><i class="fas fa-chevron-left">&lt;</i></button>
+                            <button class="nav-btn next"><i class="fas fa-chevron-right">&gt;</i></button>
+                        </div>
+                    </div>
                 </div>
                 
                 <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
@@ -69,16 +163,20 @@
             <aside class="project-sidebar">
                 <div class="sidebar-box">
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Langage</span>
-                        <span class="sidebar-value">C# (.NET)</span>
+                        <span class="sidebar-label">Technologies</span>
+                        <span class="sidebar-value">C# .NET, Windows Forms/WPF</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Equipe</span>
-                        <span class="sidebar-value">3 Développeurs</span>
+                        <span class="sidebar-label">Rôle</span>
+                        <span class="sidebar-value">Développeur & Analyste</span>
                     </div>
                     <div class="sidebar-item">
                         <span class="sidebar-label">Livrables</span>
-                        <span class="sidebar-value">Code & Dossier Technique</span>
+                        <span class="sidebar-value">Application, Jeux de tests, Rapport d'analyse</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Compétences</span>
+                        <span class="sidebar-value">Algorithmique, Structures de données, Optimisation</span>
                     </div>
                 </div>
             </aside>
@@ -91,23 +189,75 @@
         </div>
     </footer>
 
+<!-- Script Menu Mobile -->
     <script>
     function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
-    const hamburgerIcon = document.querySelector('.hamburger i'); 
+        const navLinks = document.getElementById('navLinks');
+        const hamburgerIcon = document.querySelector('.hamburger i'); 
 
-    navLinks.classList.toggle('mobile-active');
+        navLinks.classList.toggle('mobile-active');
 
-    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
-    if (navLinks.classList.contains('mobile-active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times');
-    } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
+        if (navLinks.classList.contains('mobile-active')) {
+            hamburgerIcon.classList.remove('fa-bars');
+            hamburgerIcon.classList.add('fa-times');
+        } else {
+            hamburgerIcon.classList.remove('fa-times');
+            hamburgerIcon.classList.add('fa-bars');
+        }
     }
-}
-</script>
+    </script>
+    
+    <!-- FontAwesome (Fichier externe) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Script du Carrousel (Nouveau script séparé) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.carousel-card');
+            const prevBtn = document.querySelector('.nav-btn.prev');
+            const nextBtn = document.querySelector('.nav-btn.next');
+            
+            // Sécurité : On vérifie si les éléments existent avant de lancer le script
+            if (!prevBtn || !nextBtn || cards.length === 0) return;
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                cards.forEach((card, index) => {
+                    // Reset classes
+                    card.classList.remove('active', 'prev', 'next', 'hidden');
+
+                    if (index === currentIndex) {
+                        card.classList.add('active');
+                    } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+                        card.classList.add('prev');
+                    } else if (index === (currentIndex + 1) % cards.length) {
+                        card.classList.add('next');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                    
+                    // Gestion du clic sur une carte pour la rendre active
+                    card.onclick = () => {
+                        currentIndex = index;
+                        updateCarousel();
+                    };
+                });
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                updateCarousel();
+            });
+
+            // Initialisation
+            updateCarousel();
+        });  
+    </script>
 </body>
 </html>

@@ -9,129 +9,109 @@
 </head>
 <body>
         
-<header>
-    <nav>
-        <div class="logo">
-            <img src="img/logoLion.png" alt="Logo Ruddy">
-        </div>
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="img/logoLion.png" alt="Logo Ruddy">
+    </a>
 
-        <!-- C'est ce bouton qui manquait pour que le menu apparaisse ! -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
+    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
 
-        <!-- J'ai ajouté id="navLinks" ici pour le script JS -->
-        <ul class="nav-links" id="navLinks">
-            <!-- Ajout de onclick="toggleMenu()" pour fermer le menu quand on clique sur un lien -->
-            <li><a href="accueil.html" onclick="toggleMenu()" class="active">Accueil</a></li>
-            <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Réalisations</a></li>
-            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-            
-            <li>
-                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-                    <i class="fas fa-file-download"></i> CV
-                </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+
+    <li class="nav-item-dropdown">
+        <a href="index.html#projects" class="nav-link">Réalisations</a>
+        <ul class="dropdown-menu">
+            <li class="proj proj-web">
+            <a href="projet-web.html">
+                <span class="proj-icon">&lt;/&gt;</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet site web - BUT 2</span>
+                <span class="proj-tag">Front-end · UI néon</span>
+                </span>
+            </a>
             </li>
+            <li class="proj proj-ia">
+            <a href="projet-ia.html">
+                <span class="proj-icon">🧠</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet IA - BUT 1</span>
+                <span class="proj-tag">Logique · Algorithmes</span>
+                </span>
+            </a>
+            </li>
+            <li class="proj proj-opt">
+            <a href="projet-optimisation.html">
+                <span class="proj-icon">⚙️</span>
+                <span class="proj-content">
+                <span class="proj-title">Projet Optimisation - BUT 1</span>
+                <span class="proj-tag">Performance · Maths</span>
+                </span>
+            </a>
         </ul>
+         <li>
+            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+            <i class="fas fa-file-download" aria-hidden="true"></i>
+            <span>CV</span>
+            </a>
+        </li>
     </nav>
-      <!--  <section class="hero-section"> -->
-        <!-- Canvas d'animation -->
-         <!-- 
-        <div class="animation-canvas"> -->
-            <!-- Explosions de traits - Position 1 -->
-             <!-- 
-            <div class="burst-container burst-set-1" style="top: 30%; left: 25%;">
-                <div class="line-burst line-1" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-2" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-3" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-4" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-5" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-6" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-7" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-8" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-            </div>
-        -->
-            <!-- Explosions de traits - Position 2 -->
-             <!-- 
-            <div class="burst-container burst-set-2" style="top: 65%; right: 20%;">
-                <div class="line-burst line-1" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-2" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-3" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-4" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-5" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-6" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-                <div class="line-burst line-7" style="background: linear-gradient(to top, #5865F2, transparent);"></div>
-                <div class="line-burst line-8" style="background: linear-gradient(to top, #8B5CF6, transparent);"></div>
-            </div>
-        -->
-
-            <!-- Orbes lumineux flottants -->
-             <!-- 
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-            <div class="orb orb-3"></div>
-        -->
-
-            <!-- Lignes énergétiques -->
-             
-                <!-- 
-            <div class="energy-line energy-line-1"></div>
-            <div class="energy-line energy-line-2"></div>
-            <div class="energy-line energy-line-3"></div>
-        -->
-            
-            <!-- Particules géométriques -->
-             <!-- 
-            <div class="geo-particle geo-1">
-                <div class="triangle"></div>
-            </div>
-            <div class="geo-particle geo-2">
-                <div class="square"></div>
-            </div>
-            <div class="geo-particle geo-3">
-                <div class="circle"></div>
-            </div>
-            <div class="geo-particle geo-4">
-                <div class="triangle"></div>
-            </div>
-            <div class="geo-particle geo-5">
-                <div class="square"></div>
-            </div>
-        -->
-            <!-- Vagues expansives -->
-                             <!--
-            <div class="wave">
-
-                <div class="wave-ring wave-ring-1"></div>
-                <div class="wave-ring wave-ring-2"></div>
-            </div>
-        </div> -->
 </header>
+
 
   
     
 
     <main>
         <!-- Section Héros -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span style="color: var(--primary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Portfolio Étudiant</span>
-                    <h1>Ruddy <br> <span class="highlight">Audigier</span></h1>
-                    <p>Étudiant en <strong>BUT Informatique</strong> (Parcours RACDV). Passionné par la logique, l'optimisation et le développement de jeux vidéo. En quête constante de nouveaux défis techniques.</p>
-                    
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn">Voir mes projets</a>
-                        
-                        <!-- Le bouton CV -->
-                        <button class="btn btn-outline" onclick="openModal('cvModal')"  style="padding: 1.4rem 2.2rem; font-size:14px ">
-                            <i class="fas fa-eye" style="margin-right:8px;"></i> &nbsp; Voir mon CV
-                        </button>
-                        <!-- (Si ton bouton CV est une modale, garde ton onclick, c'est juste la classe css qui compte) -->
-                    </div>
+        <section class="hero hero-gaming">
+             <!-- Fond animé léger -->
+            <div class="hero-background-code">
+                <div class="code-column">
+                <span>{ }</span>
+                <span>if (score &gt;= 100)</span>
+                <span>while (player.isAlive)</span>
+                <span>const level = 2;</span>
+                <span>for (let i = 0; i &lt; n; i++)</span>
+                <span>return bestMove;</span>
+                </div>
+                <div class="code-column code-column-delay">
+                <span>// game loop</span>
+                <span>function update()</span>
+                <span>engine.tick(delta)</span>
+                <span>render(scene)</span>
+                <span>input.handle()</span>
+                <span>saveProgress()</span>
                 </div>
             </div>
+            <div class="container hero-layout containerDebut">
+                <div class="hero-text">
+                <span class="hero-tag">Développeur & passionné de jeux vidéo</span>
+                <h1>
+                    Ruddy <span class="highlight">Audigier</span>
+                </h1>
+               <p>Étudiant en <strong>BUT Informatique</strong> (Parcours RACDV). Passionné par la logique, l'optimisation et le développement de jeux vidéo. En quête constante de nouveaux défis techniques.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn">Voir mes projets</a>
+                    <button class="btn btn-outline" onclick="openModal('cvModal')" style="padding: 1.4rem 2.2rem; font-size:14px">
+                    <i class="fas fa-eye" style="margin-right:8px"></i>Voir mon CV
+                    </button>
+                </div>
+            </div>
+
+                <div class="hero-controller-3d" id="heroController">
+                    <div class="controller-light"></div>
+                    <img
+                        src="img/controller.png"
+                        alt="Manette de jeu"
+                        class="controller-3d-img"
+                    />
+                    </div>
+                </div>
         </section>
 
         <!-- Section À Propos -->
@@ -232,14 +212,14 @@
                             <span class="tag" style="background: white; color: var(--bg-dark);">Projet Optimisation - BUT 1</span>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Optimisation Algorithmique</h3>
-                            <p style="color: var(--text-muted)">Analyse de performance et implémentation de structures de données en C# sur du code existant.</p>
+                            <h3 class="card-title">Exploration algorithmique & Matchmaking</h3>
+                            <p style="color: var(--text-muted)">Analyse de performance et implémentation d'algorithme en C# sur un systeme de matchmaking.</p>
                             <div class="card-tags">
                                 <span class="tag">C#</span>
                                 <span class="tag">Algorithmique</span>
                                 <span class="tag">Data Analyse</span>
                                 <span class="tag">Complexité</span>
-                                <span class="tag">Prise de décision</span>
+                                <span class="tag">Prise de décision</span>  
                             </div>
                         </div>
                     </a>
