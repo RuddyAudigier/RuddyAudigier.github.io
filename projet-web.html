@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,105 +8,122 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<header class="site-header">
-  <nav class="navbar">
-    <a href="index.html" class="navbar-logo">
-      <img src="img/logoLion.png" alt="Logo Ruddy">
-    </a>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </a>
 
-    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
-      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
 
-      <li class="nav-item-dropdown">
-        <a href="index.html#projects" class="nav-link">Réalisations</a>
-        <ul class="dropdown-menu">
-            <li class="proj proj-web">
-            <a href="projet-web.html" class="nav-link menu-active">
-                <span class="proj-icon">&lt;/&gt;</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet site web - BUT 2</span>
-                <span class="proj-tag">Front-end · UI néon</span>
-                </span>
-            </a>
-            </li>
-            <li class="proj proj-ia">
-            <a href="projet-ia.html">
-                <span class="proj-icon">🧠</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet IA - BUT 1</span>
-                <span class="proj-tag">Logique · Algorithmes</span>
-                </span>
-            </a>
-            </li>
-            <li class="proj proj-opt">
-            <a href="projet-optimisation.html">
-                <span class="proj-icon">⚙️</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet Optimisation - BUT 1</span>
-                <span class="proj-tag">Performance · Maths</span>
-                </span>
-            </a>
-            </li>
-                        </ul>
-         <li>
-            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-            <i class="fas fa-file-download" aria-hidden="true"></i>
-            <span>CV</span>
-            </a>
-        </li>
-    </nav>
-</header>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#projects" class="nav-link">Réalisations</a>
+                    <ul class="dropdown-menu">
+                        <li class="proj proj-web">
+                            <a href="projet-web.html"  class="nav-link menu-active">
+                                <span class="proj-icon">&lt;/&gt;</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet site web - BUT 2</span>
+                                    <span class="proj-tag"> Sécurité · Besoin client </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-ia">
+                            <a href="projet-ia.html">
+                                <span class="proj-icon">🧠</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet IA - BUT 1</span>
+                                    <span class="proj-tag">Logique · Algorithmes</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-opt">
+                            <a href="projet-optimisation.html">
+                                <span class="proj-icon">⚙️</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet Optimisation - BUT 1</span>
+                                    <span class="proj-tag">Performance · Data analyse</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+                <li>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span>CV</span>
+                    </a>
+                </li>
+        </nav>
+    </header>
 
 
     <section class="project-hero">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Projet site web - BUT 2</span>
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Projet site web - BUT
+                2</span>
             <h1>Développement Web & Méthode Agile</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une application client complète avec focus sur la sécurité et la maintenabilité.</p>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une application
+                client complète avec focus sur la sécurité et la maintenabilité.</p>
         </div>
     </section>
 
     <div class="container">
         <div class="project-meta-grid">
-            
+
             <!-- Contenu Principal -->
             <div class="project-main-content">
-                
+
                 <div class="content-block">
                     <h2>Contexte et Enjeux</h2>
-                    <p>Ce projet s'inscrit dans une commande académique simulant une situation professionnelle réelle. En équipe de 4, nous devions livrer au client une application web fonctionnel connecté à une base de données relationnelles.</p>
-                    <p><strong>Les contraintes techniques étaient strictes :</strong> utilisation native de PHP, implémentation d'un framework CSS, et application rigoureuse de la méthodologie Scrum.</p>
+                    <p>Ce projet s'inscrit dans une commande académique simulant une situation professionnelle réelle.
+                        En équipe de 4, nous devions livrer au client une application web fonctionnel connecté à une
+                        base de données relationnelles.</p>
+                    <p><strong>Les contraintes techniques étaient strictes :</strong> utilisation native de PHP,
+                        implémentation d'un framework CSS, et application rigoureuse de la méthodologie Scrum.</p>
                 </div>
 
                 <div class="content-block" id="roles">
                     <h2>Ma Contribution et mes Responsabilités</h2>
-                    
+
                     <h3>1. Gestion de Projet & Relation Client</h3>
-                    <p>J'ai endossé le rôle clé de <strong>Product Owner</strong>. Ma mission consistait à faire l'interface entre mon équipe et le client :</p>
+                    <p>J'ai endossé le rôle clé de <strong>Product Owner</strong>. Ma mission consistait à faire
+                        l'interface entre mon équipe et le client :</p>
                     <ul>
                         <li>Organisation et conduite des réunions avec le client.</li>
                         <li>Collecte des besoins et clarification des questions de mon équipe sur le projet.</li>
-                        <li>Traduction des besoins client en spécifications techniques claires (User Stories) pour faciliter l'implémentation.</li>
+                        <li>Traduction des besoins client en spécifications techniques claires (User Stories) pour
+                            faciliter l'implémentation.</li>
                     </ul>
-                    <p>J'ai également agi en tant que <strong>Scrum Master</strong> sur un sprint complet. Ma mission consistait à faire respecter la méthode Scrum à mon équipe :</p>
+                    <p>J'ai également agi en tant que <strong>Scrum Master</strong> sur un sprint complet. Ma mission
+                        consistait à faire respecter la méthode Scrum à mon équipe :</p>
                     <ul>
                         <li>Distribution des tâches selon les forces de chacun.</li>
-                        <li>Organisation de réunion quotidienne (Daily meeting) afin de suivre l'avancement de chacun.</li>
-                        <li>Relever les problèmes rencontrés par les membres de l'équipe sur leurs tâches respectives.</li>
+                        <li>Organisation de réunion quotidienne (Daily meeting) afin de suivre l'avancement de chacun.
+                        </li>
+                        <li>Relever les problèmes rencontrés par les membres de l'équipe sur leurs tâches respectives.
+                        </li>
                     </ul>
 
                     <h3>2. Architecture Technique & Qualité du Code</h3>
                     <p>Sur le plan technique, je me suis concentré sur la robustesse du backend :</p>
                     <ul>
-                        <li><strong>Refactoring & Clean Code :</strong> J'ai restructuré le code après chaque sprint pour respecter les principes <strong>SOLID</strong> et rendre l'application évolutive. Utilisation de Design Patterns pour découpler les composants.</li>
-                        <li><strong>Sécurité Avancée :</strong> Implémentation d'un système d'authentification robuste avec hachage des mots de passe (technique du "Sel et Poivre") et gestion des droits d'accès (RBAC) selon les rôles utilisateurs.</li>
-                        <li><strong>Optimisation BDD :</strong> Restructuration du schéma SQL et ajout d'index stratégiques pour accélérer les temps de réponse des requêtes complexes.</li>
+                        <li><strong>Refactoring & Clean Code :</strong> J'ai restructuré le code après chaque sprint
+                            pour respecter les principes <strong>SOLID</strong> et rendre l'application évolutive.
+                            Utilisation de Design Patterns pour découpler les composants.</li>
+                        <li><strong>Sécurité Avancée :</strong> Implémentation d'un système d'authentification robuste
+                            avec hachage des mots de passe (technique du "Sel et Poivre") et gestion des droits d'accès
+                            (RBAC) selon les rôles utilisateurs.</li>
+                        <li><strong>Optimisation BDD :</strong> Restructuration du schéma SQL et ajout d'index
+                            stratégiques pour accélérer les temps de réponse des requêtes complexes.</li>
                     </ul>
                 </div>
 
@@ -116,13 +134,78 @@
                         <li>Gérer la pression et les deadlines strictes inhérentes aux projets longs.</li>
                         <li>Discuter et négocier avec le client en fonction de ses demandes.</li>
                         <li>Retranscrire les besoins du client à mon équipe de manière compréhensible et claire.</li>
-                        <li>Comprendre l'intérêt vital des principes SOLID : un code propre aujourd'hui est un code maintenable demain.</li>
-                        <li>Maîtriser les bonnes pratiques de versionning sous <strong>GitLab</strong> (Merge Requests, Code Review, Refactoring de branche).</li>
+                        <li>Comprendre l'intérêt vital des principes SOLID : un code propre aujourd'hui est un code
+                            maintenable demain.</li>
+                        <li>Maîtriser les bonnes pratiques de versionning sous <strong>GitLab</strong> (Merge Requests,
+                            Code Review, Refactoring de branche).</li>
                         <li>Sécuriser une application web contre les failles courantes.</li>
                     </ul>
                 </div>
 
-                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
+                <div class="content-block">
+                    <h2> Illustrations de ma participation </h2>
+
+                    <div class="visual-proofs-grid">
+                        <!-- Image 1 -->
+                        <div class="proof-card"
+                            onclick="openLightbox('img/preuves/partieMDPCode.png', 'Partie de code pour hacher et verifier les mots de passe')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/preuves/partieMDPCode.png"
+                                    alt="Partie de code pour hacher et verfiier les mots de passe">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Securité des mots de passe et des données personnelles</h4>
+                                <p>Code pour hacher et verifier les mots de passe</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div class="proof-card"
+                            onclick="openLightbox('img/preuves/vuVoter.png', 'Page d\'un utilisateur avec les questions pour lesquelles il peut voter')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/preuves/vuVoter.png"
+                                    alt="Page d'un utilisateur avec les questions pour lesquelles il peut voter">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Interface utilisateur simplifié pour une expérience optimale</h4>
+                                <p>Page d'un utilisateur avec les questions pour lesquelles il peut voter</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="proof-card"
+                            onclick="openLightbox('img/preuves/MessageErreurRole.png', 'Page indiquant que l\'utilisateur n\'a pas les droits pour accéder à cette page')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/preuves/MessageErreurRole.png"
+                                    alt="Page indiquant que l'utilisateur n'a pas les droits pour accéder à cette page">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                
+                                <h4>Gestion des autorisations et sécurité du site</h4>
+                                <p>Page indiquant que l'utilisateur n'a pas les droits pour accéder à la page</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lightbox Modal -->
+                    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                        <img class="lightbox-content" id="lightbox-img">
+                        <div id="lightbox-caption"></div>
+                    </div>
+                </div>
+
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
+                    projets</a>
             </div>
 
             <!-- Sidebar Info -->
@@ -130,7 +213,8 @@
                 <div class="sidebar-box">
                     <div class="sidebar-item">
                         <span class="sidebar-label">Rôles</span>
-                        <span class="sidebar-value">Dev fullstack, <a href="#roles">Scrum Master & Product Owner</a> </span>
+                        <span class="sidebar-value">Dev fullstack, <a href="#roles">Scrum Master & Product Owner</a>
+                        </span>
                     </div>
                     <div class="sidebar-item">
                         <span class="sidebar-label">Durée</span>
@@ -159,29 +243,52 @@
         </div>
     </div>
 
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
         </div>
     </footer>
-<script>
-    function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
-    const hamburgerIcon = document.querySelector('.hamburger i'); 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+            const hamburgerIcon = document.querySelector('.hamburger i');
 
-    navLinks.classList.toggle('mobile-active');
+            navLinks.classList.toggle('mobile-active');
 
-    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
-    if (navLinks.classList.contains('mobile-active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times');
-    } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-    }
-}
-</script>
+            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+            if (navLinks.classList.contains('mobile-active')) {
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            } else {
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+        }
+
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 50);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300);
+        }
+    </script>
 
 </body>
+
 </html>

@@ -20,44 +20,47 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
-      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+        <li><a href="index.html" class="nav-link active" onclick="toggleMenu()">Accueil</a></li>
+        <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
 
-    <li class="nav-item-dropdown">
-        <a href="index.html#projects" class="nav-link">Réalisations</a>
-        <ul class="dropdown-menu">
-            <li class="proj proj-web">
-            <a href="projet-web.html">
-                <span class="proj-icon">&lt;/&gt;</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet site web - BUT 2</span>
-                <span class="proj-tag">Front-end · UI néon</span>
-                </span>
-            </a>
+        <li class="nav-item-dropdown">
+            <a href="index.html#projects" class="nav-link">Réalisations</a>
+            <ul class="dropdown-menu">
+                <li class="proj proj-web">
+                    <a href="projet-web.html">
+                        <span class="proj-icon">&lt;/&gt;</span>
+                        <span class="proj-content">
+                            <span class="proj-title">Projet site web - BUT 2</span>
+                            <span class="proj-tag"> Sécurité · Besoin client </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="proj proj-ia">
+                    <a href="projet-ia.html">fab fa-html5
+                        <span class="proj-icon">🧠</span>
+                        <span class="proj-content">
+                            <span class="proj-title">Projet IA - BUT 1</span>
+                            <span class="proj-tag">Logique · Algorithmes</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="proj proj-opt">
+                    <a href="projet-optimisation.html">
+                        <span class="proj-icon">⚙️</span>
+                        <span class="proj-content">
+                            <span class="proj-title">Projet Optimisation - BUT 1</span>
+                            <span class="proj-tag">Performance · Data analyse</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+            <li>
+                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                <i class="fas fa-file-download" aria-hidden="true"></i>
+                <span>CV</span>
+                </a>
             </li>
-            <li class="proj proj-ia">
-            <a href="projet-ia.html">
-                <span class="proj-icon">🧠</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet IA - BUT 1</span>
-                <span class="proj-tag">Logique · Algorithmes</span>
-                </span>
-            </a>
-            </li>
-            <li class="proj proj-opt">
-            <a href="projet-optimisation.html">
-                <span class="proj-icon">⚙️</span>
-                <span class="proj-content">
-                <span class="proj-title">Projet Optimisation - BUT 1</span>
-                <span class="proj-tag">Performance · Maths</span>
-                </span>
-            </a>
-        </ul>
-         <li>
-            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-            <i class="fas fa-file-download" aria-hidden="true"></i>
-            <span>CV</span>
-            </a>
         </li>
     </nav>
 </header>
@@ -151,9 +154,12 @@
                             <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
                         </div>
 
-                        <div class="stat-card">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Projets majeurs</span>
+                        <!-- Unity, Unreal Engine, React.js, Bootstrap, -->
+
+                        <div class="stat-card interactable" onclick="openModal('frameworkModal')" style="cursor: pointer;">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Frameworks expérimentés</span>
+                            <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">100%</span>
@@ -306,6 +312,45 @@
             </div> 
         </div> 
     </div> 
+
+    <!-- MODALE FRAMEWORKS (Déjà intégrée et stylée par le CSS précédent) -->
+    <div id="frameworkModal" class="modal-overlay" onclick="closeModal(event, 'frameworkModal')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mes Frameworks</h3>
+                <span class="close-btn" onclick="closeModal(event, 'frameworkModal')">&times;</span>
+            </div>
+                
+            <div class="modal-body">
+                <!-- Catégorie 1 : Web -->
+                <h4 class="category-title" style="--d: 0s">Développement Web</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1; --color: #61dafb;">
+                        <i class="fab fa-react"></i>
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-item" style="--i:2; --color: #7952b3;">
+                        <i class="fab fa-bootstrap"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 2 : Moteurs de Jeu -->
+                <h4 class="category-title" style="--d: 0.2s">Moteurs de Jeu</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:3; --color: #ffffff;">
+                        <i class="fab fa-unity"></i>
+                        <span>Unity</span>
+                    </div>
+                    <div class="skill-item" style="--i:4; --color: #ffffff;">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Unreal Engine</span>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
 
         
     <!-- MODALE CV (Visionneuse PDF) -->
