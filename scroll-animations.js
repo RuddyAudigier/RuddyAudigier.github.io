@@ -68,15 +68,28 @@
 
     let isSnapping = false;
 
-    if (projectHero) {
+    // Apply scroll snap to both project hero and index hero
+    if (projectHero || indexHero) {
         window.addEventListener('wheel', (e) => {
             // Trigger with minimal scroll down (threshold reduced to 5)
             if (window.scrollY < 50 && e.deltaY > 5 && !isSnapping) {
                 e.preventDefault();
                 isSnapping = true;
 
-                // Target: Scroll until content (which starts at 100vh) is at top
-                const targetScroll = window.innerHeight;
+                // Different targets for index vs project pages
+                let targetScroll;
+                if (indexHero) {
+                    // For index, scroll to #about section
+                    const aboutSection = document.querySelector('#about');
+                    if (aboutSection) {
+                        aboutSection.scrollIntoView({ behavior: 'smooth' });
+                        isSnapping = false;
+                        return;
+                    }
+                } else {
+                    // For project pages, scroll 80% of viewport height (not full height)
+                    targetScroll = window.innerHeight * 0.8;
+                }
 
                 window.scrollTo({
                     top: targetScroll,

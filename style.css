@@ -936,17 +936,18 @@ a {
   position: sticky;
   top: 0;
   z-index: 0;
-  height: 100vh;
-  min-height: 100vh;
+  height: 90vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 25vh 2rem 0 2rem;
+  padding: 2rem;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  box-sizing: border-box;
 }
 
 /* Hero Background Variants */
@@ -1079,7 +1080,7 @@ a {
 /* Scroll Indicator - Mouse Style */
 .scroll-indicator {
   position: absolute;
-  bottom: 10rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -1124,6 +1125,11 @@ a {
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Scroll indicator on index page - position lower to match project pages */
+.hero .scroll-indicator {
+  bottom: 5rem;
 }
 
 
