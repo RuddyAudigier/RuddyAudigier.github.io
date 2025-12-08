@@ -1129,7 +1129,7 @@ html {
 
 /* Scroll indicator on index page - position lower to match project pages */
 .hero .scroll-indicator {
-  bottom: 5rem;
+  bottom: 3rem;
 }
 
 
@@ -2247,5 +2247,367 @@ footer {
 
   .hero-background-code .code-column {
     font-size: 0.7rem;
+  }
+}
+
+/* =========================================
+   HERO ANIMATIONS - PROJECT SPECIFIC
+   ========================================= */
+
+/* Web Project - Floating Code Particles */
+.hero-animation-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.code-particle {
+  position: absolute;
+  bottom: -50px;
+  font-size: 1.5rem;
+  color: rgba(59, 130, 246, 0.4);
+  font-weight: bold;
+  animation: floatUp 8s linear infinite;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    bottom: 110%;
+    opacity: 0;
+    transform: translateX(20px) rotate(360deg);
+  }
+}
+
+/* Optimization Project - Performance Graph */
+.hero-animation-opt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.perf-bar {
+  position: absolute;
+  bottom: 0;
+  width: 4%;
+  background: linear-gradient(to top, rgba(16, 185, 129, 0.8), rgba(16, 185, 129, 0.3));
+  border-radius: 4px 4px 0 0;
+  animation: barPulse 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+@keyframes barPulse {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+}
+
+/* Nuit de l'Info Project - Starfield */
+.hero-animation-nuit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  right: -100px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to left, rgba(236, 72, 153, 0), rgba(236, 72, 153, 1));
+  animation: shoot 4s linear infinite;
+}
+
+@keyframes shoot {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 110%;
+    opacity: 0;
+  }
+}
+
+/* IA Project - Neural Network */
+.hero-animation-ia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.neural-network {
+  width: 100%;
+  height: 100%;
+}
+
+.neural-connection {
+  stroke: rgba(245, 158, 11, 0.3);
+  stroke-width: 2;
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+@keyframes connectionPulse {
+
+  0%,
+  100% {
+    stroke-opacity: 0.3;
+    stroke-width: 2;
+  }
+
+  50% {
+    stroke-opacity: 0.8;
+    stroke-width: 3;
+  }
+}
+
+.neural-node {
+  fill: rgba(245, 158, 11, 0.8);
+  animation: nodePulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}
+
+@keyframes nodePulse {
+
+  0%,
+  100% {
+    fill-opacity: 0.6;
+  }
+
+  50% {
+    fill-opacity: 1;
+  }
+}
+
+/* =========================================
+   INDEX HERO - GAME ENGINE ANIMATION
+   ========================================= */
+
+.hero-animation-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Debug Grid */
+.debug-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(144, 0, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(144, 0, 254, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Game Particles (Objects) */
+.game-particle {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(144, 0, 254, 0.6);
+  animation: floatGame 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(144, 0, 254, 0.8));
+}
+
+.game-particle i {
+  animation: rotateGame 4s linear infinite;
+}
+
+@keyframes floatGame {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateGame {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* FPS Counter */
+.fps-counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(144, 0, 254, 0.5);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fps-label {
+  color: rgba(144, 0, 254, 0.8);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.fps-value {
+  color: #00ff00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: fpsPulse 1s ease-in-out infinite;
+}
+
+@keyframes fpsPulse {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px #00ff00;
+  }
+
+  50% {
+    text-shadow: 0 0 15px #00ff00;
+  }
+}
+
+/* Debug Info */
+.debug-info {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 3px solid rgba(144, 0, 254, 0.8);
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.debug-line {
+  margin: 3px 0;
+  animation: debugBlink 2s ease-in-out infinite;
+}
+
+.debug-line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.debug-line:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes debugBlink {
+
+  0%,
+  90%,
+  100% {
+    opacity: 0.7;
+  }
+
+  95% {
+    opacity: 1;
   }
 }
