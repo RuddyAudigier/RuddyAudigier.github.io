@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header theme-ia">
         <nav class="navbar">
             <a href="index.html" class="navbar-logo">
                 <img src="img/logoLion.png" alt="Logo Ruddy">
@@ -75,13 +75,22 @@
         </nav>
     </header>
 
-    <section class="project-hero">
+    <section class="project-hero hero-bg-ia">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet IA - BUT 1</span>
+            <i class="fas fa-brain hero-icon-large"></i>
+            <br>
+            <div class="hero-tags">
+                <span class="hero-tag">Programmation d'IA</span>
+                <span class="hero-tag">Code Legacy</span>
+                <span class="hero-tag">MVC</span>
+                <span class="hero-tag">Inter-processus</span>
+            </div>
+
             <h1>Intelligence Artificielle lié à un jeu vidéo</h1>
             <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une IA autonome
                 capable de communiquer avec un moteur de jeu externe.</p>
         </div>
+        <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
@@ -198,6 +207,8 @@
             lightbox.style.display = 'none';
         }
     </script>
+
+    <script src="scroll-animations.js"></script>
 </body>
 
 </html>

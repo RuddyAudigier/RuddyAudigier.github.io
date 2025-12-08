@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,147 +8,160 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-        
-<header class="site-header">
-  <nav class="navbar">
-    <a href="index.html" class="navbar-logo">
-      <img src="img/logoLion.png" alt="Logo Ruddy">
-    </a>
 
-    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </a>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link active" onclick="toggleMenu()">Accueil</a></li>
-        <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <li class="nav-item-dropdown">
-            <a href="index.html#projects" class="nav-link">Réalisations</a>
-            <ul class="dropdown-menu">
-                <li class="proj proj-web">
-                    <a href="projet-web.html">
-                        <span class="proj-icon">&lt;/&gt;</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet site web - BUT 2</span>
-                            <span class="proj-tag"> Sécurité · Besoin client </span>
-                        </span>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+
+                <li class="nav-item-dropdown">
+                    <a href="index.html#projects" class="nav-link">Réalisations</a>
+                    <ul class="dropdown-menu">
+                        <li class="proj proj-web">
+                            <a href="projet-web.html">
+                                <span class="proj-icon">&lt;/&gt;</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet site web - BUT 2</span>
+                                    <span class="proj-tag"> Sécurité · Besoin client </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-ia">
+                            <a href="projet-ia.html">
+                                <span class="proj-icon">🧠</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet IA - BUT 1</span>
+                                    <span class="proj-tag">Logique · Algorithmes</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-opt">
+                            <a href="projet-optimisation.html">
+                                <span class="proj-icon">⚙️</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet Optimisation - BUT 1</span>
+                                    <span class="proj-tag">Performance · Data analyse</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-nuit">
+                            <a href="projet-nuit-info.html">
+                                <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
+                                        aria-hidden="true"></i></span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Nuit de l'info - Application Web</span>
+                                    <span class="proj-tag">React.js · Déployé</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+                <li>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span>CV</span>
                     </a>
                 </li>
-                <li class="proj proj-ia">
-                    <a href="projet-ia.html">
-                        <span class="proj-icon">🧠</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet IA - BUT 1</span>
-                            <span class="proj-tag">Logique · Algorithmes</span>
-                        </span>
-                    </a>
                 </li>
-                <li class="proj proj-opt">
-                    <a href="projet-optimisation.html">
-                        <span class="proj-icon">⚙️</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet Optimisation - BUT 1</span>
-                            <span class="proj-tag">Performance · Data analyse</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="proj proj-nuit">
-                    <a href="projet-nuit-info.html">
-                        <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb" aria-hidden="true"></i></span>
-                        <span class="proj-content">
-                            <span class="proj-title">Nuit de l'info - Application Web</span>
-                            <span class="proj-tag">React.js · Déployé</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
-            <li>
-                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-                <i class="fas fa-file-download" aria-hidden="true"></i>
-                <span>CV</span>
-                </a>
-            </li>
-        </li>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 
-  
-    
+
+
 
     <main>
         <!-- Section Héros -->
         <section class="hero hero-gaming">
-             <!-- Fond animé léger -->
+            <!-- Fond animé léger -->
             <div class="hero-background-code">
                 <div class="code-column">
-                <span>{ }</span>
-                <span>if (score &gt;= 100)</span>
-                <span>while (player.isAlive)</span>
-                <span>const level = 2;</span>
-                <span>for (let i = 0; i &lt; n; i++)</span>
-                <span>return bestMove;</span>
+                    <span>{ }</span>
+                    <span>if (score &gt;= 100)</span>
+                    <span>while (player.isAlive)</span>
+                    <span>const level = 2;</span>
+                    <span>for (let i = 0; i &lt; n; i++)</span>
+                    <span>return bestMove;</span>
                 </div>
                 <div class="code-column code-column-delay">
-                <span>// game loop</span>
-                <span>function update()</span>
-                <span>engine.tick(delta)</span>
-                <span>render(scene)</span>
-                <span>input.handle()</span>
-                <span>saveProgress()</span>
+                    <span>// game loop</span>
+                    <span>function update()</span>
+                    <span>engine.tick(delta)</span>
+                    <span>render(scene)</span>
+                    <span>input.handle()</span>
+                    <span>saveProgress()</span>
                 </div>
             </div>
             <div class="container hero-layout containerDebut">
                 <div class="hero-text">
-                <span class="hero-tag">Développeur & passionné de jeux vidéo</span>
-                <h1>
-                    Ruddy <span class="highlight">Audigier</span>
-                </h1>
-               <p>Étudiant en <strong>BUT Informatique</strong> (Parcours RACDV). Passionné par la logique, l'optimisation et le développement de jeux vidéo. En quête constante de nouveaux défis techniques.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn">Voir mes projets</a>
-                    <button class="btn btn-outline" onclick="openModal('cvModal')" style="padding: 1.4rem 2.2rem; font-size:14px">
-                    <i class="fas fa-eye" style="margin-right:8px"></i>Voir mon CV
-                    </button>
+                    <span class="hero-tag">Développeur & passionné de jeux vidéo</span>
+                    <h1>
+                        Ruddy <span class="highlight">Audigier</span>
+                    </h1>
+                    <p>Étudiant en <strong>BUT Informatique</strong> (Parcours RACDV). Passionné par la logique,
+                        l'optimisation et le développement de jeux vidéo. En quête constante de nouveaux défis
+                        techniques.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn">Voir mes projets</a>
+                        <button class="btn btn-outline" onclick="openModal('cvModal')"
+                            style="padding: 1.4rem 2.2rem; font-size:14px">
+                            <i class="fas fa-eye" style="margin-right:8px"></i>Voir mon CV
+                        </button>
+                    </div>
                 </div>
-            </div>
 
                 <div class="hero-controller-3d" id="heroController">
                     <div class="controller-light"></div>
-                    <img
-                        src="img/controller.png"
-                        alt="Manette de jeu"
-                        class="controller-3d-img"
-                    />
-                    </div>
+                    <img src="img/controller.png" alt="Manette de jeu" class="controller-3d-img" />
                 </div>
+            </div>
         </section>
 
         <!-- Section À Propos -->
         <section id="about">
             <div class="container">
                 <h2 class="section-title">À propos de moi</h2>
-                
+
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>Bonjour, je m'appelle <strong>Ruddy Audigier</strong>, j'ai 18 ans. Je me définis avant tout comme quelqu'un de curieux et déterminé. J'aime explorer de nouveaux domaines, comprendre comment les choses fonctionnent et repousser mes limites.</p>
+                        <p>Bonjour, je m'appelle <strong>Ruddy Audigier</strong>, j'ai 18 ans. Je me définis avant tout
+                            comme quelqu'un de curieux et déterminé. J'aime explorer de nouveaux domaines, comprendre
+                            comment les choses fonctionnent et repousser mes limites.</p>
 
                         <div class="about-highlight">
-                            "Mon parcours débute par une passion pour l'E-sport (Rocket League, Apex Legends), qui a éveillé ma curiosité pour le mécanisme interne des jeux vidéo."
+                            "Mon parcours débute par une passion pour l'E-sport (Rocket League, Apex Legends), qui a
+                            éveillé ma curiosité pour le mécanisme interne des jeux vidéo."
                         </div>
 
-                        <p>Cette curiosité s'est confirmée lors de mon stage de 3ème en géomatique, où j'ai découvert l'importance des bases de données cachées derrière les interfaces utilisateur. J'ai ensuite approfondi ma logique en spécialité NSI (Numérique et Sciences Informatiques), trouvant une réelle satisfaction à résoudre des problèmes algorithmiques complexes.</p>
+                        <p>Cette curiosité s'est confirmée lors de mon stage de 3ème en géomatique, où j'ai découvert
+                            l'importance des bases de données cachées derrière les interfaces utilisateur. J'ai ensuite
+                            approfondi ma logique en spécialité NSI (Numérique et Sciences Informatiques), trouvant une
+                            réelle satisfaction à résoudre des problèmes algorithmiques complexes.</p>
 
-                        <p>J'ai fait le choix stratégique de l'<strong>IUT</strong> pour son approche pragmatique. Je ne voulais pas d'un apprentissage par cœur, mais d'une formation basée sur la pratique et les projets concrets. Après une première année à Dijon, j'ai transféré mon dossier à <strong>l'IUT de Montpellier</strong> pour intégrer le parcours <em>RACDV (Réalisation d'Applications)</em>, en parfaite adéquation avec mon projet professionnel.</p>
+                        <p>J'ai fait le choix stratégique de l'<strong>IUT</strong> pour son approche pragmatique. Je ne
+                            voulais pas d'un apprentissage par cœur, mais d'une formation basée sur la pratique et les
+                            projets concrets. Après une première année à Dijon, j'ai transféré mon dossier à
+                            <strong>l'IUT de Montpellier</strong> pour intégrer le parcours <em>RACDV (Réalisation
+                                d'Applications)</em>, en parfaite adéquation avec mon projet professionnel.
+                        </p>
 
-                        <p><strong>Mon objectif ?</strong> 
-                            Me spécialiser dans la programmation de jeux vidéo (Gameplay ou Engine Programmer). 
+                        <p><strong>Mon objectif ?</strong>
+                            Me spécialiser dans la programmation de jeux vidéo (Gameplay ou Engine Programmer).
                         </p>
                         <div class="about-highlight">
-                            "C'est ma vocation, et je souhaite voir les gens s'amuser avec les jeux vidéo que j'aurai programmés."
+                            "C'est ma vocation, et je souhaite voir les gens s'amuser avec les jeux vidéo que j'aurai
+                            programmés."
                         </div>
                     </div>
 
@@ -156,7 +170,7 @@
                             <span class="stat-number">2+</span>
                             <span class="stat-label">Années d'études sup.</span>
                         </div>
-                            
+
                         <div class="stat-card interactable" onclick="openModal('langModal')" style="cursor: pointer;">
                             <span class="stat-number">10</span>
                             <span class="stat-label">Langages maîtrisés</span>
@@ -165,7 +179,8 @@
 
                         <!-- Unity, Unreal Engine, React.js, Bootstrap, -->
 
-                        <div class="stat-card interactable" onclick="openModal('frameworkModal')" style="cursor: pointer;">
+                        <div class="stat-card interactable" onclick="openModal('frameworkModal')"
+                            style="cursor: pointer;">
                             <span class="stat-number">4</span>
                             <span class="stat-label">Frameworks expérimentés</span>
                             <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
@@ -184,15 +199,17 @@
             <div class="container">
                 <h2 class="section-title">Mes Réalisations</h2>
                 <div class="projects-grid">
-                    
+
                     <!-- Carte SAE 3 -->
                     <a href="projet-web.html" class="card">
                         <div class="card-header" style="background-image: url('img/971.jpg');">
-                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet site web - BUT 2</span>
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet site web - BUT
+                                2</span>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Application Web & Gestion Agile</h3>
-                            <p style="color: var(--text-muted)">Développement complet d'une solution client avec authentification sécurisée et architecture maintenable.</p>
+                            <p style="color: var(--text-muted)">Développement complet d'une solution client avec
+                                authentification sécurisée et architecture maintenable.</p>
                             <div class="card-tags">
                                 <span class="tag">PHP</span>
                                 <span class="tag">Responsable client</span>
@@ -211,7 +228,8 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">IA jouant à un jeu</h3>
-                            <p style="color: var(--text-muted)">Création d'une IA qui réalise le meilleur chemin possible sur un jeu donné. Objectif : ramasser les diamants et atteindre la sortie.</p>
+                            <p style="color: var(--text-muted)">Création d'une IA qui réalise le meilleur chemin
+                                possible sur un jeu donné. Objectif : ramasser les diamants et atteindre la sortie.</p>
                             <div class="card-tags">
                                 <span class="tag">Programmation d'IA</span>
                                 <span class="tag">Code Legacy</span>
@@ -221,32 +239,37 @@
                         </div>
                     </a>
 
-                     <!-- Carte SAE 1.2 -->
+                    <!-- Carte SAE 1.2 -->
                     <a href="projet-optimisation.html" class="card">
                         <div class="card-header" style="background-image: url('img/optimisation.png');">
-                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet Optimisation - BUT 1</span>
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Projet Optimisation -
+                                BUT 1</span>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Exploration algorithmique & Matchmaking</h3>
-                            <p style="color: var(--text-muted)">Analyse de performance et implémentation d'algorithme en C# sur un systeme de matchmaking.</p>
+                            <p style="color: var(--text-muted)">Analyse de performance et implémentation d'algorithme en
+                                C# sur un systeme de matchmaking.</p>
                             <div class="card-tags">
                                 <span class="tag">C#</span>
                                 <span class="tag">Algorithmique</span>
                                 <span class="tag">Data Analyse</span>
                                 <span class="tag">Complexité</span>
-                                <span class="tag">Prise de décision</span>  
+                                <span class="tag">Prise de décision</span>
                             </div>
                         </div>
                     </a>
 
                     <!-- Carte Nuit de l'info -->
                     <a href="projet-nuit-info.html" class="card">
-                        <div class="card-header" style="background-image: url('img/logoNird.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
-                            <span class="tag" style="background: white; color: var(--bg-dark);">Nuit de l'info - Application Web</span>
+                        <div class="card-header"
+                            style="background-image: url('img/logoNird.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                            <span class="tag" style="background: white; color: var(--bg-dark);">Nuit de l'info -
+                                Application Web</span>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Evenement — Nuit de l'info</h3>
-                            <p style="color: var(--text-muted)">Application réalisée en <strong>React.js</strong> et déployée pour l'événement "Nuit de l'info" (IUT).</p>
+                            <p style="color: var(--text-muted)">Application réalisée en <strong>React.js</strong> et
+                                déployée pour l'événement "Nuit de l'info" (IUT).</p>
                             <div class="card-tags">
                                 <span class="tag">React.js & Vite</span>
                                 <span class="tag">JSX</span>
@@ -267,7 +290,7 @@
             <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
         </div>
     </footer>
-            
+
     <!-- MODALE LANGAGES (Déjà intégrée et stylée par le CSS précédent) -->
     <div id="langModal" class="modal-overlay" onclick="closeModal(event, 'langModal')">
         <div class="modal-content">
@@ -275,7 +298,7 @@
                 <h3>Mes Langages</h3>
                 <span class="close-btn" onclick="closeModal(event, 'langModal')">&times;</span>
             </div>
-                
+
             <div class="modal-body">
                 <!-- Catégorie 1 : Web -->
                 <h4 class="category-title" style="--d: 0s">Développement Web</h4>
@@ -336,9 +359,9 @@
                         <span>Bash</span>
                     </div>
                 </div>
-            </div> 
-        </div> 
-    </div> 
+            </div>
+        </div>
+    </div>
 
     <!-- MODALE FRAMEWORKS (Déjà intégrée et stylée par le CSS précédent) -->
     <div id="frameworkModal" class="modal-overlay" onclick="closeModal(event, 'frameworkModal')">
@@ -347,7 +370,7 @@
                 <h3>Mes Frameworks</h3>
                 <span class="close-btn" onclick="closeModal(event, 'frameworkModal')">&times;</span>
             </div>
-                
+
             <div class="modal-body">
                 <!-- Catégorie 1 : Web -->
                 <h4 class="category-title" style="--d: 0s">Développement Web</h4>
@@ -374,17 +397,17 @@
                         <span>Unreal Engine</span>
                     </div>
                 </div>
-            </div> 
-        </div> 
-    </div> 
+            </div>
+        </div>
+    </div>
 
 
-        
+
     <!-- MODALE CV (Visionneuse PDF) -->
     <div id="cvModal" class="modal-overlay" onclick="closeModal(event, 'cvModal')">
         <!-- J'ajoute la classe 'modal-large' pour qu'elle soit plus grande que celle des langages -->
-        <div class="modal-content modal-large"> 
-            
+        <div class="modal-content modal-large">
+
             <div class="modal-header">
                 <h3>Mon Curriculum Vitae</h3>
                 <div class="header-actions">
@@ -395,7 +418,7 @@
                     <span class="close-btn" onclick="closeModal(event, 'cvModal')">&times;</span>
                 </div>
             </div>
-                
+
             <div class="modal-body-cv">
                 <!-- La balise object permet d'afficher le PDF directement -->
                 <object data="doc/CV_Audigier_Web.pdf" type="application/pdf" width="100%" height="100%">
@@ -409,12 +432,12 @@
         </div>
     </div>
 
-  
+
 
     <script>
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
-            if(modal) {
+            if (modal) {
                 modal.style.display = 'flex';
                 setTimeout(() => {
                     modal.classList.add('active');
@@ -433,24 +456,26 @@
         }
 
         function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
-    const hamburgerIcon = document.querySelector('.hamburger i'); 
+            const navLinks = document.getElementById('navLinks');
+            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+            const hamburgerIcon = document.querySelector('.hamburger i');
 
-    navLinks.classList.toggle('mobile-active');
+            navLinks.classList.toggle('mobile-active');
 
-    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
-    if (navLinks.classList.contains('mobile-active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times');
-    } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-    }
-}
+            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+            if (navLinks.classList.contains('mobile-active')) {
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            } else {
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+        }
     </script>
+
+    <script src="scroll-animations.js"></script>
 </body>
-    
-    
-  
+
+
+
 </html>

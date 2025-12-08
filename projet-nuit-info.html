@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header theme-nuit">
         <nav class="navbar">
             <a href="index.html" class="navbar-logo">
                 <img src="img/logoLion.png" alt="Logo Ruddy">
@@ -76,10 +76,17 @@
     </header>
 
 
-    <section class="project-hero">
+    <section class="project-hero hero-bg-nuit">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Nuit de l'Info 2025 —
-                Événement Hackathon</span>
+            <i class="fas fa-moon hero-icon-large"></i>
+            <br>
+            <div class="hero-tags">
+                <span class="hero-tag">React.js</span>
+                <span class="hero-tag">Vite</span>
+                <span class="hero-tag">Déploiement</span>
+                <span class="hero-tag">Travail d'équipe</span>
+            </div>
+
             <h1>Application Web NIRD — Village Numérique Résistant</h1>
             <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une plateforme
                 ludique et pédagogique pour promouvoir un numérique libre et responsable dans les écoles.</p>
@@ -90,6 +97,7 @@
                 </a>
             </div>
         </div>
+        <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
@@ -102,7 +110,7 @@
                     <h2>Contexte : La Nuit de l'Info 2025</h2>
                     <p>La <strong>Nuit de l'Info</strong> est un événement national qui rassemble des étudiants en
                         informatique pour une nuit de développement intense. Du <strong>jeudi 4 au vendredi 5 décembre
-                            2025 (14h30-14h00)</strong>, les équipes doivent concevoir et déployer une application web
+                            2025 (16h-8h)</strong>, les équipes doivent concevoir et déployer une application web
                         fonctionnelle en moins de 24 heures.</p>
                     <p>Cette année, notre équipe de l'<strong>IUT de Montpellier</strong> a relevé le défi
                         <strong>NIRD</strong> (pour un Numérique Inclusif, Responsable et Durable), porté par le
@@ -353,6 +361,8 @@
         }
     </script>
 
+    <script src="scroll-animations.js"></script>
 </body>
 
 </html>
+```

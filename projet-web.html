@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header theme-web">
         <nav class="navbar">
             <a href="index.html" class="navbar-logo">
                 <img src="img/logoLion.png" alt="Logo Ruddy">
@@ -76,14 +76,24 @@
     </header>
 
 
-    <section class="project-hero">
+    <section class="project-hero hero-bg-web">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Projet site web - BUT
-                2</span>
+            <i class="fas fa-code hero-icon-large"></i>
+            <br>
+            <div class="hero-tags">
+                <span class="hero-tag">PHP</span>
+                <span class="hero-tag">Responsable client</span>
+                <span class="hero-tag">SQL</span>
+                <span class="hero-tag">SOLID</span>
+                <span class="hero-tag">Scrum Master</span>
+                <span class="hero-tag">Sécurité</span>
+            </div>
+
             <h1>Développement Web & Méthode Agile</h1>
             <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une application
                 client complète avec focus sur la sécurité et la maintenabilité.</p>
         </div>
+        <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
@@ -299,6 +309,8 @@
         }
     </script>
 
+    <script src="scroll-animations.js"></script>
 </body>
 
 </html>
+```

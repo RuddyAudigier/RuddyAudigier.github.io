@@ -11,7 +11,7 @@
 
 <body>
 
-    <header class="site-header">
+    <header class="site-header theme-opt">
         <nav class="navbar">
             <a href="index.html" class="navbar-logo">
                 <img src="img/logoLion.png" alt="Logo Ruddy">
@@ -77,9 +77,17 @@
     </header>
 
 
-    <section class="project-hero">
+    <section class="project-hero hero-bg-opt">
         <div class="container">
-            <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet optimisation - BUT 1</span>
+            <i class="fas fa-cogs hero-icon-large"></i>
+            <br>
+            <div class="hero-tags">
+                <span class="hero-tag">C#</span>
+                <span class="hero-tag">Algorithmique</span>
+                <span class="hero-tag">Data Analyse</span>
+                <span class="hero-tag">Complexité</span>
+            </div>
+
             <h1>Exploration Algorithmique & Matchmaking</h1>
             <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une
                 application C# de constitution d'équipes optimisées avec contraintes de rôles et de niveaux.</p>
@@ -88,6 +96,7 @@
             style="padding: 1rem 2rem; font-size: 14px; margin-top: 30px ;display: inline-flex; align-items: center;">
             <i class="fas fa-eye" style="margin-right: 8px;"></i> Voir mon compte rendu
         </a>
+        <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
@@ -309,6 +318,8 @@
             }
         });
     </script>
+
+    <script src="scroll-animations.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,62 +9,63 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<header class="site-header">
-  <nav class="navbar">
-    <a href="index.html" class="navbar-logo">
-      <img src="img/logoLion.png" alt="Logo Ruddy">
-    </a>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </a>
 
-    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
-        <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
 
-        <li class="nav-item-dropdown">
-            <a href="index.html#projects" class="nav-link">Réalisations</a>
-            <ul class="dropdown-menu">
-                <li class="proj proj-web">
-                    <a href="projet-web.html">
-                        <span class="proj-icon">&lt;/&gt;</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet site web - BUT 2</span>
-                            <span class="proj-tag"> Sécurité · Besoin client </span>
-                        </span>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#projects" class="nav-link">Réalisations</a>
+                    <ul class="dropdown-menu">
+                        <li class="proj proj-web">
+                            <a href="projet-web.html">
+                                <span class="proj-icon">&lt;/&gt;</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet site web - BUT 2</span>
+                                    <span class="proj-tag"> Sécurité · Besoin client </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-ia">
+                            <a href="projet-ia.html">
+                                <span class="proj-icon">🧠</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet IA - BUT 1</span>
+                                    <span class="proj-tag">Logique · Algorithmes</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-opt">
+                            <a href="projet-optimisation.html">
+                                <span class="proj-icon">⚙️</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet Optimisation - BUT 1</span>
+                                    <span class="proj-tag">Performance · Data analyse</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                <li><a href="contact.html" class="nav-link active" onclick="toggleMenu()"> Contact </a></li>
+                <li>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span>CV</span>
                     </a>
                 </li>
-                <li class="proj proj-ia">
-                    <a href="projet-ia.html">
-                        <span class="proj-icon">🧠</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet IA - BUT 1</span>
-                            <span class="proj-tag">Logique · Algorithmes</span>
-                        </span>
-                    </a>
                 </li>
-                <li class="proj proj-opt">
-                    <a href="projet-optimisation.html">
-                        <span class="proj-icon">⚙️</span>
-                        <span class="proj-content">
-                            <span class="proj-title">Projet Optimisation - BUT 1</span>
-                            <span class="proj-tag">Performance · Data analyse</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <li><a href="contact.html" class="nav-link active" onclick="toggleMenu()"> Contact </a></li>
-            <li>
-                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-                <i class="fas fa-file-download" aria-hidden="true"></i>
-                <span>CV</span>
-                </a>
-            </li>
-        </li>
-    </nav>
-</header>
+        </nav>
+    </header>
 
     <main>
         <section class="page-header">
@@ -74,21 +76,26 @@
             <div class="contact-layout">
                 <div class="contact-info">
                     <h2>Mes Coordonnées</h2>
-                    <p>Je suis actuellement à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter !</p>
+                    <p>Je suis actuellement à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter
+                        !</p>
                     <br>
-                    <p><strong>Email :</strong> <a href="mailto: ruddy.audigier@etu.umontpellier.fr"></a>ruddy.audigier@etu.umontpellier.fr </p>
-                    <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/ruddy-audigier/"> mon compte Linkedin </a> </p>
-                    <p><strong>GitHub :</strong>  <a href="https://github.com/RuddyAudigier"> mon compte GitHub </a> </p>
-                    <p><strong>GitLab :</strong>  <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/audigierr1"> mon compte GitLab </a></p>
+                    <p><strong>Email :</strong> <a
+                            href="mailto: ruddy.audigier@etu.umontpellier.fr"></a>ruddy.audigier@etu.umontpellier.fr
+                    </p>
+                    <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/ruddy-audigier/"> mon compte
+                            Linkedin </a> </p>
+                    <p><strong>GitHub :</strong> <a href="https://github.com/RuddyAudigier"> mon compte GitHub </a> </p>
+                    <p><strong>GitLab :</strong> <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/audigierr1"> mon
+                            compte GitLab </a></p>
                 </div>
 
-                    
+
                 <div class="contact-form">
                     <h2>Envoyer un message</h2>
-                    
+
                     <!-- Remplacer l'URL ci-dessous par VOTRE lien Formspree -->
                     <form action="https://formspree.io/f/xdkvabpz" method="POST">
-                        
+
                         <label for="name">Nom</label>
                         <!-- L'attribut 'name' est important, c'est ce qui s'affichera dans le mail -->
                         <input type="text" id="name" name="nom" placeholder="Votre nom" required>
@@ -100,7 +107,7 @@
                         <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
 
                         <input type="hidden" name="_next" value="http://ton-site.com/contact.html">
-                        
+
                         <!-- Champ caché pour le sujet du mail (Optionnel) -->
                         <input type="hidden" name="_subject" value="Nouveau message de mon Portfolio !">
 
@@ -117,24 +124,27 @@
             <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
         </div>
     </footer>
-            
+
     <script>
-    function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
-    const hamburgerIcon = document.querySelector('.hamburger i'); 
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+            const hamburgerIcon = document.querySelector('.hamburger i');
 
-    navLinks.classList.toggle('mobile-active');
+            navLinks.classList.toggle('mobile-active');
 
-    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
-    if (navLinks.classList.contains('mobile-active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times');
-    } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-    }
-}
-</script>
+            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+            if (navLinks.classList.contains('mobile-active')) {
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            } else {
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+        }
+    </script>
+
+    <script src="scroll-animations.js"></script>
 </body>
+
 </html>
