@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuit de l'info - Ruddy Audigier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </a>
+
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+
+                <li class="nav-item-dropdown">
+                    <a href="index.html#projects" class="nav-link">Réalisations</a>
+                    <ul class="dropdown-menu">
+                        <li class="proj proj-web">
+                            <a href="projet-web.html">
+                                <span class="proj-icon">&lt;/&gt;</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet site web - BUT 2</span>
+                                    <span class="proj-tag"> Sécurité · Besoin client </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-ia">
+                            <a href="projet-ia.html">
+                                <span class="proj-icon">🧠</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet IA - BUT 1</span>
+                                    <span class="proj-tag">Logique · Algorithmes</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-opt">
+                            <a href="projet-optimisation.html">
+                                <span class="proj-icon">⚙️</span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Projet Optimisation - BUT 1</span>
+                                    <span class="proj-tag">Performance · Data analyse</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="proj proj-nuit">
+                            <a href="projet-nuit-info.html" class="nav-link menu-active">
+                                <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
+                                        aria-hidden="true"></i></span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Nuit de l'info - Application Web</span>
+                                    <span class="proj-tag">React.js · Déployé</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+                <li>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span>CV</span>
+                    </a>
+                </li>
+        </nav>
+    </header>
+
+
+    <section class="project-hero">
+        <div class="container">
+            <span class="tag" style="margin-bottom: 1rem; display: inline-block; font-size: 1rem;">Nuit de l'Info 2025 —
+                Événement Hackathon</span>
+            <h1>Application Web NIRD — Village Numérique Résistant</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une plateforme
+                ludique et pédagogique pour promouvoir un numérique libre et responsable dans les écoles.</p>
+            <div style="margin-top: 2rem;">
+                <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn"
+                    style="text-align: center; font-size: 0.95rem; padding: 1.2rem;">
+                    <i aria-hidden="true"></i>
+                    Voir l'application
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="project-meta-grid">
+
+            <!-- Contenu Principal -->
+            <div class="project-main-content">
+
+                <div class="content-block">
+                    <h2>Contexte : La Nuit de l'Info 2025</h2>
+                    <p>La <strong>Nuit de l'Info</strong> est un événement national qui rassemble des étudiants en
+                        informatique pour une nuit de développement intense. Du <strong>jeudi 4 au vendredi 5 décembre
+                            2025 (14h30-14h00)</strong>, les équipes doivent concevoir et déployer une application web
+                        fonctionnelle en moins de 24 heures.</p>
+                    <p>Cette année, notre équipe de l'<strong>IUT de Montpellier</strong> a relevé le défi
+                        <strong>NIRD</strong> (pour un Numérique Inclusif, Responsable et Durable), porté par le
+                        collectif enseignant NIRD et le Bureau de la Nuit de l'Info 2025.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Le Défi NIRD : "Le Village Numérique Résistant"</h2>
+                    <p><strong>Thème :</strong> Comment les établissements scolaires peuvent tenir tête aux Big Tech
+                        ?<br>
+                        <em>David contre Goliath, Astérix contre l'Empire numérique</em>
+                    </p>
+
+                    <p>Face à la dépendance structurelle aux géants de la technologie (licences coûteuses, stockage hors
+                        UE, écosystèmes fermés), l'École peut devenir un village résistant, ingénieux et créatif — à
+                        l'image du célèbre village d'Astérix.</p>
+
+                    <h3>Objectifs du Projet</h3>
+                    <p>Créer une application Web qui permet aux établissements scolaires d'adopter progressivement un
+                        <strong>Numérique Libre, Responsable et Durable</strong> :
+                    </p>
+                    <ul>
+                        <li>Sensibiliser les équipes éducatives et les élèves à la souveraineté numérique</li>
+                        <li>Encourager le réemploi et le reconditionnement du matériel</li>
+                        <li>Promouvoir l'usage de <strong>Linux</strong> pour lutter contre l'obsolescence programmée
+                        </li>
+                        <li>Mutualiser les ressources et outils libres via la <strong>Forge des communs numériques
+                                éducatifs</strong></li>
+                        <li>Accompagner les établissements dans une transition numérique écoresponsable</li>
+                    </ul>
+
+                    <h3>Notre Approche</h3>
+                    <p>Nous avons développé une <strong>expérience ludique, attractive et engageante</strong> répondant
+                        aux exigences du défi :</p>
+                    <ul>
+                        <li><strong>Interactivité :</strong> Interface dynamique et immersive</li>
+                        <li><strong>Pédagogie :</strong> Contenu éducatif accessible et compréhensible</li>
+                        <li><strong>Créativité :</strong> Design inspiré de l'univers d'Astérix revisité en contexte
+                            numérique</li>
+                        <li><strong>Résistance numérique :</strong> Mise en avant des solutions libres et autonomes</li>
+                    </ul>
+                </div>
+
+                <div class="content-block" id="contribution">
+                    <h2>Ma Contribution</h2>
+
+                    <h3>Développement Frontend en React.js</h3>
+                    <p>J'ai participé activement au développement de l'application en utilisant
+                        <strong>React.js</strong> avec <strong>Vite</strong> comme outil de build :
+                    </p>
+                    <ul>
+                        <li>Création de composants JSX réutilisables et modulaires</li>
+                        <li>Mise en place d'une architecture componentisée pour faciliter la collaboration</li>
+                        <li>Développement d'interactions dynamiques et animations fluides</li>
+                        <li>Intégration du design system pour une cohérence visuelle</li>
+                    </ul>
+
+                    <h3>Travail d'Équipe sous Pression</h3>
+                    <p>Durant cette nuit de développement intense, j'ai dû :</p>
+                    <ul>
+                        <li>Collaborer efficacement avec mes coéquipiers en temps réel</li>
+                        <li>Gérer les priorités et respecter les contraintes de temps strictes</li>
+                        <li>Résoudre rapidement les problèmes techniques rencontrés</li>
+                        <li>Maintenir une communication fluide pour assurer la cohésion du projet</li>
+                    </ul>
+
+                    <h3>Déploiement et Production</h3>
+                    <p>J'ai contribué au déploiement de l'application sur <strong>Netlify</strong>, garantissant une
+                        mise en ligne rapide et accessible pour l'évaluation du jury.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Technologies et Architecture</h2>
+                    <p>Notre stack technique a été choisi pour sa performance et sa rapidité de développement :</p>
+                    <ul>
+                        <li><strong>React.js</strong> : Framework JavaScript moderne pour une UI réactive</li>
+                        <li><strong>Vite</strong> : Build tool ultra-rapide optimisé pour le développement React</li>
+                        <li><strong>JSX</strong> : Syntaxe déclarative pour les composants UI</li>
+                        <li><strong>Netlify</strong> : Déploiement automatisé et hébergement performant</li>
+                        <li><strong>CSS moderne</strong> : Animations et design responsive</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Résultats et Apprentissages</h2>
+
+                    <h3>Application Déployée</h3>
+                    <p>Notre application est accessible en ligne et démontre notre capacité à livrer un produit
+                        fonctionnel sous contrainte de temps :</p>
+                    <p style="text-align: center; margin: 2rem 0;">
+                        <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn"
+                            style="margin: 0;">
+                            <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>
+                            Voir l'application déployée
+                        </a>
+                    </p>
+
+                    <h3>Compétences Acquises</h3>
+                    <p>Cette expérience intensive m'a permis de développer des compétences essentielles :</p>
+                    <ul>
+                        <li><strong>Développement rapide :</strong> Prototypage et implémentation sous forte contrainte
+                            de temps</li>
+                        <li><strong>Travail en équipe :</strong> Collaboration synchrone et gestion de conflits de code
+                        </li>
+                        <li><strong>Gestion du stress :</strong> Maintien de la productivité malgré la pression et la
+                            fatigue</li>
+                        <li><strong>Créativité technique :</strong> Solutions innovantes pour répondre aux exigences du
+                            défi</li>
+                        <li><strong>React.js :</strong> Maîtrise approfondie du framework et de l'écosystème moderne
+                            JavaScript</li>
+                        <li><strong>Déploiement continu :</strong> Pipeline CI/CD avec Netlify</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Documentation du Projet</h2>
+
+                    <div class="visual-proofs-grid">
+                        <!-- Image 1 : Présentation du sujet -->
+                        <div class="proof-card"
+                            onclick="openLightbox('img/nuit-info-presentation.jpg', 'Présentation du sujet NIRD 2025 : Le Village Numérique Résistant')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/nuit-info-presentation.jpg" alt="Présentation du sujet NIRD 2025">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Présentation du Défi NIRD 2025</h4>
+                                <p>Sujet officiel : "Le Village Numérique Résistant"</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 : Détails du projet -->
+                        <div class="proof-card"
+                            onclick="openLightbox('img/nuit-info-details.jpg', 'Acteurs du projet NIRD et activités de la démarche')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/nuit-info-details.jpg"
+                                    alt="Détails du projet NIRD : acteurs et activités">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Acteurs et Activités du Projet</h4>
+                                <p>Démarche NIRD : inclusion, responsabilité et durabilité</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lightbox Modal -->
+                    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                        <img class="lightbox-content" id="lightbox-img">
+                        <div id="lightbox-caption"></div>
+                    </div>
+                </div>
+
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
+                    projets</a>
+            </div>
+
+            <!-- Sidebar Info -->
+            <aside class="project-sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Événement</span>
+                        <span class="sidebar-value">Nuit de l'Info 2025</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Défi</span>
+                        <span class="sidebar-value">NIRD — Village Numérique Résistant</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Durée</span>
+                        <span class="sidebar-value">7+ heures (une nuit)</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Équipe</span>
+                        <span class="sidebar-value">Collectif IUT Montpellier</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Rôle</span>
+                        <span class="sidebar-value"><a href="#contribution">Développeur Frontend</a></span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <span class="sidebar-label">Technologies</span>
+                    <div class="card-tags" style="margin-top: 1rem;">
+                        <span class="tag">React.js</span>
+                        <span class="tag">Vite</span>
+                        <span class="tag">JSX</span>
+                        <span class="tag">Netlify</span>
+                        <span class="tag">JavaScript ES6+</span>
+                        <span class="tag">CSS Animations</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+            const hamburgerIcon = document.querySelector('.hamburger i');
+
+            navLinks.classList.toggle('mobile-active');
+
+            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+            if (navLinks.classList.contains('mobile-active')) {
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            } else {
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+        }
+
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 50);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300);
+        }
+    </script>
+
+</body>
+
+</html>

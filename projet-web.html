@@ -28,7 +28,7 @@
                     <a href="index.html#projects" class="nav-link">Réalisations</a>
                     <ul class="dropdown-menu">
                         <li class="proj proj-web">
-                            <a href="projet-web.html"  class="nav-link menu-active">
+                            <a href="projet-web.html" class="nav-link menu-active">
                                 <span class="proj-icon">&lt;/&gt;</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet site web - BUT 2</span>
@@ -54,8 +54,18 @@
                                 </span>
                             </a>
                         </li>
+                        <li class="proj proj-nuit">
+                            <a href="projet-nuit-info.html" class="nav-link">
+                                <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
+                                        aria-hidden="true"></i></span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Nuit de l'info - Application Web</span>
+                                    <span class="proj-tag">React.js · Déployé</span>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                    <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+                <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
                 <li>
                     <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
                         <i class="fas fa-file-download" aria-hidden="true"></i>
@@ -189,7 +199,7 @@
                                 </div>
                             </div>
                             <div class="proof-info">
-                                
+
                                 <h4>Gestion des autorisations et sécurité du site</h4>
                                 <p>Page indiquant que l'utilisateur n'a pas les droits pour accéder à la page</p>
                             </div>
@@ -271,7 +281,7 @@
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
-            
+
             lightboxImg.src = imageSrc;
             lightboxCaption.textContent = caption;
             lightbox.style.display = 'flex';

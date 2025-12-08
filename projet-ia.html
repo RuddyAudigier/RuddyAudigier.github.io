@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<header class="site-header">
-  <nav class="navbar">
-    <a href="index.html" class="navbar-logo">
-      <img src="img/logoLion.png" alt="Logo Ruddy">
-    </a>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logoLion.png" alt="Logo Ruddy">
+            </a>
 
-    <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
-      <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="index.html#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
 
-      <li class="nav-item-dropdown">
+                <li class="nav-item-dropdown">
                     <a href="index.html#projects" class="nav-link">Réalisations</a>
                     <ul class="dropdown-menu">
                         <li class="proj proj-web">
@@ -52,46 +54,64 @@
                                 </span>
                             </a>
                         </li>
+                        <li class="proj proj-nuit">
+                            <a href="projet-nuit-info.html" class="nav-link">
+                                <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
+                                        aria-hidden="true"></i></span>
+                                <span class="proj-content">
+                                    <span class="proj-title">Nuit de l'info - Application Web</span>
+                                    <span class="proj-tag">React.js · Déployé</span>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                    <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+                <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
                 <li>
-            <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-            <i class="fas fa-file-download" aria-hidden="true"></i>
-            <span>CV</span>
-            </a>
-        </li>
-    </nav>
-</header>
+                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span>CV</span>
+                    </a>
+                </li>
+        </nav>
+    </header>
 
     <section class="project-hero">
         <div class="container">
             <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Projet IA - BUT 1</span>
             <h1>Intelligence Artificielle lié à un jeu vidéo</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une IA autonome capable de communiquer avec un moteur de jeu externe.</p>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une IA autonome
+                capable de communiquer avec un moteur de jeu externe.</p>
         </div>
     </section>
 
     <div class="container">
         <div class="project-meta-grid">
-            
+
             <div class="project-main-content">
                 <div class="content-block">
                     <h2>Le Concept du Jeu</h2>
-                    <p>Il s'agit d'un jeu de stratégie et de collecte. L'objectif de l'IA est de naviguer sur une carte générée aléatoirement, de localiser et récupérer un maximum de diamants, puis d'atteindre la sortie avant la fin du temps imparti.</p>
-                    <p>Ce projet s'est étalé sur <strong>4 mois</strong>, demandant une rigueur constante, une autonomie totale ainsi qu'une compréhension.</p>
+                    <p>Il s'agit d'un jeu de stratégie et de collecte. L'objectif de l'IA est de naviguer sur une carte
+                        générée aléatoirement, de localiser et récupérer un maximum de diamants, puis d'atteindre la
+                        sortie avant la fin du temps imparti.</p>
+                    <p>Ce projet s'est étalé sur <strong>4 mois</strong>, demandant une rigueur constante, une autonomie
+                        totale ainsi qu'une compréhension.</p>
                 </div>
 
                 <div class="content-block">
                     <h2>Architecture Technique</h2>
-                    <p>La contrainte la plus forte était l'interdiction de modifier le code source du jeu lui-même. Notre IA devait être un programme externe communiquant avec le jeu.</p>
-                    
+                    <p>La contrainte la plus forte était l'interdiction de modifier le code source du jeu lui-même.
+                        Notre IA devait être un programme externe communiquant avec le jeu.</p>
+
                     <h3>1. Communication Inter-Processus</h3>
-                    <p>J'ai mis en place un protocole de communication pour échanger des données (position du joueur, emplacement des diamants) entre le processus du jeu et mon IA développée en C#. Cela m'a appris à faire dialoguer deux programmes distincts.</p>
+                    <p>J'ai mis en place un protocole de communication pour échanger des données (position du joueur,
+                        emplacement des diamants) entre le processus du jeu et mon IA développée en C#. Cela m'a appris
+                        à faire dialoguer deux programmes distincts.</p>
 
                     <h3>2. Pattern MVC (Modèle-Vue-Contrôleur)</h3>
                     <p>Pour garantir un code maintenable et évolutif, j'ai strictement appliqué le pattern MVC :</p>
                     <ul>
-                        <li><strong>Modèle :</strong> Logique décisionnelle, calcul de trajectoire, état de la mémoire de l'IA.</li>
+                        <li><strong>Modèle :</strong> Logique décisionnelle, calcul de trajectoire, état de la mémoire
+                            de l'IA.</li>
                         <li><strong>Vue :</strong> Gestion des entrées/sorties avec le protocole de communication.</li>
                         <li><strong>Contrôleur :</strong> Orchestration des actions et mise à jour de l'état.</li>
                     </ul>
@@ -99,17 +119,20 @@
 
                 <div class="content-block">
                     <h2>Bilan Personnel</h2>
-                    <p>Ce projet a confirmé mon désir de travailler dans le jeu vidéo. Au-delà de l'aspect ludique, j'ai aimé la complexité architecturale et technique.</p>
+                    <p>Ce projet a confirmé mon désir de travailler dans le jeu vidéo. Au-delà de l'aspect ludique, j'ai
+                        aimé la complexité architecturale et technique.</p>
                     <p>J'ai développé des compétences solides en :</p>
                     <ul>
                         <li><strong>Architecture Logicielle :</strong> Séparation des différentes responsabilités.</li>
-                        <li><strong>Principes SOLID :</strong> Utilisation d'interfaces, énumération, design pattern et respect des principes SOLID.</li>
+                        <li><strong>Principes SOLID :</strong> Utilisation d'interfaces, énumération, design pattern et
+                            respect des principes SOLID.</li>
                         <li><strong>Algorithmique :</strong> Pathfinding et optimisation de déplacements.</li>
                         <li><strong>Rigueur :</strong> Gestion de version (Git) propre et code documenté.</li>
                     </ul>
                 </div>
-                
-                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux projets</a>
+
+                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
+                    projets</a>
             </div>
 
             <aside class="project-sidebar">
@@ -142,22 +165,39 @@
     </footer>
 
     <script>
-    function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
-    const hamburgerIcon = document.querySelector('.hamburger i'); 
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
+            const hamburgerIcon = document.querySelector('.hamburger i');
 
-    navLinks.classList.toggle('mobile-active');
+            navLinks.classList.toggle('mobile-active');
 
-    // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
-    if (navLinks.classList.contains('mobile-active')) {
-        hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times');
-    } else {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-    }
-}
-</script>
+            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
+            if (navLinks.classList.contains('mobile-active')) {
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            } else {
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Lightbox Functions
+        function openLightbox(imageSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightbox.style.display = 'block';
+            lightboxImg.src = imageSrc;
+            lightboxCaption.innerHTML = captionText;
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>
