@@ -1955,6 +1955,52 @@ footer {
   transform: rotate(90deg);
 }
 
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10002;
+  transition: background 0.3s;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .lightbox-prev,
+  .lightbox-next {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
 /* Responsive pour la grille */
 @media (max-width: 768px) {
   .visual-proofs-grid {

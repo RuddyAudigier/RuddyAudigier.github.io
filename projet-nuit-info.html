@@ -253,42 +253,83 @@
                     <h2>Documentation du Projet</h2>
 
                     <div class="visual-proofs-grid">
-                        <!-- Image 1 : Présentation du sujet -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/nuit-info-presentation.jpg', 'Présentation du sujet NIRD 2025 : Le Village Numérique Résistant')">
+                        <!-- Carte 1 : Documentation -->
+                        <div class="proof-card" id="card-doc"
+                            data-images='["img/nuit-info-presentation.jpg", "img/nuit-info-details.jpg"]'
+                            data-captions='["Présentation du sujet NIRD 2025 : Le Village Numérique Résistant", "Acteurs du projet NIRD et activités de la démarche"]'
+                            onclick="openLightboxGroup('card-doc')">
                             <div class="proof-image-wrapper">
-                                <img src="img/nuit-info-presentation.jpg" alt="Présentation du sujet NIRD 2025">
+                                <img src="img/nuit-info-presentation.jpg" alt="Documentation du projet">
                                 <div class="proof-overlay">
                                     <i class="fas fa-expand-alt"></i>
                                 </div>
                             </div>
                             <div class="proof-info">
-                                <h4>Présentation du Défi NIRD 2025</h4>
-                                <p>Sujet officiel : "Le Village Numérique Résistant"</p>
+                                <h4>Documentation du Projet</h4>
+                                <p>Présentation et détails du défi NIRD</p>
                             </div>
                         </div>
 
-                        <!-- Image 2 : Détails du projet -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/nuit-info-details.jpg', 'Acteurs du projet NIRD et activités de la démarche')">
+                        <!-- Carte 2 : Jeu 1 (Village & Quizz) -->
+                        <div class="proof-card" id="card-jeu1"
+                            data-images='["img/preuves/village.png", "img/preuves/quizz.png"]'
+                            data-captions='["Interface du village numérique résistant", "Quizz sur le thème de décathlon et du sport"]'
+                            onclick="openLightboxGroup('card-jeu1')">
                             <div class="proof-image-wrapper">
-                                <img src="img/nuit-info-details.jpg"
-                                    alt="Détails du projet NIRD : acteurs et activités">
+                                <img src="img/preuves/village.png" alt="Jeu 1 : Village et Quizz">
                                 <div class="proof-overlay">
                                     <i class="fas fa-expand-alt"></i>
                                 </div>
                             </div>
                             <div class="proof-info">
-                                <h4>Acteurs et Activités du Projet</h4>
-                                <p>Démarche NIRD : inclusion, responsabilité et durabilité</p>
+                                <h4>Jeu 1 : Village & Quizz</h4>
+                                <p>Exploration du village et mini-jeux</p>
                             </div>
                         </div>
+
+                        <!-- Carte 3 : Jeu 2 -->
+                        <div class="proof-card" id="card-jeu2"
+                            data-images='["img/preuves/Jeu2.png", "img/preuves/QuestionJeu2.png"]'
+                            data-captions='["Interface du jeu numéro 2", "Un exemple de question dans le jeu numéro 2"]'
+                            onclick="openLightboxGroup('card-jeu2')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/preuves/Jeu2.png" alt="Jeu 2">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Jeu 2 : Questions & Réponses</h4>
+                                <p>Interface et exemples de questions</p>
+                            </div>
+                        </div>
+
+                        <!-- Carte 4 : Jeu 3 -->
+                        <div class="proof-card" id="card-jeu3"
+                            data-images='["img/preuves/ecranAccueilJeu3.png", "img/preuves/imageJeuRaphael.png"]'
+                            data-captions='["L écran d accueil du jeu numéro 3", "L écran principale du jeu numéro 3"]'
+                            onclick="openLightboxGroup('card-jeu3')">
+                            <div class="proof-image-wrapper">
+                                <img src="img/preuves/ecranAccueilJeu3.png" alt="Jeu 3">
+                                <div class="proof-overlay">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                            <div class="proof-info">
+                                <h4>Jeu 3 : Aventure Interactive</h4>
+                                <p>Écrans d'accueil et de jeu</p>
+                            </div>
+                        </div>
+
                     </div>
+
 
                     <!-- Lightbox Modal -->
                     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
                         <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                        <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
                         <img class="lightbox-content" id="lightbox-img">
+                        <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
                         <div id="lightbox-caption"></div>
                     </div>
                 </div>
@@ -369,17 +410,97 @@
             }
         }
 
-        function openLightbox(imageSrc, caption) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
+        // --- Slideshow Logic ---
+        function startSlideshows() {
+            const cards = document.querySelectorAll('.proof-card[data-images]');
 
-            lightboxImg.src = imageSrc;
-            lightboxCaption.textContent = caption;
+            cards.forEach(card => {
+                const images = JSON.parse(card.dataset.images);
+                if (images.length <= 1) return;
+
+                let index = 0;
+                const imgElement = card.querySelector('img');
+
+                // Ensure transition property exists
+                imgElement.style.transition = 'opacity 0.2s ease';
+
+                setInterval(() => {
+                    index = (index + 1) % images.length;
+                    imgElement.style.opacity = '0.7';
+                    setTimeout(() => {
+                        imgElement.src = images[index];
+                        imgElement.style.opacity = '1';
+                    }, 200);
+                }, 1500); // Change every 1.5 seconds
+            });
+        }
+
+        // Initialize slideshows
+        document.addEventListener('DOMContentLoaded', startSlideshows);
+
+
+        // --- Lightbox Logic ---
+        let currentGroup = [];
+        let currentCaptions = [];
+        let currentIndex = 0;
+
+        function openLightboxGroup(cardId) {
+            const card = document.getElementById(cardId);
+            if (!card) return;
+
+            currentGroup = JSON.parse(card.dataset.images);
+            currentCaptions = JSON.parse(card.dataset.captions);
+            currentIndex = 0;
+
+            updateLightboxContent();
+
+            const lightbox = document.getElementById('lightbox');
             lightbox.style.display = 'flex';
             setTimeout(() => {
                 lightbox.classList.add('active');
             }, 50);
+        }
+
+        // Keep old function for backward compatibility if needed (e.g. sidebar)
+        function openLightbox(imageSrc, caption) {
+            currentGroup = [imageSrc];
+            currentCaptions = [caption];
+            currentIndex = 0;
+
+            updateLightboxContent();
+
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 50);
+        }
+
+        function updateLightboxContent() {
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            // Simple fade effect
+            lightboxImg.style.opacity = '0.5';
+            setTimeout(() => {
+                lightboxImg.src = currentGroup[currentIndex];
+                lightboxCaption.textContent = currentCaptions[currentIndex];
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
+
+        function changeLightboxImage(direction, event) {
+            if (event) event.stopPropagation(); // Prevent closing lightbox
+
+            currentIndex += direction;
+
+            if (currentIndex >= currentGroup.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = currentGroup.length - 1;
+            }
+
+            updateLightboxContent();
         }
 
         function closeLightbox() {
@@ -389,6 +510,19 @@
                 lightbox.style.display = 'none';
             }, 300);
         }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    changeLightboxImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeLightboxImage(1);
+                } else if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
     </script>
 
     <script src="scroll-animations.js"></script>
