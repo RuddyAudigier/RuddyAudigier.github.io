@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruddy Audigier - Développeur Informatique</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -65,16 +65,16 @@
                                 </span>
                             </a>
                         </li>
-                    </ul>
-                <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
-                <li>
-                    <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
-                        <i class="fas fa-file-download" aria-hidden="true"></i>
-                        <span>CV</span>
-                    </a>
                 </li>
-                </li>
-        </nav>
+            </ul>
+            </li>
+            <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
+            <li>
+                <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
+                    <i class="fas fa-file-download" aria-hidden="true"></i>
+                    <span>CV</span>
+                </a>
+            </li>
     </header>
 
 
@@ -155,6 +155,20 @@
                             <i class="fas fa-eye" style="margin-right:8px"></i>Voir mon CV
                         </button>
                     </div>
+
+                    <div class="hero-tech-stack">
+                        <span>Stack Principale :</span>
+                        <div class="stack-icons">
+                            <i class="fab fa-react" title="React.js"></i>
+                            <img src="img/logoLangage/processed/logoCSharp.png" alt="C#" title="C#"
+                                class="stack-icon-img logo-csharp">
+                            <img src="img/logoLangage/processed/logoCpp.png" alt="C++" title="C++"
+                                class="stack-icon-img logo-cpp">
+                            <img src="img/logoLangage/processed/logoUnrealEngine.png" alt="Unreal Engine"
+                                title="Unreal Engine" class="stack-icon-img logo-unreal">
+                            <i class="fas fa-database" title="SQL"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="hero-controller-3d" id="heroController">
@@ -169,63 +183,272 @@
         <!-- Section À Propos -->
         <section id="about">
             <div class="container">
-                <h2 class="section-title">À propos de moi</h2>
-
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>Bonjour, je m'appelle <strong>Ruddy Audigier</strong>, j'ai 18 ans. Je me définis avant tout
-                            comme quelqu'un de curieux et déterminé. J'aime explorer de nouveaux domaines, comprendre
-                            comment les choses fonctionnent et repousser mes limites.</p>
-
-                        <div class="about-highlight">
-                            "Mon parcours débute par une passion pour l'E-sport (Rocket League, Apex Legends), qui a
-                            éveillé ma curiosité pour le mécanisme interne des jeux vidéo."
+                <h2 class="section-title">Mon Parcours & Compétences</h2>
+                <!-- Objectif Section (Standalone) -->
+                <div class="objectif-section">
+                    <h3><img src="img/target.png" alt="" class="section-icon"> Mon Objectif</h3>
+                    <div class="objectif-card">
+                        <div class="objectif-header">
+                            <div class="status-badge">
+                                <span class="pulse-dot"></span>
+                                Recherche de stage
+                            </div>
+                            <h4>Développeur Gameplay / Logiciel</h4>
                         </div>
-
-                        <p>Cette curiosité s'est confirmée lors de mon stage de 3ème en géomatique, où j'ai découvert
-                            l'importance des bases de données cachées derrière les interfaces utilisateur. J'ai ensuite
-                            approfondi ma logique en spécialité NSI (Numérique et Sciences Informatiques), trouvant une
-                            réelle satisfaction à résoudre des problèmes algorithmiques complexes.</p>
-
-                        <p>J'ai fait le choix stratégique de l'<strong>IUT</strong> pour son approche pragmatique. Je ne
-                            voulais pas d'un apprentissage par cœur, mais d'une formation basée sur la pratique et les
-                            projets concrets. Après une première année à Dijon, j'ai transféré mon dossier à
-                            <strong>l'IUT de Montpellier</strong> pour intégrer le parcours <em>RACDV (Réalisation
-                                d'Applications)</em>, en parfaite adéquation avec mon projet professionnel.
+                        <p class="objectif-desc">
+                            De part ma rencontre avec l'informatique lié au jeu vidéo, j'ai toujours voulu faire ce
+                            métier.
+                            Je suis convaincu que c'est ma vocation et je souhaite voir les gens s'amuser avec les jeux
+                            vidéo que j'aurai programmés.
                         </p>
+                        <div class="objectif-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Période</span>
+                                    <span class="detail-value">Avril 2026 - Juin 2026</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Durée</span>
+                                    <span class="detail-value">10 à 12 semaines</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Lieu</span>
+                                    <span class="detail-value">Montpellier / Lyon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <p><strong>Mon objectif ?</strong>
-                            Me spécialiser dans la programmation de jeux vidéo (Gameplay ou Engine Programmer).
-                        </p>
-                        <div class="about-highlight">
-                            "C'est ma vocation, et je souhaite voir les gens s'amuser avec les jeux vidéo que j'aurai
-                            programmés."
+                <div class="about-grid-new">
+                    <!-- Colonne Gauche : Timeline -->
+                    <div class="about-timeline">
+
+                        <h3><img src="img/clock.png" alt="" class="section-icon"> Mon Histoire</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2024 - Aujourd'hui</h4>
+                                <p><strong>BUT Informatique (2ème année) - IUT Montpellier</strong></p>
+                                <p>Parcours RACDV (Réalisation d'Applications). Spécialisation en développement logiciel
+                                    et gestion de projets complexes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2023 - 2024</h4>
+                                <p><strong>BUT Informatique (1ère année) - IUT Dijon</strong></p>
+                                <p>Fondamentaux de la programmation, bases de données, et travail en équipe sur des
+                                    projets réels.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2020 - 2023</h4>
+                                <p><strong>Baccalauréat Général - Spécialité NSI et HGGSP</strong>
+                                <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: -0.9rem; margin-bottom: 1rem;">Mention bien</span></p>
+                                <p>Découverte de la programmation et de l'algorithmique. Passion confirmée pour le
+                                    développement.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2016 - 2020</h4>
+                                <p><strong>E-sport - Rocket League, Apex Legends</strong></p>
+                                <p>Mon parcours débute par une passion pour l'E-sport (Rocket League, Apex Legends), qui a éveillé ma curiosité pour le mécanisme interne des jeux vidéo.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Années d'études sup.</span>
+                    <!-- Colonne Droite : Arsenal Technique -->
+                    <div class="about-skills-preview">
+                        <h3 class="arsenal-title"><img src="img/epee.png" alt="" class="section-icon"> Arsenal Technique
+                        </h3>
+
+                        <!-- Partie 1 : Outils de Prédilection -->
+                        <div class="arsenal-section">
+                            <h4 class="arsenal-subtitle">Mes outils de prédilections</h4>
+                            <div class="skills-highlight-grid">
+                                <div class="skill-highlight">
+                                    <div class="skill-icon-large">
+                                        <img src="img/logoLangage/processed/logoUnity.png" alt="Unity"
+                                            title="Unity" class="stack-icon-img logo-unity">
+                                    </div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">Unity</span>
+                                        <span class="skill-desc">Développement Avancé</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-highlight">
+                                    <div class="skill-icon-large">
+                                        <img src="img/logoLangage/processed/logoCSharp.png" alt="C#" title="C#"
+                                            class="stack-icon-img logo-csharp">
+                                    </div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">C++ / C#</span>
+                                        <span class="skill-desc">Architecture & Optimisation</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="stat-card interactable" onclick="openModal('langModal')" style="cursor: pointer;">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">Langages maîtrisés</span>
-                            <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
+                        <!-- Partie 2 : Polyvalence & Outils (Carrousel) -->
+                        <div class="arsenal-section">
+                            <h4 class="arsenal-subtitle">Polyvalence et Outils</h4>
+                            <div class="skills-carousel-container">
+                                <!-- Filter Bar -->
+                                <div class="skills-filter">
+                                    <button class="filter-btn active" data-filter="web">Web</button>
+                                    <button class="filter-btn" data-filter="poo">POO</button>
+                                    <button class="filter-btn" data-filter="bdd">BDD</button>
+                                    <button class="filter-btn" data-filter="game">Jeu Vidéo</button>
+                                </div>
+
+                                <!-- Carousel Wrapper -->
+                                <div class="carousel-wrapper">
+                                    <button class="carousel-nav prev" aria-label="Précédent"><i
+                                            class="fas fa-chevron-left"></i></button>
+
+                                    <div class="skills-track-container">
+                                        <div class="skills-track" id="skillsTrack">
+                                            <!-- Web -->
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-html5" style="color: #e34f26;"></i>
+                                                <span>HTML</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-css3-alt" style="color: #1572b6;"></i>
+                                                <span>CSS</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-js" style="color: #f7df1e;"></i>
+                                                <span>JavaScript</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web poo">
+                                                <img src="img/logoLangage/processed/logoPhp.png" alt="PHP"
+                                                    class="skill-icon-img">
+                                                <span>PHP</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-react" style="color: #61dafb;"></i>
+                                                <span>React.js</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fas fa-bolt" style="color: #ffc107;"></i>
+                                                <span>Vite</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-angular" style="color: #dd0031;"></i>
+                                                <span>Angular</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="web">
+                                                <i class="fab fa-figma" style="color: #f24e1e;"></i>
+                                                <span>Figma</span>
+                                            </div>
+
+                                            <!-- POO / Game Shared -->
+                                            <div class="skill-card-mini" data-category="poo game">
+                                                <img src="img/logoLangage/processed/logoCSharp.png" alt="C#"
+                                                    class="skill-icon-img">
+                                                <span>C#</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="poo">
+                                                <img src="img/logoLangage/processed/logoJava.png" alt="Java"
+                                                    class="skill-icon-img">
+                                                <span>Java</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="poo">
+                                                <i class="fab fa-python" style="color: #3776ab;"></i>
+                                                <span>Python</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="poo game">
+                                                <img src="img/logoLangage/processed/logoCpp.png" alt="C++"
+                                                    class="skill-icon-img">
+                                                <span>C++</span>
+                                            </div>
+
+                                            <!-- BDD -->
+                                            <div class="skill-card-mini" data-category="bdd">
+                                                <i class="fas fa-database" style="color: #f29111;"></i>
+                                                <span>SQL</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="bdd">
+                                                <i class="fas fa-server" style="color: #c60000;"></i>
+                                                <span>PL/SQL</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="bdd">
+                                                <i class="fas fa-table" style="color: #f29111;"></i>
+                                                <span>phpMyAdmin</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="bdd">
+                                                <i class="fas fa-database" style="color: #00758f;"></i>
+                                                <span>MySQL</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="bdd">
+                                                <i class="fas fa-hdd" style="color: #f80000;"></i>
+                                                <span>Oracle</span>
+                                            </div>
+
+                                            <!-- Game Specific -->
+                                            <div class="skill-card-mini" data-category="game">
+                                                <img src="img/logoLangage/processed/logoUnity.png" alt="Unity"
+                                                    class="skill-icon-img">
+                                                <span>Unity</span>
+                                            </div>
+                                            <div class="skill-card-mini" data-category="game">
+                                                <img src="img/logoLangage/processed/logoUnrealEngine.png"
+                                                    alt="Unreal Engine" class="skill-icon-img">
+                                                <span>Unreal Engine</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-nav next" aria-label="Suivant"><i
+                                            class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="skills-more">
+                                <div class="skills-actions">
+                                    <button class="btn-stylish" onclick="openModal('langModal')">
+                                        <i class="fas fa-code"></i> Langages de programmation
+                                    </button>
+                                    <button class="btn-stylish" onclick="openModal('frameworkModal')">
+                                        <i class="fas fa-layer-group"></i> Frameworks & Outils
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Unity, Unreal Engine, React.js, Bootstrap, -->
-
-                        <div class="stat-card interactable" onclick="openModal('frameworkModal')"
-                            style="cursor: pointer;">
-                            <span class="stat-number">4</span>
-                            <span class="stat-label">Frameworks expérimentés</span>
-                            <div class="click-hint"><i class="fas fa-eye"></i> Voir</div>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Investissement</span>
+                        <!-- Partie 3 : Compétences Clés -->
+                        <div class="arsenal-section">
+                            <h4 class="arsenal-subtitle">Compétences clés</h4>
+                            <div class="soft-skills">
+                                <span class="soft-tag">💡 Curiosité</span>
+                                <span class="soft-tag">🧩 Résolution de problèmes</span>
+                                <span class="soft-tag">🤝 Travail d'équipe</span>
+                                <span class="soft-tag">🚀 Autonomie</span>
+                                <span class="soft-tag">🧹 Clean Code</span>
+                                <span class="soft-tag">🏗️ Architecture Logicielle</span>
+                                <span class="soft-tag">⚡ Optimisation</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -245,7 +468,7 @@
                                 2</span>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Application Web & Gestion Agile</h3>
+                            <h3 class="card-title">Plateforme Web PHP & Gestion Agile</h3>
                             <p style="color: var(--text-muted)">Développement complet d'une solution client avec
                                 authentification sécurisée et architecture maintenable.</p>
                             <div class="card-tags">
@@ -265,7 +488,7 @@
                             <span class="tag" style="background: white; color: var(--bg-dark);">Projet IA - BUT 1</span>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">IA jouant à un jeu</h3>
+                            <h3 class="card-title">IA Autonome (Pathfinding A*)</h3>
                             <p style="color: var(--text-muted)">Création d'une IA qui réalise le meilleur chemin
                                 possible sur un jeu donné. Objectif : ramasser les diamants et atteindre la sortie.</p>
                             <div class="card-tags">
@@ -284,7 +507,7 @@
                                 BUT 1</span>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Exploration algorithmique & Matchmaking</h3>
+                            <h3 class="card-title">Moteur de Matchmaking (C#)</h3>
                             <p style="color: var(--text-muted)">Analyse de performance et implémentation d'algorithme en
                                 C# sur un systeme de matchmaking.</p>
                             <div class="card-tags">
@@ -305,7 +528,7 @@
                                 Application Web</span>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Evenement — Nuit de l'info</h3>
+                            <h3 class="card-title">App React.js - Nuit de l'Info</h3>
                             <p style="color: var(--text-muted)">Application réalisée en <strong>React.js</strong> et
                                 déployée pour l'événement "Nuit de l'info" (IUT).</p>
                             <div class="card-tags">
@@ -325,7 +548,20 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <a href="https://github.com/RuddyAudigier" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ruddy-audigier/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ruddy.audigier@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+            </div>
         </div>
     </footer>
 
@@ -405,13 +641,13 @@
     <div id="frameworkModal" class="modal-overlay" onclick="closeModal(event, 'frameworkModal')">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Mes Frameworks</h3>
+                <h3>Mes Frameworks et outils</h3>
                 <span class="close-btn" onclick="closeModal(event, 'frameworkModal')">&times;</span>
             </div>
 
             <div class="modal-body">
-                <!-- Catégorie 1 : Web -->
-                <h4 class="category-title" style="--d: 0s">Développement Web</h4>
+                <!-- Catégorie 1 : Web & Design -->
+                <h4 class="category-title" style="--d: 0s">Web & Design</h4>
                 <div class="skills-grid">
                     <div class="skill-item" style="--i:1; --color: #61dafb;">
                         <i class="fab fa-react"></i>
@@ -421,18 +657,43 @@
                         <i class="fab fa-bootstrap"></i>
                         <span>Bootstrap</span>
                     </div>
+                    <div class="skill-item" style="--i:3; --color: #ffc107;">
+                        <i class="fas fa-bolt"></i>
+                        <span>Vite</span>
+                    </div>
+                    <div class="skill-item" style="--i:4; --color: #f24e1e;">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
                 </div>
 
                 <!-- Catégorie 2 : Moteurs de Jeu -->
                 <h4 class="category-title" style="--d: 0.2s">Moteurs de Jeu</h4>
                 <div class="skills-grid">
-                    <div class="skill-item" style="--i:3; --color: #ffffff;">
+                    <div class="skill-item" style="--i:5; --color: #ffffff;">
                         <i class="fab fa-unity"></i>
                         <span>Unity</span>
                     </div>
-                    <div class="skill-item" style="--i:4; --color: #ffffff;">
+                    <div class="skill-item" style="--i:6; --color: #ffffff;">
                         <i class="fas fa-gamepad"></i>
                         <span>Unreal Engine</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 3 : Bases de Données -->
+                <h4 class="category-title" style="--d: 0.4s">Bases de Données</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:7; --color: #00758f;">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-item" style="--i:8; --color: #f80000;">
+                        <i class="fas fa-hdd"></i>
+                        <span>Oracle</span>
+                    </div>
+                    <div class="skill-item" style="--i:9; --color: #f29111;">
+                        <i class="fas fa-table"></i>
+                        <span>PhpMyAdmin</span>
                     </div>
                 </div>
             </div>
@@ -440,6 +701,94 @@
     </div>
 
 
+
+    <!-- MODALE TOUS LES OUTILS (Nouvelle) -->
+    <div id="allToolsModal" class="modal-overlay" onclick="closeModal(event, 'allToolsModal')">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Arsenal Complet</h3>
+                <span class="close-btn" onclick="closeModal(event, 'allToolsModal')">&times;</span>
+            </div>
+
+            <div class="modal-body">
+                <div class="skills-grid-full">
+                    <!-- Section Langages -->
+                    <div class="full-skill-category">
+                        <h4><i class="fas fa-code"></i> Langages</h4>
+                        <div class="mini-skill-list">
+                            <span class="mini-skill"><i class="fab fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                            <span class="mini-skill"><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS3</span>
+                            <span class="mini-skill"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                            <span class="mini-skill"><i class="fab fa-php" style="color: #8993be;"></i> PHP</span>
+                            <span class="mini-skill"><i class="fab fa-python" style="color: #3776ab;"></i> Python</span>
+                            <span class="mini-skill"><i class="fab fa-java" style="color: #5382a1;"></i> Java</span>
+                            <span class="mini-skill"><i class="fas fa-code" style="color: #68217a;"></i> C#</span>
+                            <span class="mini-skill"><i class="fas fa-code-branch" style="color: #00599c;"></i>
+                                C++</span>
+                            <span class="mini-skill"><i class="fas fa-microchip" style="color: #283593;"></i> C</span>
+                            <span class="mini-skill"><i class="fas fa-terminal" style="color: #4eaa25;"></i> Bash</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Frameworks & Libs -->
+                    <div class="full-skill-category">
+                        <h4><i class="fas fa-layer-group"></i> Frameworks & Libs</h4>
+                        <div class="mini-skill-list">
+                            <span class="mini-skill"><i class="fab fa-react" style="color: #61dafb;"></i>
+                                React.js</span>
+                            <span class="mini-skill"><i class="fab fa-angular" style="color: #dd0031;"></i>
+                                Angular</span>
+                            <span class="mini-skill"><i class="fab fa-bootstrap" style="color: #7952b3;"></i>
+                                Bootstrap</span>
+                            <span class="mini-skill"><i class="fas fa-bolt" style="color: #ffc107;"></i> Vite</span>
+                            <span class="mini-skill"><i class="fas fa-wind" style="color: #38bdf8;"></i> Tailwind</span>
+                            <span class="mini-skill"><i class="fab fa-symfony" style="color: #fff;"></i> Symfony</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Tools & Devops -->
+                    <div class="full-skill-category">
+                        <h4><i class="fas fa-tools"></i> Outils & DevOps</h4>
+                        <div class="mini-skill-list">
+                            <span class="mini-skill"><i class="fab fa-git-alt" style="color: #f05032;"></i> Git</span>
+                            <span class="mini-skill"><i class="fab fa-github" style="color: #fff;"></i> GitHub</span>
+                            <span class="mini-skill"><i class="fab fa-docker" style="color: #2496ed;"></i> Docker</span>
+                            <span class="mini-skill"><i class="fab fa-figma" style="color: #f24e1e;"></i> Figma</span>
+                            <span class="mini-skill"><i class="fas fa-tasks" style="color: #0079bf;"></i>
+                                Trello/Jira</span>
+                            <span class="mini-skill"><i class="fas fa-cube" style="color: #fff;"></i> Blender</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Game Dev -->
+                    <div class="full-skill-category">
+                        <h4><i class="fas fa-gamepad"></i> Game Dev</h4>
+                        <div class="mini-skill-list">
+                            <span class="mini-skill"><i class="fab fa-unity" style="color: #fff;"></i> Unity</span>
+                            <span class="mini-skill"><i class="fas fa-gamepad" style="color: #fff;"></i> Unreal Engine
+                                5</span>
+                            <span class="mini-skill"><i class="fas fa-vr-cardboard" style="color: #ff9800;"></i> VR
+                                Dev</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Data -->
+                    <div class="full-skill-category">
+                        <h4><i class="fas fa-database"></i> Data</h4>
+                        <div class="mini-skill-list">
+                            <span class="mini-skill"><i class="fas fa-database" style="color: #00758f;"></i>
+                                MySQL</span>
+                            <span class="mini-skill"><i class="fas fa-server" style="color: #f80000;"></i> Oracle</span>
+                            <span class="mini-skill"><i class="fas fa-table" style="color: #336791;"></i>
+                                PostgreSQL</span>
+                            <span class="mini-skill"><i class="fas fa-project-diagram" style="color: #f29111;"></i>
+                                PL/SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- MODALE CV (Visionneuse PDF) -->
     <div id="cvModal" class="modal-overlay" onclick="closeModal(event, 'cvModal')">
@@ -511,6 +860,7 @@
         }
     </script>
 
+    <script src="main.js"></script>
     <script src="scroll-animations.js"></script>
 </body>
 
