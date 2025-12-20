@@ -28,7 +28,7 @@
                     <a href="index.html#projects" class="nav-link">Réalisations</a>
                     <ul class="dropdown-menu">
                         <li class="proj proj-web">
-                            <a href="projet-web.html" class="nav-link menu-active">
+                            <a href="projet-web.html" class="nav-link menu-active" onclick="toggleMenu()">
                                 <span class="proj-icon">&lt;/&gt;</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet site web - BUT 2</span>
@@ -37,7 +37,7 @@
                             </a>
                         </li>
                         <li class="proj proj-ia">
-                            <a href="projet-ia.html">
+                            <a href="projet-ia.html" onclick="toggleMenu()">
                                 <span class="proj-icon">🧠</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet IA - BUT 1</span>
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                         <li class="proj proj-opt">
-                            <a href="projet-optimisation.html">
+                            <a href="projet-optimisation.html" onclick="toggleMenu()">
                                 <span class="proj-icon">⚙️</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet Optimisation - BUT 1</span>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="proj proj-nuit">
-                            <a href="projet-nuit-info.html" class="nav-link">
+                            <a href="projet-nuit-info.html" onclick="toggleMenu()">
                                 <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
                                         aria-hidden="true"></i></span>
                                 <span class="proj-content">
@@ -65,6 +65,7 @@
                             </a>
                         </li>
                     </ul>
+                </li>
                 <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
                 <li>
                     <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
@@ -72,12 +73,13 @@
                         <span>CV</span>
                     </a>
                 </li>
+            </ul>
         </nav>
     </header>
 
 
 
-    <section class="project-hero hero-bg-web">
+    <section class="project-intro-modern theme-web">
         <!-- Floating Code Animation -->
         <div class="hero-animation-web">
             <span class="code-particle" style="left: 10%; animation-delay: 0s;">&lt;/&gt;</span>
@@ -89,201 +91,420 @@
             <span class="code-particle" style="left: 70%; animation-delay: 0.5s;">;</span>
             <span class="code-particle" style="left: 80%; animation-delay: 3.5s;">?</span>
             <span class="code-particle" style="left: 90%; animation-delay: 1.8s;">:</span>
-            <span class="code-particle" style="left: 15%; animation-delay: 2.8s;">&amp;&amp;</span>
-            <span class="code-particle" style="left: 25%; animation-delay: 0.8s;">||</span>
-            <span class="code-particle" style="left: 35%; animation-delay: 3.2s;">!</span>
-            <span class="code-particle" style="left: 45%; animation-delay: 1.2s;">*</span>
-            <span class="code-particle" style="left: 55%; animation-delay: 2.2s;">+</span>
-            <span class="code-particle" style="left: 65%; animation-delay: 0.3s;">/</span>
-            <span class="code-particle" style="left: 75%; animation-delay: 3.8s;">#</span>
-            <span class="code-particle" style="left: 85%; animation-delay: 1.6s;">@</span>
-            <span class="code-particle" style="left: 95%; animation-delay: 2.6s;">%</span>
         </div>
 
-        <div class="container">
-            <i class="fas fa-code hero-icon-large"></i>
-            <br>
-            <div class="hero-tags">
-                <span class="hero-tag">PHP</span>
-                <span class="hero-tag">Responsable client</span>
-                <span class="hero-tag">SQL</span>
-                <span class="hero-tag">SOLID</span>
-                <span class="hero-tag">Scrum Master</span>
-                <span class="hero-tag">Sécurité</span>
-            </div>
+        <i class="fas fa-laptop-code intro-moon-decoration"></i>
 
-            <h1>Développement Web & Méthode Agile</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Conception d'une application
-                client complète avec focus sur la sécurité et la maintenabilité.</p>
+        <div class="container">
+            <nav class="project-breadcrumbs">
+                <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i>
+                <a href="index.html#projects">Réalisations</a> <i class="fas fa-chevron-right"></i>
+                <span>Projet Web</span>
+            </nav>
+
+            <div class="intro-grid">
+                <div class="intro-main">
+                    <span class="section-tagline">PHP · SQL · Architecture SOLID</span>
+                    <h1 class="project-title-large">Développement Web & <span class="highlight-web">Méthode Agile</span>
+                    </h1>
+                    <p class="project-description-lead">
+                        Conception d'une application client robuste et sécurisée, pilotée par une méthodologie Scrum
+                        rigoureuse pour garantir qualité et maintenabilité.
+                    </p>
+
+                    <div class="intro-actions">
+                        <div class="event-badge">
+                            <i class="fas fa-users-cog"></i> Sprint Review Validée
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-sidebar-stats">
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">3 Mois</span>
+                            <span class="stat-txt">Cycle Développement</span>
+                        </div>
+                    </div>
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">SOLID</span>
+                            <span class="stat-txt">Rigueur Architecturale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
         <div class="project-meta-grid">
-
             <!-- Contenu Principal -->
             <div class="project-main-content">
-
-                <div class="content-block">
-                    <h2>Contexte et Enjeux</h2>
-                    <p>Ce projet s'inscrit dans une commande académique simulant une situation professionnelle réelle.
-                        En équipe de 4, nous devions livrer au client une application web fonctionnel connecté à une
-                        base de données relationnelles.</p>
-                    <p><strong>Les contraintes techniques étaient strictes :</strong> utilisation native de PHP,
-                        implémentation d'un framework CSS, et application rigoureuse de la méthodologie Scrum.</p>
-                </div>
-
-                <div class="content-block" id="roles">
-                    <h2>Ma Contribution et mes Responsabilités</h2>
-
-                    <h3>1. Gestion de Projet & Relation Client</h3>
-                    <p>J'ai endossé le rôle clé de <strong>Product Owner</strong>. Ma mission consistait à faire
-                        l'interface entre mon équipe et le client :</p>
-                    <ul>
-                        <li>Organisation et conduite des réunions avec le client.</li>
-                        <li>Collecte des besoins et clarification des questions de mon équipe sur le projet.</li>
-                        <li>Traduction des besoins client en spécifications techniques claires (User Stories) pour
-                            faciliter l'implémentation.</li>
-                    </ul>
-                    <p>J'ai également agi en tant que <strong>Scrum Master</strong> sur un sprint complet. Ma mission
-                        consistait à faire respecter la méthode Scrum à mon équipe :</p>
-                    <ul>
-                        <li>Distribution des tâches selon les forces de chacun.</li>
-                        <li>Organisation de réunion quotidienne (Daily meeting) afin de suivre l'avancement de chacun.
-                        </li>
-                        <li>Relever les problèmes rencontrés par les membres de l'équipe sur leurs tâches respectives.
-                        </li>
-                    </ul>
-
-                    <h3>2. Architecture Technique & Qualité du Code</h3>
-                    <p>Sur le plan technique, je me suis concentré sur la robustesse du backend :</p>
-                    <ul>
-                        <li><strong>Refactoring & Clean Code :</strong> J'ai restructuré le code après chaque sprint
-                            pour respecter les principes <strong>SOLID</strong> et rendre l'application évolutive.
-                            Utilisation de Design Patterns pour découpler les composants.</li>
-                        <li><strong>Sécurité Avancée :</strong> Implémentation d'un système d'authentification robuste
-                            avec hachage des mots de passe (technique du "Sel et Poivre") et gestion des droits d'accès
-                            (RBAC) selon les rôles utilisateurs.</li>
-                        <li><strong>Optimisation BDD :</strong> Restructuration du schéma SQL et ajout d'index
-                            stratégiques pour accélérer les temps de réponse des requêtes complexes.</li>
-                    </ul>
+                <!-- CONTEXTE -->
+                <div class="project-section-header">
+                    <span class="section-tagline">Collaboration & Méthodologie</span>
+                    <h2>Contexte Stratégique</h2>
                 </div>
 
                 <div class="content-block">
-                    <h2>Compétences Acquises</h2>
-                    <p>Ce projet m'a appris à :</p>
-                    <ul>
-                        <li>Gérer la pression et les deadlines strictes inhérentes aux projets longs.</li>
-                        <li>Discuter et négocier avec le client en fonction de ses demandes.</li>
-                        <li>Retranscrire les besoins du client à mon équipe de manière compréhensible et claire.</li>
-                        <li>Comprendre l'intérêt vital des principes SOLID : un code propre aujourd'hui est un code
-                            maintenable demain.</li>
-                        <li>Maîtriser les bonnes pratiques de versionning sous <strong>GitLab</strong> (Merge Requests,
-                            Code Review, Refactoring de branche).</li>
-                        <li>Sécuriser une application web contre les failles courantes.</li>
-                    </ul>
-                </div>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-muted); margin-bottom: 2.5rem;">
+                        Ce projet s'inscrit dans une simulation professionnelle réelle : la conception d'une application
+                        web complète pour un client académique. En équipe de 4, l'enjeu était de transformer un cahier
+                        des charges complexe en une solution logicielle <strong>robuste</strong>,
+                        <strong>maintenable</strong> et <strong>sécurisée</strong>, tout en appliquant les principes de
+                        la méthodologie <strong>Agile Scrum</strong> sur une période de 3 mois.
+                    </p>
 
-                <div class="content-block">
-                    <h2> Illustrations de ma participation </h2>
-
-                    <div class="visual-proofs-grid">
-                        <!-- Image 1 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/partieMDPCode.png', 'Partie de code pour hacher et verifier les mots de passe')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/partieMDPCode.png"
-                                    alt="Partie de code pour hacher et verfiier les mots de passe">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Securité des mots de passe et des données personnelles</h4>
-                                <p>Code pour hacher et verifier les mots de passe</p>
-                            </div>
+                    <div class="pro-strategy-grid"
+                        style="margin-bottom: 0; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                        <!-- Relation Client -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-design">Relation Client</span>
+                            <h3>Analyse des Besoins</h3>
+                            <p>
+                                Traduction des exigences métier en User Stories exploitables par l'équipe technique,
+                                assurant un alignement parfait avec les attentes du client final.
+                            </p>
                         </div>
 
-                        <!-- Image 2 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/vuVoter.png', 'Page d\'un utilisateur avec les questions pour lesquelles il peut voter')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/vuVoter.png"
-                                    alt="Page d'un utilisateur avec les questions pour lesquelles il peut voter">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Interface utilisateur simplifié pour une expérience optimale</h4>
-                                <p>Page d'un utilisateur avec les questions pour lesquelles il peut voter</p>
-                            </div>
+                        <!-- Méthode Scrum -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-strategy">Agilité</span>
+                            <h3>Pilotage par Sprints</h3>
+                            <p>
+                                Orchestration des cycles de développement via des Daily Meetings et des Sprint Reviews,
+                                garantissant une livraison continue de valeur métier.
+                            </p>
                         </div>
 
-                        <!-- Image 3 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/MessageErreurRole.png', 'Page indiquant que l\'utilisateur n\'a pas les droits pour accéder à cette page')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/MessageErreurRole.png"
-                                    alt="Page indiquant que l'utilisateur n'a pas les droits pour accéder à cette page">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
+                        <!-- Architecture -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"
+                                style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 60%);">
                             </div>
-                            <div class="proof-info">
-
-                                <h4>Gestion des autorisations et sécurité du site</h4>
-                                <p>Page indiquant que l'utilisateur n'a pas les droits pour accéder à la page</p>
-                            </div>
+                            <span class="strategy-label label-design">Qualité</span>
+                            <h3>Code Durable</h3>
+                            <p>
+                                Application précoce des principes SOLID pour garantir une base de code évolutive et
+                                minimiser la dette technique lors des montées en charge.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Lightbox Modal -->
-                    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-                        <img class="lightbox-content" id="lightbox-img">
-                        <div id="lightbox-caption"></div>
-                    </div>
                 </div>
-
-                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
-                    projets</a>
             </div>
 
-            <!-- Sidebar Info -->
+            <!-- SIDEBAR : Sibling of main-content -->
             <aside class="project-sidebar">
+                <!-- INFOS PROJET -->
                 <div class="sidebar-box">
                     <div class="sidebar-item">
                         <span class="sidebar-label">Rôles</span>
-                        <span class="sidebar-value">Dev fullstack, <a href="#roles">Scrum Master & Product Owner</a>
-                        </span>
+                        <span class="sidebar-value">Dev Fullstack, Scrum Master</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Type</span>
+                        <span class="sidebar-value">Projet S.A.E - BUT 2</span>
                     </div>
                     <div class="sidebar-item">
                         <span class="sidebar-label">Durée</span>
-                        <span class="sidebar-value">Projet Long (3 mois)</span>
+                        <span class="sidebar-value">3 Mois</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Équipe</span>
-                        <span class="sidebar-value">4 Développeurs</span>
+                        <span class="sidebar-label">Statut</span>
+                        <span class="sidebar-value">Livré au Client</span>
                     </div>
                 </div>
 
+                <!-- COMPÉTENCES UNIFIÉES -->
                 <div class="sidebar-box">
-                    <span class="sidebar-label">Compétences majeures</span>
-                    <div class="card-tags" style="margin-top: 1rem;">
-                        <span class="tag">PHP</span>
-                        <span class="tag">BootStrap</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Principes SOLID</span>
-                        <span class="tag">Design pattern</span>
-                        <span class="tag">PhpMyAdmin</span>
-                        <span class="tag">GitLab</span>
-                        <span class="tag">Méthode Scrum</span>
+                    <span class="sidebar-label">Compétences</span>
+
+                    <!-- 1. Soft Skills -->
+                    <div style="margin-top: 1.2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Soft Skills
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Méthode Scrum</span>
+                            <span class="tag">Gestion client</span>
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Négociation</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Skills Techniques -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Skills Techniques
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Principes SOLID</span>
+                            <span class="tag">Architecture MVC</span>
+                            <span class="tag">Sécurité Web</span>
+                            <span class="tag">Modélisation SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Langages, Frameworks & Outils -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Langages, Frameworks & Outils
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">GitLab</span>
+                        </div>
                     </div>
                 </div>
             </aside>
         </div>
+
+        <div class="section-divider"></div>
+
+        <!-- LE DÉFI WEB -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Leadership & Organisation</span>
+                <h2>Le Défi Agile</h2>
+                <p>Double casquette : Direction technique et relation client</p>
+            </div>
+
+            <div class="roles-grid" style="margin-bottom: 0;">
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-user-tie"></i>
+                        Product Owner
+                    </div>
+                    <ul class="role-list">
+                        <li>Réunions hebdomadaires client</li>
+                        <li>Rédaction du Backlog Produit</li>
+                        <li>Arbitrage des priorités métier</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-tasks"></i>
+                        Scrum Master
+                    </div>
+                    <ul class="role-list">
+                        <li>Animation des cérémonies Scrum</li>
+                        <li>Levée des bloquages techniques</li>
+                        <li>Suivi de la vélocité d'équipe</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-terminal"></i>
+                        Fullstack Dev
+                    </div>
+                    <ul class="role-list">
+                        <li>Implémentation cœur métier</li>
+                        <li>Revues de code (Pair Programming)</li>
+                        <li>Garant de la qualité technique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- MA PARTICIPATION & EXPERTISE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Expertise & Qualité</span>
+                <h2>Réalisations Techniques</h2>
+                <p>Focus sur la sécurité, la performance et la propreté du code</p>
+            </div>
+
+            <div class="pro-strategy-grid">
+                <!-- Sécurité -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-challenge">Sécurité</span>
+                    <h3>Sécurité de Haut Niveau</h3>
+                    <p>Implémentation d'un système d'authentification robuste avec hachage "Sel & Poivre" et gestion des
+                        accès par rôles (RBAC) pour protéger les données utilisateurs.</p>
+                </div>
+
+                <!-- Clean Code -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-strategy">Architecture</span>
+                    <h3>Architecture SOLID</h3>
+                    <p>Découplage strict des composants via le pattern MVC et respect rigoureux des principes SOLID pour
+                        assurer une maintenance simplifiée et une évolutivité maximale.</p>
+                </div>
+
+                <!-- BD -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"
+                        style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 60%);">
+                    </div>
+                    <span class="strategy-label label-design">Optimisation</span>
+                    <h3>Optimisation SQL</h3>
+                    <p>Restructuration complète du schéma de données et mise en place d'index stratégiques pour garantir
+                        des temps de réponse optimaux même avec des volumes de données croissants.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- COMPÉTENCES ACQUISES -->
+        <div class="project-section-header">
+            <h2>Compétences Développées</h2>
+        </div>
+
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <span class="achievement-icon">🤝</span>
+                <div class="achievement-title">Soft Skills</div>
+                <div class="achievement-desc">Gestion client, négociation, communication d'équipe</div>
+            </div>
+
+            <div class="achievement-card">
+                <span class="achievement-icon">💻</span>
+                <div class="achievement-title">Développement</div>
+                <div class="achievement-desc">PHP, SQL, principes SOLID, Design Patterns</div>
+            </div>
+
+            <div class="achievement-card">
+                <span class="achievement-icon">🔐</span>
+                <div class="achievement-title">Sécurité</div>
+                <div class="achievement-desc">Authentification, hachage, gestion des droits</div>
+            </div>
+
+            <div class="achievement-card">
+                <span class="achievement-icon">📊</span>
+                <div class="achievement-title">Méthodologie Agile</div>
+                <div class="achievement-desc">Scrum, sprints, daily meetings, backlog</div>
+            </div>
+
+            <div class="achievement-card">
+                <span class="achievement-icon">🔧</span>
+                <div class="achievement-title">Outils</div>
+                <div class="achievement-desc">GitLab, Merge Requests, Code Review</div>
+            </div>
+
+            <div class="achievement-card">
+                <span class="achievement-icon">📈</span>
+                <div class="achievement-title">Gestion de Projet</div>
+                <div class="achievement-desc">Deadlines, pression, priorisation</div>
+            </div>
+        </div>
+
+        <!-- DOCUMENTATION -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Preuves & Interfaces</span>
+                <h2>Documentation & Screenshots</h2>
+                <p>Aperçu fonctionnel et technique de l'application livrée</p>
+            </div>
+
+            <div class="visual-proofs-grid">
+                <!-- Carte 1 : Sécurité -->
+                <div class="proof-card" id="card-security" data-images='["img/preuves/partieMDPCode.png"]'
+                    data-captions='["Hachage et vérification sécurisée des mots de passe"]'
+                    onclick="openLightboxGroup('card-security')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/partieMDPCode.png" alt="Code Sécurité">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Sécurité des Données</h4>
+                        <p>Implémentation du cryptage métier</p>
+                    </div>
+                </div>
+
+                <!-- Carte 2 : UX -->
+                <div class="proof-card" id="card-ux" data-images='["img/preuves/vuVoter.png"]'
+                    data-captions='["Interface utilisateur pour le système de vote hybride"]'
+                    onclick="openLightboxGroup('card-ux')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/vuVoter.png" alt="Interface Vote">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Interface Vote</h4>
+                        <p>Expérience utilisateur simplifiée</p>
+                    </div>
+                </div>
+
+                <!-- Carte 3 : Autorisations -->
+                <div class="proof-card" id="card-auth" data-images='["img/preuves/MessageErreurRole.png"]'
+                    data-captions='["Gestion des restrictions d accès par rôle utilisateur"]'
+                    onclick="openLightboxGroup('card-auth')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/MessageErreurRole.png" alt="Message Erreur">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Gestion des Droits</h4>
+                        <p>Contrôle des accès applicatifs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
+                <img class="lightbox-content" id="lightbox-img">
+                <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
+                <div id="lightbox-caption"></div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- RÉTROSPECTIVE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Bilan & Maturité</span>
+                <h2>Analyse Post-Projet</h2>
+            </div>
+
+            <div class="content-block"
+                style="background: rgba(59, 130, 246, 0.03); padding: 3rem; border-radius: 24px; border: 1px dashed rgba(59, 130, 246, 0.2);">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-style: italic;">
+                    "La réussite de ce projet ne réside pas seulement dans le code, mais dans la transition fluide entre
+                    la vision produit (Product Owner) et l'exécution technique (Scrum Master). J'ai appris qu'une
+                    architecture SOLID n'est pas une option, mais une assurance-vie pour tout projet PHP de longue
+                    durée."
+                </p>
+                <div style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white;">
+                        RA</div>
+                    <div>
+                        <span style="display: block; font-weight: 700; color: var(--text-main);">Ruddy Audigier</span>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">Product Owner & Scrum Master</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
+            projets</a>
     </div>
 
 
@@ -295,12 +516,8 @@
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
             const hamburgerIcon = document.querySelector('.hamburger i');
-
             navLinks.classList.toggle('mobile-active');
-
-            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
             if (navLinks.classList.contains('mobile-active')) {
                 hamburgerIcon.classList.remove('fa-bars');
                 hamburgerIcon.classList.add('fa-times');
@@ -310,26 +527,78 @@
             }
         }
 
-        function openLightbox(imageSrc, caption) {
+        // --- Slideshow Logic ---
+        function startSlideshows() {
+            const cards = document.querySelectorAll('.proof-card[data-images]');
+            cards.forEach((card, i) => {
+                const images = JSON.parse(card.dataset.images);
+                if (images.length <= 1) return;
+                setTimeout(() => {
+                    let index = 0;
+                    const imgElement = card.querySelector('img');
+                    imgElement.style.transition = 'opacity 0.2s ease';
+                    setInterval(() => {
+                        index = (index + 1) % images.length;
+                        imgElement.style.opacity = '0.7';
+                        setTimeout(() => {
+                            imgElement.src = images[index];
+                            imgElement.style.opacity = '1';
+                        }, 200);
+                    }, 2000);
+                }, i * 500);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', startSlideshows);
+
+        // --- Lightbox Logic ---
+        let currentGroup = [];
+        let currentCaptions = [];
+        let currentIndex = 0;
+
+        function openLightboxGroup(cardId) {
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            currentGroup = JSON.parse(card.dataset.images);
+            currentCaptions = JSON.parse(card.dataset.captions);
+            currentIndex = 0;
+            updateLightboxContent();
             const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'flex';
+            setTimeout(() => { lightbox.classList.add('active'); }, 50);
+        }
+
+        function updateLightboxContent() {
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
-
-            lightboxImg.src = imageSrc;
-            lightboxCaption.textContent = caption;
-            lightbox.style.display = 'flex';
+            lightboxImg.style.opacity = '0.5';
             setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 50);
+                lightboxImg.src = currentGroup[currentIndex];
+                lightboxCaption.textContent = currentCaptions[currentIndex];
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
+
+        function changeLightboxImage(direction, event) {
+            if (event) event.stopPropagation();
+            currentIndex += direction;
+            if (currentIndex >= currentGroup.length) currentIndex = 0;
+            else if (currentIndex < 0) currentIndex = currentGroup.length - 1;
+            updateLightboxContent();
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('active');
-            setTimeout(() => {
-                lightbox.style.display = 'none';
-            }, 300);
+            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
         }
+
+        document.addEventListener('keydown', function (e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                else if (e.key === 'ArrowRight') changeLightboxImage(1);
+                else if (e.key === 'Escape') closeLightbox();
+            }
+        });
     </script>
 
     <script src="scroll-animations.js"></script>

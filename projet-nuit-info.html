@@ -28,7 +28,7 @@
                     <a href="index.html#projects" class="nav-link">Réalisations</a>
                     <ul class="dropdown-menu">
                         <li class="proj proj-web">
-                            <a href="projet-web.html">
+                            <a href="projet-web.html" onclick="toggleMenu()">
                                 <span class="proj-icon">&lt;/&gt;</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet site web - BUT 2</span>
@@ -37,7 +37,7 @@
                             </a>
                         </li>
                         <li class="proj proj-ia">
-                            <a href="projet-ia.html">
+                            <a href="projet-ia.html" onclick="toggleMenu()">
                                 <span class="proj-icon">🧠</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet IA - BUT 1</span>
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                         <li class="proj proj-opt">
-                            <a href="projet-optimisation.html">
+                            <a href="projet-optimisation.html" onclick="toggleMenu()">
                                 <span class="proj-icon">⚙️</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet Optimisation - BUT 1</span>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="proj proj-nuit">
-                            <a href="projet-nuit-info.html" class="nav-link menu-active">
+                            <a href="projet-nuit-info.html" class="nav-link menu-active" onclick="toggleMenu()">
                                 <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
                                         aria-hidden="true"></i></span>
                                 <span class="proj-content">
@@ -65,6 +65,7 @@
                             </a>
                         </li>
                     </ul>
+                </li>
                 <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
                 <li>
                     <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
@@ -72,12 +73,13 @@
                         <span>CV</span>
                     </a>
                 </li>
+            </ul>
         </nav>
     </header>
 
 
 
-    <section class="project-hero hero-bg-nuit">
+    <section class="project-intro-modern">
         <!-- Starfield Animation -->
         <div class="hero-animation-nuit">
             <div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
@@ -100,24 +102,51 @@
             <div class="shooting-star" style="top: 70%; animation-delay: 11s;"></div>
         </div>
 
-        <div class="container">
-            <i class="fas fa-moon hero-icon-large"></i>
-            <br>
-            <div class="hero-tags">
-                <span class="hero-tag">React.js</span>
-                <span class="hero-tag">Vite</span>
-                <span class="hero-tag">Déploiement</span>
-                <span class="hero-tag">Travail d'équipe</span>
-            </div>
+        <i class="fas fa-moon intro-moon-decoration"></i>
 
-            <h1>Application Web NIRD — Village Numérique Résistant</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une plateforme
-                ludique et pédagogique pour promouvoir un numérique libre et responsable dans les écoles.</p>
-            <div style="margin-top: 2rem;">
-                <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn"
-                    style="text-align: center; font-size: 0.95rem; padding: 1.2rem;">
-                    <i class="fas fa-eye" style="margin-right: 8px;"></i> Voir mon compte rendu
-                </a>
+        <div class="container">
+            <nav class="project-breadcrumbs">
+                <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i>
+                <a href="index.html#projects">Réalisations</a> <i class="fas fa-chevron-right"></i>
+                <span>Nuit de l'Info</span>
+            </nav>
+
+            <div class="intro-grid">
+                <div class="intro-main">
+                    <span class="section-tagline">Sprint 10h — React.js</span>
+                    <h1 class="project-title-large">Village Numérique Résistant <span
+                            class="highlight-nuit">(NIRD)</span></h1>
+                    <p class="project-description-lead">
+                        Une plateforme immersive alliant pédagogie et engagement pour sensibiliser les écoles à la
+                        souveraineté numérique et au logiciel libre.
+                    </p>
+
+                    <div class="intro-actions">
+                        <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Voir le Projet
+                        </a>
+                        <div class="event-badge">
+                            <i class="fas fa-award"></i> Nuit de l'Info 2025
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-sidebar-stats">
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">10h</span>
+                            <span class="stat-txt">Production Intensive</span>
+                        </div>
+                    </div>
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">100%</span>
+                            <span class="stat-txt">CI/CD Netlify</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
@@ -125,264 +154,375 @@
 
     <div class="container">
         <div class="project-meta-grid">
-
-            <!-- Contenu Principal -->
             <div class="project-main-content">
-
-                <div class="content-block">
-                    <h2>Contexte : La Nuit de l'Info 2025</h2>
-                    <p>La <strong>Nuit de l'Info</strong> est un événement national qui rassemble des étudiants en
-                        informatique pour une nuit de développement intense. Du <strong>jeudi 4 au vendredi 5 décembre
-                            2025 (16h-8h)</strong>, les équipes doivent concevoir et déployer une application web
-                        fonctionnelle en moins de 24 heures.</p>
-                    <p>Cette année, notre équipe de l'<strong>IUT de Montpellier</strong> a relevé le défi
-                        <strong>NIRD</strong> (pour un Numérique Inclusif, Responsable et Durable), porté par le
-                        collectif enseignant NIRD et le Bureau de la Nuit de l'Info 2025.
-                    </p>
+                <!-- CONTEXTE -->
+                <div class="project-section-header">
+                    <span class="section-tagline">Logistique & Objectifs</span>
+                    <h2>Contexte Stratégique</h2>
                 </div>
 
                 <div class="content-block">
-                    <h2>Le Défi NIRD : "Le Village Numérique Résistant"</h2>
-                    <p><strong>Thème :</strong> Comment les établissements scolaires peuvent tenir tête aux Big Tech
-                        ?<br>
-                        <em>David contre Goliath, Astérix contre l'Empire numérique</em>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-muted); margin-bottom: 2.5rem;">
+                        La Nuit de l'Info 2025 a lancé un défi crucial pour l'éducation : le projet <strong>NIRD
+                            (Village Numérique Résistant)</strong>. Dans un paysage numérique dominé par des solutions
+                        propriétaires fermées, l'objectif était de concevoir un écosystème pédagogique prônant la
+                        <strong>souveraineté numérique</strong> et le <strong>réemploi matériel</strong>. Ce challenge
+                        de 10 heures a nécessité une réactivité extrême pour transformer des concepts complexes en une
+                        interface web interactive et engagée.
                     </p>
 
-                    <p>Face à la dépendance structurelle aux géants de la technologie (licences coûteuses, stockage hors
-                        UE, écosystèmes fermés), l'École peut devenir un village résistant, ingénieux et créatif — à
-                        l'image du célèbre village d'Astérix.</p>
-
-                    <h3>Objectifs du Projet</h3>
-                    <p>Créer une application Web qui permet aux établissements scolaires d'adopter progressivement un
-                        <strong>Numérique Libre, Responsable et Durable</strong> :
-                    </p>
-                    <ul>
-                        <li>Sensibiliser les équipes éducatives et les élèves à la souveraineté numérique</li>
-                        <li>Encourager le réemploi et le reconditionnement du matériel</li>
-                        <li>Promouvoir l'usage de <strong>Linux</strong> pour lutter contre l'obsolescence programmée
-                        </li>
-                        <li>Mutualiser les ressources et outils libres via la <strong>Forge des communs numériques
-                                éducatifs</strong></li>
-                        <li>Accompagner les établissements dans une transition numérique écoresponsable</li>
-                    </ul>
-
-                    <h3>Notre Approche</h3>
-                    <p>Nous avons développé une <strong>expérience ludique, attractive et engageante</strong> répondant
-                        aux exigences du défi :</p>
-                    <ul>
-                        <li><strong>Interactivité :</strong> Interface dynamique et immersive</li>
-                        <li><strong>Pédagogie :</strong> Contenu éducatif accessible et compréhensible</li>
-                        <li><strong>Créativité :</strong> Design inspiré de l'univers d'Astérix revisité en contexte
-                            numérique</li>
-                        <li><strong>Résistance numérique :</strong> Mise en avant des solutions libres et autonomes</li>
-                    </ul>
-                </div>
-
-                <div class="content-block" id="contribution">
-                    <h2>Ma Contribution</h2>
-
-                    <h3>Développement Frontend en React.js</h3>
-                    <p>J'ai participé activement au développement de l'application en utilisant
-                        <strong>React.js</strong> avec <strong>Vite</strong> comme outil de build :
-                    </p>
-                    <ul>
-                        <li>Création de composants JSX réutilisables et modulaires</li>
-                        <li>Mise en place d'une architecture componentisée pour faciliter la collaboration</li>
-                        <li>Développement d'interactions dynamiques et animations fluides</li>
-                        <li>Intégration du design system pour une cohérence visuelle</li>
-                    </ul>
-
-                    <h3>Travail d'Équipe sous Pression</h3>
-                    <p>Durant cette nuit de développement intense, j'ai dû :</p>
-                    <ul>
-                        <li>Collaborer efficacement avec mes coéquipiers en temps réel</li>
-                        <li>Gérer les priorités et respecter les contraintes de temps strictes</li>
-                        <li>Résoudre rapidement les problèmes techniques rencontrés</li>
-                        <li>Maintenir une communication fluide pour assurer la cohésion du projet</li>
-                    </ul>
-
-                    <h3>Déploiement et Production</h3>
-                    <p>J'ai contribué au déploiement de l'application sur <strong>Netlify</strong>, garantissant une
-                        mise en ligne rapide et accessible pour l'évaluation du jury.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Technologies et Architecture</h2>
-                    <p>Notre stack technique a été choisi pour sa performance et sa rapidité de développement :</p>
-                    <ul>
-                        <li><strong>React.js</strong> : Framework JavaScript moderne pour une UI réactive</li>
-                        <li><strong>Vite</strong> : Build tool ultra-rapide optimisé pour le développement React</li>
-                        <li><strong>JSX</strong> : Syntaxe déclarative pour les composants UI</li>
-                        <li><strong>Netlify</strong> : Déploiement automatisé et hébergement performant</li>
-                        <li><strong>CSS moderne</strong> : Animations et design responsive</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>Résultats et Apprentissages</h2>
-
-                    <h3>Application Déployée</h3>
-                    <p>Notre application est accessible en ligne et démontre notre capacité à livrer un produit
-                        fonctionnel sous contrainte de temps :</p>
-                    <p style="text-align: center; margin: 2rem 0;">
-                        <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn"
-                            style="margin: 0;">
-                            <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>
-                            Voir l'application déployée
-                        </a>
-                    </p>
-
-                    <h3>Compétences Acquises</h3>
-                    <p>Cette expérience intensive m'a permis de développer des compétences essentielles :</p>
-                    <ul>
-                        <li><strong>Développement rapide :</strong> Prototypage et implémentation sous forte contrainte
-                            de temps</li>
-                        <li><strong>Travail en équipe :</strong> Collaboration synchrone et gestion de conflits de code
-                        </li>
-                        <li><strong>Gestion du stress :</strong> Maintien de la productivité malgré la pression et la
-                            fatigue</li>
-                        <li><strong>Créativité technique :</strong> Solutions innovantes pour répondre aux exigences du
-                            défi</li>
-                        <li><strong>React.js :</strong> Maîtrise approfondie du framework et de l'écosystème moderne
-                            JavaScript</li>
-                        <li><strong>Déploiement continu :</strong> Pipeline CI/CD avec Netlify</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>Documentation du Projet</h2>
-
-                    <div class="visual-proofs-grid">
-                        <!-- Carte 1 : Documentation -->
-                        <div class="proof-card" id="card-doc"
-                            data-images='["img/nuit-info-presentation.jpg", "img/nuit-info-details.jpg"]'
-                            data-captions='["Présentation du sujet NIRD 2025 : Le Village Numérique Résistant", "Acteurs du projet NIRD et activités de la démarche"]'
-                            onclick="openLightboxGroup('card-doc')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/nuit-info-presentation.jpg" alt="Documentation du projet">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Documentation du Projet</h4>
-                                <p>Présentation et détails du défi NIRD</p>
-                            </div>
+                    <div class="pro-strategy-grid"
+                        style="margin-bottom: 0; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                        <!-- Le Challenge -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-challenge">Le Challenge</span>
+                            <h3>L'Urgence du Temps Réel</h3>
+                            <p>
+                                Concevoir une architecture React robuste capable d'unifier trois mini-jeux interactifs
+                                en une seule nuit, tout en garantissant des performances optimales malgré des
+                                contraintes de temps drastiques.
+                            </p>
                         </div>
 
-                        <!-- Carte 2 : Jeu 1 (Village & Quizz) -->
-                        <div class="proof-card" id="card-jeu1"
-                            data-images='["img/preuves/village.png", "img/preuves/quizz.png"]'
-                            data-captions='["Interface du village numérique résistant", "Quizz sur le thème de décathlon et du sport"]'
-                            onclick="openLightboxGroup('card-jeu1')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/village.png" alt="Jeu 1 : Village et Quizz">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Jeu 1 : Village & Quizz</h4>
-                                <p>Exploration du village et mini-jeux</p>
-                            </div>
+                        <!-- La Stratégie -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-strategy">La Stratégie</span>
+                            <h3>Architecture Atomique</h3>
+                            <p>
+                                Déploiement d'un design system modulaire avec Vite.js pour permettre une itération
+                                rapide. Cette structure a favorisé une collaboration fluide et un déploiement continu
+                                sans friction.
+                            </p>
                         </div>
 
-                        <!-- Carte 3 : Jeu 2 -->
-                        <div class="proof-card" id="card-jeu2"
-                            data-images='["img/preuves/Jeu2.png", "img/preuves/QuestionJeu2.png"]'
-                            data-captions='["Interface du jeu numéro 2", "Un exemple de question dans le jeu numéro 2"]'
-                            onclick="openLightboxGroup('card-jeu2')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/Jeu2.png" alt="Jeu 2">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
+                        <!-- L'Expérience -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"
+                                style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 60%);">
                             </div>
-                            <div class="proof-info">
-                                <h4>Jeu 2 : Questions & Réponses</h4>
-                                <p>Interface et exemples de questions</p>
-                            </div>
+                            <span class="strategy-label label-design">L'Expérience</span>
+                            <h3>Immersion & Engagement</h3>
+                            <p>
+                                Création d'un village virtuel vivant où chaque interaction sensibilise l'utilisateur aux
+                                enjeux du logiciel libre et de l'autonomie numérique via des mécaniques de jeu fluides.
+                            </p>
                         </div>
-
-                        <!-- Carte 4 : Jeu 3 -->
-                        <div class="proof-card" id="card-jeu3"
-                            data-images='["img/preuves/ecranAccueilJeu3.png", "img/preuves/imageJeuRaphael.png"]'
-                            data-captions='["L écran d accueil du jeu numéro 3", "L écran principale du jeu numéro 3"]'
-                            onclick="openLightboxGroup('card-jeu3')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/ecranAccueilJeu3.png" alt="Jeu 3">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Jeu 3 : Aventure Interactive</h4>
-                                <p>Écrans d'accueil et de jeu</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Lightbox Modal -->
-                    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-                        <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
-                        <img class="lightbox-content" id="lightbox-img">
-                        <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
-                        <div id="lightbox-caption"></div>
                     </div>
                 </div>
-
-                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
-                    projets</a>
             </div>
 
-            <!-- Sidebar Info -->
+            <!-- SIDEBAR : Sibling of main-content -->
             <aside class="project-sidebar">
+                <!-- INFOS PROJET -->
                 <div class="sidebar-box">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Rôles</span>
+                        <span class="sidebar-value">Développeur Frontend</span>
+                    </div>
                     <div class="sidebar-item">
                         <span class="sidebar-label">Événement</span>
                         <span class="sidebar-value">Nuit de l'Info 2025</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Défi</span>
-                        <span class="sidebar-value"
-                            onclick="openLightbox('img/nuit-info-presentation.jpg', 'Présentation du sujet NIRD 2025 : Le Village Numérique Résistant')"
-                            style="cursor: pointer; color: var(--primary); text-decoration: underline;">
-                            NIRD — Village Numérique Résistant
-                        </span>
-                    </div>
-                    <div class="sidebar-item">
                         <span class="sidebar-label">Durée</span>
-                        <span class="sidebar-value">1 nuit (10h)</span>
+                        <span class="sidebar-value">1 Nuit (Challenge 10h)</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Équipe</span>
-                        <span class="sidebar-value">4 membres</span>
-                    </div>
-                    <div class="sidebar-item">
-                        <span class="sidebar-label">Rôle</span>
-                        <span class="sidebar-value">
-                            <a href="https://super-stardust-16160f.netlify.app/" target="_blank">Développeur
-                                Frontend</a>
-                        </span>
+                        <span class="sidebar-label">Statut</span>
+                        <span class="sidebar-value">Déployé sur Netlify</span>
                     </div>
                 </div>
 
+                <!-- COMPÉTENCES UNIFIÉES -->
                 <div class="sidebar-box">
-                    <span class="sidebar-label">Technologies</span>
-                    <div class="card-tags" style="margin-top: 1rem;">
-                        <span class="tag">React.js</span>
-                        <span class="tag">Vite</span>
-                        <span class="tag">JSX</span>
-                        <span class="tag">Netlify</span>
-                        <span class="tag">JavaScript ES6+</span>
-                        <span class="tag">CSS Animations</span>
-                        <span class="tag">Responsive Design</span>
+                    <span class="sidebar-label">Compétences</span>
+
+                    <!-- 1. Soft Skills -->
+                    <div style="margin-top: 1.2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Soft Skills
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Gestion du stress</span>
+                            <span class="tag">Travail en équipe</span>
+                            <span class="tag">Créativité</span>
+                            <span class="tag">Adaptabilité</span>
+                            <span class="tag">Autonomie</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Skills Techniques -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Skills Techniques
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Principes SOLID</span>
+                            <span class="tag">Performance Frontend</span>
+                            <span class="tag">Déploiement CI/CD</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Langages, Frameworks & Outils -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Langages, Frameworks & Outils
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Vite.js</span>
+                            <span class="tag">JSX</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">GitLab</span>
+                            <span class="tag">Netlify</span>
+                        </div>
                     </div>
                 </div>
             </aside>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Le Défi NIRD -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Architecture du Concept</span>
+                <h2>Le Défi NIRD</h2>
+                <p>Sensibilisation, Réemploi et Collaboration</p>
+            </div>
+
+            <div class="roles-grid" style="margin-bottom: 0;">
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-book"></i>
+                        Sensibilisation
+                    </div>
+                    <ul class="role-list">
+                        <li>Souveraineté numérique</li>
+                        <li>Enjeux pour les écoles</li>
+                        <li>Éducation aux médias</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-recycle"></i>
+                        Réemploi
+                    </div>
+                    <ul class="role-list">
+                        <li>Lutte contre l'obsolescence</li>
+                        <li>Matériel reconditionné</li>
+                        <li>Logiciels Libres (Linux)</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-users"></i>
+                        Collaboration
+                    </div>
+                    <ul class="role-list">
+                        <li>Partage de ressources</li>
+                        <li>Forge des communs</li>
+                        <li>Transition durable</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- PARTICIPATION & EXPERTISE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Expertise & Action</span>
+                <h2>Ma Participation & Expertise</h2>
+                <p>Focus sur les réalisations techniques et humaines</p>
+            </div>
+
+            <div class="pro-strategy-grid">
+                <!-- Frontend React.js -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-strategy">Frontend React.js</span>
+                    <h3>Développement React.js</h3>
+                    <p>J'ai participé activement au développement de l'application en utilisant React.js avec Vite :</p>
+                    <ul class="role-list" style="margin-top: 1rem;">
+                        <li>Création de composants JSX réutilisables et modulaires</li>
+                        <li>Architecture componentisée pour faciliter la collaboration</li>
+                        <li>Interactions dynamiques et animations fluides</li>
+                        <li>Intégration du design system pour une cohérence visuelle</li>
+                    </ul>
+                </div>
+
+                <!-- Travail d'Équipe -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-challenge">Soft Skills</span>
+                    <h3>Travail d'Équipe sous Pression</h3>
+                    <p>Durant cette nuit de développement intense, j'ai dû :</p>
+                    <ul class="role-list" style="margin-top: 1rem;">
+                        <li>Collaborer efficacement with mes coéquipiers en temps réel</li>
+                        <li>Gérer les priorités et respecter les contraintes strictes</li>
+                        <li>Résoudre rapidement les problèmes techniques rencontrés</li>
+                        <li>Maintenir une communication fluide pour assurer la cohésion</li>
+                    </ul>
+                </div>
+
+                <!-- Déploiement -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"
+                        style="background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.12), transparent 60%);">
+                    </div>
+                    <span class="strategy-label label-strategy">Infrastructure</span>
+                    <h3>Déploiement et Production</h3>
+                    <p>
+                        J'ai contribué au déploiement de l'application sur Netlify, garantissant une mise en ligne
+                        rapide et
+                        accessible pour l'évaluation du jury. Ce flux de CI/CD a été crucial pour la réactivité de
+                        l'équipe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RESULTATS -->
+            <div style="text-align: center; margin: 4rem 0;">
+                <a href="https://super-stardust-16160f.netlify.app/" target="_blank" class="btn"
+                    style="padding: 1.5rem 3rem; font-size: 1.1rem;">
+                    <i class="fas fa-external-link-alt" style="margin-right: 10px;"></i> Accéder à l'Application
+                    Déployée
+                </a>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- DOCUMENTATION -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Visualisation & Preuves</span>
+                <h2>Documentation & Screenshots</h2>
+                <p>Aperçu du Village Numérique et des mini-jeux pédagogiques</p>
+            </div>
+
+            <div class="visual-proofs-grid">
+                <!-- Carte 1 : Documentation -->
+                <div class="proof-card" id="card-doc"
+                    data-images='["img/nuit-info-presentation.jpg", "img/nuit-info-details.jpg"]'
+                    data-captions='["Sujet NIRD 2025 : Le Village Numérique Résistant", "Acteurs et activités de la démarche souveraine"]'
+                    onclick="openLightboxGroup('card-doc')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/nuit-info-presentation.jpg" alt="Documentation NIRD">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Documentation Projet</h4>
+                        <p>Fondamentaux du défi NIRD 2025</p>
+                    </div>
+                </div>
+
+                <!-- Carte 2 : Jeux -->
+                <div class="proof-card" id="card-jeu1"
+                    data-images='["img/preuves/village.png", "img/preuves/quizz.png"]'
+                    data-captions='["Le Village Numérique interactif", "Exemple de quizz pédagogique"]'
+                    onclick="openLightboxGroup('card-jeu1')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/village.png" alt="Mini-jeux Nuit Info">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Village & Quizz</h4>
+                        <p>Immersion et évaluation ludique</p>
+                    </div>
+                </div>
+
+                <!-- Carte 3 : Gameplay 1 -->
+                <div class="proof-card" id="card-jeu2"
+                    data-images='["img/preuves/Jeu2.png", "img/preuves/QuestionJeu2.png"]'
+                    data-captions='["Interface du mini-jeu numéro 2", "Système de questions interactives"]'
+                    onclick="openLightboxGroup('card-jeu2')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/Jeu2.png" alt="Gameplay Nuit Info">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Mini-jeu 2</h4>
+                        <p>Interaction et mécaniques de jeu</p>
+                    </div>
+                </div>
+
+                <!-- Carte 4 : Gameplay 2 -->
+                <div class="proof-card" id="card-jeu3"
+                    data-images='["img/preuves/ecranAccueilJeu3.png", "img/preuves/imageJeuRaphael.png"]'
+                    data-captions='["Accueil du mini-jeu 3", "Niveau de jeu principal"]'
+                    onclick="openLightboxGroup('card-jeu3')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/ecranAccueilJeu3.png" alt="Aventure Nuit Info">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Mini-jeu 3</h4>
+                        <p>Aventure graphique et narration</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
+                <img class="lightbox-content" id="lightbox-img">
+                <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
+                <div id="lightbox-caption"></div>
+            </div>
+
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- RETROSPECTIVE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Rétrospective & Maturité</span>
+                <h2>Analyse Post-Challenge</h2>
+            </div>
+
+            <div class="content-block"
+                style="background: rgba(59, 130, 246, 0.03); padding: 3rem; border-radius: 24px; border: 1px dashed rgba(59, 130, 246, 0.2);">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-style: italic;">
+                    "Ce projet a été une véritable leçon de pragmatisme technique. J'ai appris qu'une architecture
+                    propre au départ est le seul moyen de survivre à un sprint de 24h. Si c'était à refaire,
+                    j'introduirais une gestion d'état globale (Zustand ou Redux) plus tôt pour simplifier la
+                    communication entre les différents mini-jeux."
+                </p>
+                <div style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white;">
+                        RA</div>
+                    <div>
+                        <span style="display: block; font-weight: 700; color: var(--text-main);">Ruddy Audigier</span>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">Lead Frontend sur le projet</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 4rem; margin-bottom: 2rem;">
+            <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
+                projets</a>
         </div>
     </div>
 
@@ -392,15 +532,12 @@
             <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
         </div>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            // Important : il te faut aussi cibler l'icone si tu veux qu'elle change en croix
             const hamburgerIcon = document.querySelector('.hamburger i');
-
             navLinks.classList.toggle('mobile-active');
-
-            // Gestion de l'icône (si tu as <i class="fas fa-bars"></i>)
             if (navLinks.classList.contains('mobile-active')) {
                 hamburgerIcon.classList.remove('fa-bars');
                 hamburgerIcon.classList.add('fa-times');
@@ -413,31 +550,27 @@
         // --- Slideshow Logic ---
         function startSlideshows() {
             const cards = document.querySelectorAll('.proof-card[data-images]');
-
-            cards.forEach(card => {
+            cards.forEach((card, i) => {
                 const images = JSON.parse(card.dataset.images);
                 if (images.length <= 1) return;
 
-                let index = 0;
-                const imgElement = card.querySelector('img');
-
-                // Ensure transition property exists
-                imgElement.style.transition = 'opacity 0.2s ease';
-
-                setInterval(() => {
-                    index = (index + 1) % images.length;
-                    imgElement.style.opacity = '0.7';
-                    setTimeout(() => {
-                        imgElement.src = images[index];
-                        imgElement.style.opacity = '1';
-                    }, 200);
-                }, 1500); // Change every 1.5 seconds
+                // Add staggered delay based on index
+                setTimeout(() => {
+                    let index = 0;
+                    const imgElement = card.querySelector('img');
+                    imgElement.style.transition = 'opacity 0.2s ease';
+                    setInterval(() => {
+                        index = (index + 1) % images.length;
+                        imgElement.style.opacity = '0.7';
+                        setTimeout(() => {
+                            imgElement.src = images[index];
+                            imgElement.style.opacity = '1';
+                        }, 200);
+                    }, 2000); // 2s interval
+                }, i * 500); // 500ms stagger between each card
             });
         }
-
-        // Initialize slideshows
         document.addEventListener('DOMContentLoaded', startSlideshows);
-
 
         // --- Lightbox Logic ---
         let currentGroup = [];
@@ -447,40 +580,18 @@
         function openLightboxGroup(cardId) {
             const card = document.getElementById(cardId);
             if (!card) return;
-
             currentGroup = JSON.parse(card.dataset.images);
             currentCaptions = JSON.parse(card.dataset.captions);
             currentIndex = 0;
-
             updateLightboxContent();
-
             const lightbox = document.getElementById('lightbox');
             lightbox.style.display = 'flex';
-            setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 50);
-        }
-
-        // Keep old function for backward compatibility if needed (e.g. sidebar)
-        function openLightbox(imageSrc, caption) {
-            currentGroup = [imageSrc];
-            currentCaptions = [caption];
-            currentIndex = 0;
-
-            updateLightboxContent();
-
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'flex';
-            setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 50);
+            setTimeout(() => { lightbox.classList.add('active'); }, 50);
         }
 
         function updateLightboxContent() {
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
-
-            // Simple fade effect
             lightboxImg.style.opacity = '0.5';
             setTimeout(() => {
                 lightboxImg.src = currentGroup[currentIndex];
@@ -490,37 +601,24 @@
         }
 
         function changeLightboxImage(direction, event) {
-            if (event) event.stopPropagation(); // Prevent closing lightbox
-
+            if (event) event.stopPropagation();
             currentIndex += direction;
-
-            if (currentIndex >= currentGroup.length) {
-                currentIndex = 0;
-            } else if (currentIndex < 0) {
-                currentIndex = currentGroup.length - 1;
-            }
-
+            if (currentIndex >= currentGroup.length) currentIndex = 0;
+            else if (currentIndex < 0) currentIndex = currentGroup.length - 1;
             updateLightboxContent();
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('active');
-            setTimeout(() => {
-                lightbox.style.display = 'none';
-            }, 300);
+            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
         }
 
-        // Keyboard navigation
         document.addEventListener('keydown', function (e) {
             if (document.getElementById('lightbox').style.display === 'flex') {
-                if (e.key === 'ArrowLeft') {
-                    changeLightboxImage(-1);
-                } else if (e.key === 'ArrowRight') {
-                    changeLightboxImage(1);
-                } else if (e.key === 'Escape') {
-                    closeLightbox();
-                }
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                else if (e.key === 'ArrowRight') changeLightboxImage(1);
+                else if (e.key === 'Escape') closeLightbox();
             }
         });
     </script>
@@ -529,4 +627,3 @@
 </body>
 
 </html>
-```

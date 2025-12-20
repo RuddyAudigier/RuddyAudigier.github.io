@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploration Algorithmique - Ruddy Audigier</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
     <header class="site-header theme-opt">
         <nav class="navbar">
             <a href="index.html" class="navbar-logo">
@@ -29,7 +28,7 @@
                     <a href="index.html#projects" class="nav-link">Réalisations</a>
                     <ul class="dropdown-menu">
                         <li class="proj proj-web">
-                            <a href="projet-web.html">
+                            <a href="projet-web.html" onclick="toggleMenu()">
                                 <span class="proj-icon">&lt;/&gt;</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet site web - BUT 2</span>
@@ -38,7 +37,7 @@
                             </a>
                         </li>
                         <li class="proj proj-ia">
-                            <a href="projet-ia.html">
+                            <a href="projet-ia.html" onclick="toggleMenu()">
                                 <span class="proj-icon">🧠</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet IA - BUT 1</span>
@@ -47,7 +46,7 @@
                             </a>
                         </li>
                         <li class="proj proj-opt">
-                            <a href="projet-optimisation.html" class="nav-link menu-active">
+                            <a href="projet-optimisation.html" class="nav-link menu-active" onclick="toggleMenu()">
                                 <span class="proj-icon">⚙️</span>
                                 <span class="proj-content">
                                     <span class="proj-title">Projet Optimisation - BUT 1</span>
@@ -56,7 +55,7 @@
                             </a>
                         </li>
                         <li class="proj proj-nuit">
-                            <a href="projet-nuit-info.html" class="nav-link">
+                            <a href="projet-nuit-info.html" onclick="toggleMenu()">
                                 <span class="proj-icon"><i class="fab fa-react" style="color:#61dafb"
                                         aria-hidden="true"></i></span>
                                 <span class="proj-content">
@@ -66,6 +65,7 @@
                             </a>
                         </li>
                     </ul>
+                </li>
                 <li><a href="contact.html" class="nav-link" onclick="toggleMenu()"> Contact </a></li>
                 <li>
                     <a href="doc/CV_Audigier_Web.pdf" class="nav-btn-cv" download>
@@ -73,12 +73,13 @@
                         <span>CV</span>
                     </a>
                 </li>
+            </ul>
         </nav>
     </header>
 
 
 
-    <section class="project-hero hero-bg-opt">
+    <section class="project-intro-modern theme-opt">
         <!-- Performance Graph Animation -->
         <div class="hero-animation-opt">
             <div class="perf-bar" style="left: 15%; height: 40%; animation-delay: 0s;"></div>
@@ -91,180 +92,373 @@
             <div class="perf-bar" style="left: 85%; height: 60%; animation-delay: 1.4s;"></div>
         </div>
 
-        <div class="container">
-            <i class="fas fa-cogs hero-icon-large"></i>
-            <br>
-            <div class="hero-tags">
-                <span class="hero-tag">C#</span>
-                <span class="hero-tag">Algorithmique</span>
-                <span class="hero-tag">Data Analyse</span>
-                <span class="hero-tag">Complexité</span>
-            </div>
+        <i class="fas fa-microchip intro-moon-decoration"></i>
 
-            <h1>Exploration Algorithmique & Matchmaking</h1>
-            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8; font-size: 1.2rem;">Développement d'une
-                application C# de constitution d'équipes optimisées avec contraintes de rôles et de niveaux.</p>
+        <div class="container">
+            <nav class="project-breadcrumbs">
+                <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i>
+                <a href="index.html#projects">Réalisations</a> <i class="fas fa-chevron-right"></i>
+                <span>Projet Optimisation</span>
+            </nav>
+
+            <div class="intro-grid">
+                <div class="intro-main">
+                    <span class="section-tagline">C# · Heuristiques · Data Analysis</span>
+                    <h1 class="project-title-large">Exploration & <span class="highlight-opt">Matchmaking</span></h1>
+                    <p class="project-description-lead">
+                        Résolution de problèmes d'optimisation combinatoire par le développement d'algorithmes
+                        performants pour l'équilibrage dynamique d'équipes.
+                    </p>
+
+                    <div class="intro-actions">
+                        <div class="event-badge">
+                            <i class="fas fa-chart-line"></i> Complexité O(n) Atteinte
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-sidebar-stats">
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">250+</span>
+                            <span class="stat-txt">Volume Joueurs</span>
+                        </div>
+                    </div>
+                    <div class="glass-stat-card">
+                        <div class="stat-icon"><i class="fas fa-infinity"></i></div>
+                        <div class="stat-data">
+                            <span class="stat-nb">O(n)</span>
+                            <span class="stat-txt">Complexité Maximale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="doc/S2.02_compteRendu.pdf" class="btn btn-outline" target="_blank"
-            style="padding: 1rem 2rem; font-size: 14px; margin-top: 30px ;display: inline-flex; align-items: center;">
-            <i class="fas fa-eye" style="margin-right: 8px;"></i> Voir mon compte rendu
-        </a>
         <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})"></div>
     </section>
 
     <div class="container">
         <div class="project-meta-grid">
-
+            <!-- Contenu Principal -->
             <div class="project-main-content">
-                <div class="content-block">
-                    <h2>Le Contexte : Matchmaking Avancé</h2>
-                    <p>L'objectif de cette SAE était de développer une application dotée d'une interface graphique (IHM)
-                        permettant de tester et comparer des algorithmes de création d'équipes. Le défi consistait à
-                        répartir une liste de X joueurs (de niveau 0 à 100) en équipes de 4 équilibrées.</p>
-                    <p><strong>Les critères de réussite (Score) :</strong></p>
-                    <ul>
-                        <li>La moyenne de l'équipe doit être la plus proche possible de 50.</li>
-                        <li>Un malus important est appliqué pour chaque joueur laissé sur le carreau (non assigné).</li>
-                    </ul>
+                <!-- CONTEXTE -->
+                <div class="project-section-header">
+                    <span class="section-tagline">Algorithmie & Statistiques</span>
+                    <h2>Contexte Stratégique</h2>
                 </div>
 
                 <div class="content-block">
-                    <h2>Les 3 Niveaux de Contraintes</h2>
-                    <p>Le projet imposait une complexité croissante pour simuler un vrai matchmaking de jeu vidéo </p>
-                    <ul style="margin-top: 1rem;">
-                        <li><strong>Niveau 1 (Basique) :</strong> On équilibre uniquement selon le <em>niveau</em>
-                            global des joueurs (de 0 à 100).</li>
-                        <li><strong>Niveau 2 (Rôles) :</strong> Chaque équipe doit contenir 1 Tank, 1 Support et 1 DPS
-                            (le 4ème est libre).</li>
-                        <li><strong>Niveau 3 (Complet) :</strong> On prend en compte le rôle principal ET le rôle
-                            secondaire pour une synergie parfaite.</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>Stratégie et Heuristiques</h2>
-                    <p>Nous devions implémenter 4 algorithmes classiques, en inventer un, et en adapter certains aux
-                        niveaux supérieurs. Voici ma sélection :</p>
-
-                    <h3>1. Les Algorithmes Rapides</h3>
-                    <p>J'ai utilisé <strong>"Les Extrêmes en Premier"</strong> (adapté au Niveau 2). L'idée est de trier
-                        les joueurs et d'associer les plus forts avec les plus faibles.
-                        <br><em>Résultat :</em> Exécution quasi instantanée (4ms pour 250 joueurs) mais score moyen.
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-muted); margin-bottom: 2.5rem;">
+                        L'objectif de ce projet était de résoudre un problème classique mais complexe : l'équilibrage
+                        parfait d'équipes dans un environnement compétitif. Face à une liste de 250 joueurs, l'enjeu
+                        était de minimiser la <strong>variance statistique</strong> tout en respectant des contraintes
+                        de rôles strictes, transformant un défi mathématique en une solution logicielle
+                        <strong>performante</strong>.
                     </p>
 
-                    <h3>2. Les Algorithmes d'Optimisation</h3>
-                    <p>J'ai implémenté le <strong>"N-OPT"</strong> (adapté aux Niveaux 2 et 3). Il recombine totalement
-                        les membres de deux équipes pour trouver la meilleure configuration.
-                        <br><em>Résultat :</em> C'est le plus performant. Au niveau 3, il traite 100 joueurs en 1
-                        seconde avec un score d'équipe quasi parfait (écart de 0 à 1 point).
-                    </p>
-
-                    <h3>3. L'Algorithme Inventé : "Le Draft"</h3>
-                    <p>Mon concept était de remplir les équipes une par une en scannant la liste pour trouver le
-                        "meilleur candidat" à l'instant T. Bien que l'idée semblait bonne sur le papier, les tests ont
-                        montré des résultats mitigés comparés au N-OPT.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Analyse des Performances</h2>
-                    <p>L'application permettait de générer des jeux de tests (répartition aléatoire ou biaisée) et de
-                        tracer des graphiques de performance.</p>
-                    <p><strong>Conclusion du dossier technique :</strong></p>
-                    <ul>
-                        <li>Pour une volumétrie faible (< 100 joueurs), tous les algos se valent.</li>
-                        <li>Pour une forte volumétrie (> 200 joueurs), le <strong>N-Swap</strong> devient trop lent
-                            (complexité exponentielle).</li>
-                        <li>Le meilleur compromis est le <strong>N-OPT</strong>, qui offre une qualité de matchmaking
-                            excellente tout en restant raisonnable en temps d'exécution (contrairement au N-Swap qui
-                            explose les compteurs).</li>
-                    </ul>
-                </div>
-                <div class="content-block">
-                    <h2> Illustrations de ma participation </h2>
-
-                    <div class="visual-proofs-grid">
-                        <!-- Image 1 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/DiagrammeExtremeEnPremier.png', 'Diagramme de la vitesse d\'execution des Extremes En Premier')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/DiagrammeExtremeEnPremier.png"
-                                    alt="Diagramme d'analyse Extremes En Premier">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Extrêmes en Premier</h4>
-                                <p>Analyse de la vitesse d'exécution</p>
-                            </div>
+                    <div class="pro-strategy-grid"
+                        style="margin-bottom: 0; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                        <!-- Analyse -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-design">Analyse</span>
+                            <h3>Heuristiques de Tri</h3>
+                            <p>
+                                Comparaison de plusieurs méthodes de répartition pour identifier le meilleur compromis
+                                entre vitesse d'exécution et équité des équipes.
+                            </p>
                         </div>
 
-                        <!-- Image 2 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/DiagrammeNSwap.png', 'Diagramme de la vitesse d\'execution du N-Swap')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/DiagrammeNSwap.png"
-                                    alt="Diagramme d'analyse de l'algorithme N-SWAP">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
-                            </div>
-                            <div class="proof-info">
-                                <h4>Algorithme N-Swap</h4>
-                                <p>Comparaison des performances</p>
-                            </div>
+                        <!-- Data -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"></div>
+                            <span class="strategy-label label-strategy">Data</span>
+                            <h3>Tests Massifs</h3>
+                            <p>
+                                Validation des algorithmes sur des jeux de données de grande taille pour garantir la
+                                stabilité des résultats face à l'explosion combinatoire.
+                            </p>
                         </div>
 
-                        <!-- Image 3 -->
-                        <div class="proof-card"
-                            onclick="openLightbox('img/preuves/Diagramme1erJeuTest.png', 'Graphique du 1er jeu de test')">
-                            <div class="proof-image-wrapper">
-                                <img src="img/preuves/Diagramme1erJeuTest.png"
-                                    alt="Diagramme d'analyse du 1er jeu de test">
-                                <div class="proof-overlay">
-                                    <i class="fas fa-expand-alt"></i>
-                                </div>
+                        <!-- Performance -->
+                        <div class="pro-strategy-card">
+                            <div class="card-glow"
+                                style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 60%);">
                             </div>
-                            <div class="proof-info">
-                                <h4>Premier Jeu de Test</h4>
-                                <p>Résultats graphiques initiaux</p>
-                            </div>
+                            <span class="strategy-label label-design">Optimisation</span>
+                            <h3>Target Variance</h3>
+                            <p>
+                                Mise au point de métriques précises pour évaluer la qualité de l'équilibrage et affiner
+                                les boucles de calcul n-opt.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Lightbox Modal -->
-                    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-                        <img class="lightbox-content" id="lightbox-img">
-                        <div id="lightbox-caption"></div>
-                    </div>
                 </div>
-
-                <a href="index.html#projects" class="btn btn-outline" style="margin-left:0;">&larr; Retour aux
-                    projets</a>
             </div>
 
+            <!-- SIDEBAR : Sibling of main-content -->
             <aside class="project-sidebar">
+                <!-- INFOS PROJET -->
                 <div class="sidebar-box">
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Technologies</span>
-                        <span class="sidebar-value">C# .NET, Windows Forms/WPF</span>
-                    </div>
-                    <div class="sidebar-item">
                         <span class="sidebar-label">Rôle</span>
-                        <span class="sidebar-value">Développeur & Analyste</span>
+                        <span class="sidebar-value">Algorithmicien</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Livrables</span>
-                        <span class="sidebar-value">Application, Jeux de tests, Rapport d'analyse</span>
+                        <span class="sidebar-label">Langage</span>
+                        <span class="sidebar-value">C# (.NET)</span>
                     </div>
                     <div class="sidebar-item">
-                        <span class="sidebar-label">Compétences</span>
-                        <span class="sidebar-value">Algorithmique, Structures de données, Optimisation</span>
+                        <span class="sidebar-label">Durée</span>
+                        <span class="sidebar-value">3 Mois</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">Type</span>
+                        <span class="sidebar-value">S.A.E - BUT 1</span>
+                    </div>
+                </div>
+
+                <!-- COMPÉTENCES UNIFIÉES -->
+                <div class="sidebar-box">
+                    <span class="sidebar-label">Compétences</span>
+
+                    <!-- 1. Soft Skills -->
+                    <div style="margin-top: 1.2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Soft Skills
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Rigueur scientifique</span>
+                            <span class="tag">Analyse critique</span>
+                            <span class="tag">Logique pure</span>
+                            <span class="tag">Persévérance</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Skills Techniques -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Skills Techniques
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">Complexité O(n)</span>
+                            <span class="tag">Statistiques descriptives</span>
+                            <span class="tag">Heuristiques</span>
+                            <span class="tag">Jeux de tests</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Langages & Outils -->
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-weight: 700;">
+                            Langages & Outils
+                        </h4>
+                        <div class="card-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">Excel (Analyses)</span>
+                            <span class="tag">Visual Studio</span>
+                            <span class="tag">GitHub</span>
+                        </div>
                     </div>
                 </div>
             </aside>
         </div>
+
+        <div class="section-divider"></div>
+
+        <!-- LE DÉFI OPTIMISATION -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Scalabilité & Contraintes</span>
+                <h2>Les Niveaux de Complexité</h2>
+                <p>De l'équilibrage simple à la synergie de rôles avancée</p>
+            </div>
+
+            <div class="roles-grid" style="margin-bottom: 0;">
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-level-up-alt"></i>
+                        Niveau 1
+                    </div>
+                    <ul class="role-list">
+                        <li>Équilibre par Niveau</li>
+                        <li>Distribution linéaire</li>
+                        <li>Moyenne cible : 50</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-users"></i>
+                        Niveau 2
+                    </div>
+                    <ul class="role-list">
+                        <li>Contraintes de Rôles</li>
+                        <li>1 Tank / 1 Support / 1 DPS</li>
+                        <li>Gestion des synergies</li>
+                    </ul>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-title">
+                        <i class="fas fa-star"></i>
+                        Niveau 3
+                    </div>
+                    <ul class="role-list">
+                        <li>Rôles Secondaires</li>
+                        <li>Heuristique complète</li>
+                        <li>Optimisation maximale</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- MA PARTICIPATION & EXPERTISE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Stratégies & Comparaisons</span>
+                <h2>Expertise Algorithmique</h2>
+                <p>Évaluation des performances et qualité de l'équilibrage</p>
+            </div>
+
+            <div class="pro-strategy-grid">
+                <!-- Vitesse -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-challenge">Vitesse</span>
+                    <h3>Extrêmes en Premier</h3>
+                    <p>Algorithme ultra-rapide (4ms) idéal pour les gros volumes, offrant un équilibrage statistique
+                        satisfaisant avec une complexité minimale.</p>
+                </div>
+
+                <!-- Qualité -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"></div>
+                    <span class="strategy-label label-strategy">Qualité</span>
+                    <h3>Heuristique N-OPT</h3>
+                    <p>Recombinaison intelligente par paires d'équipes pour atteindre un équilibre quasi-parfait, au
+                        prix d'un temps de calcul légèrement supérieur.</p>
+                </div>
+
+                <!-- Analyse -->
+                <div class="pro-strategy-card">
+                    <div class="card-glow"
+                        style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 60%);">
+                    </div>
+                    <span class="strategy-label label-design">Statistiques</span>
+                    <h3>Analyse de Variance</h3>
+                    <p>Étude approfondie des résultats via des métriques de dispersion pour valider scientifiquement la
+                        supériorité des approches heuristiques.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- DOCUMENTATION -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Données & Preuves</span>
+                <h2>Analyses et Résultats</h2>
+                <p>Visualisation des performances et de la précision algorithmique</p>
+            </div>
+
+            <div class="visual-proofs-grid">
+                <!-- Image 1 -->
+                <div class="proof-card" id="card-speed-extreme"
+                    data-images='["img/preuves/DiagrammeExtremeEnPremier.png"]'
+                    data-captions='["Analyse de la vitesse dexécution de l algorithme Extrêmes en Premier"]'
+                    onclick="openLightboxGroup('card-speed-extreme')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/DiagrammeExtremeEnPremier.png" alt="Analyse Algorithme Extrêmes">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Stats Vitesse</h4>
+                        <p>Étude de l'algorithme Extrêmes</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="proof-card" id="card-speed-nopt" data-images='["img/preuves/DiagrammeNSwap.png"]'
+                    data-captions='["Comparaison des performances et de la convergence du N-Swap"]'
+                    onclick="openLightboxGroup('card-speed-nopt')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/DiagrammeNSwap.png" alt="Analyse Algorithme N-Swap">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Stats Convergence</h4>
+                        <p>Performance du N-Swap</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="proof-card" id="card-test-results" data-images='["img/preuves/Diagramme1erJeuTest.png"]'
+                    data-captions='["Visualisation de l équilibrage parfait sur un jeu de test de 250 joueurs"]'
+                    onclick="openLightboxGroup('card-test-results')">
+                    <div class="proof-image-wrapper">
+                        <img src="img/preuves/Diagramme1erJeuTest.png" alt="Résultats Équilibrage">
+                        <div class="proof-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="proof-info">
+                        <h4>Précision Équipes</h4>
+                        <p>Validation par le test</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
+                <img class="lightbox-content" id="lightbox-img">
+                <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
+                <div id="lightbox-caption"></div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- RÉTROSPECTIVE -->
+        <section class="project-page-section">
+            <div class="project-section-header">
+                <span class="section-tagline">Bilan & Maturité</span>
+                <h2>Analyse Post-Projet</h2>
+            </div>
+
+            <div class="content-block"
+                style="background: rgba(59, 130, 246, 0.03); padding: 3rem; border-radius: 24px; border: 1px dashed rgba(59, 130, 246, 0.2);">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-style: italic;">
+                    "L'optimisation n'est pas une quête de la perfection absolue, mais celle du meilleur compromis. Ce
+                    projet m'a démontré que souvent, une heuristique intelligente (N-OPT) surpasse largement une
+                    recherche brute, tant en efficacité qu'en élégance mathématique."
+                </p>
+                <div style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white;">
+                        RA</div>
+                    <div>
+                        <span style="display: block; font-weight: 700; color: var(--text-main);">Ruddy Audigier</span>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithmicien & Développeur
+                            C#</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <footer>
@@ -273,14 +467,11 @@
         </div>
     </footer>
 
-    <!-- Script Menu Mobile -->
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             const hamburgerIcon = document.querySelector('.hamburger i');
-
             navLinks.classList.toggle('mobile-active');
-
             if (navLinks.classList.contains('mobile-active')) {
                 hamburgerIcon.classList.remove('fa-bars');
                 hamburgerIcon.classList.add('fa-times');
@@ -289,45 +480,56 @@
                 hamburgerIcon.classList.add('fa-bars');
             }
         }
-    </script>
 
-    <!-- FontAwesome (Fichier externe) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        // --- Lightbox Logic ---
+        let currentGroup = [];
+        let currentCaptions = [];
+        let currentIndex = 0;
 
-    <!-- Script Lightbox -->
-    <script>
-        function openLightbox(src, caption) {
+        function openLightboxGroup(cardId) {
+            const card = document.getElementById(cardId);
+            if (!card || !card.dataset.images) return;
+            currentGroup = JSON.parse(card.dataset.images);
+            currentCaptions = JSON.parse(card.dataset.captions);
+            currentIndex = 0;
+            updateLightboxContent();
             const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'flex';
+            setTimeout(() => { lightbox.classList.add('active'); }, 50);
+        }
+
+        function updateLightboxContent() {
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
-
-            lightbox.style.display = 'flex';
-            // Petit délai pour l'animation d'opacité
+            lightboxImg.style.opacity = '0.5';
             setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 10);
+                if (currentGroup[currentIndex]) {
+                    lightboxImg.src = currentGroup[currentIndex];
+                    lightboxCaption.textContent = currentCaptions[currentIndex];
+                }
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
 
-            lightboxImg.src = src;
-            lightboxCaption.textContent = caption;
-            document.body.style.overflow = 'hidden'; // Empêche le scroll
+        function changeLightboxImage(direction, event) {
+            if (event) event.stopPropagation();
+            currentIndex += direction;
+            if (currentIndex >= currentGroup.length) currentIndex = 0;
+            else if (currentIndex < 0) currentIndex = currentGroup.length - 1;
+            updateLightboxContent();
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
-
             lightbox.classList.remove('active');
-
-            // Attendre la fin de l'animation pour masquer
-            setTimeout(() => {
-                lightbox.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Réactive le scroll
-            }, 300);
+            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
         }
 
-        // Fermeture avec la touche Echap
-        document.addEventListener('keydown', function (event) {
-            if (event.key === "Escape") {
-                closeLightbox();
+        document.addEventListener('keydown', function (e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                else if (e.key === 'ArrowRight') changeLightboxImage(1);
+                else if (e.key === 'Escape') closeLightbox();
             }
         });
     </script>
