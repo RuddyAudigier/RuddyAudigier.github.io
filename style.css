@@ -3485,6 +3485,7 @@ footer {
   gap: 1.5rem;
 }
 
+
 .arsenal-subtitle {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
@@ -3872,11 +3873,13 @@ footer {
 
 /* Fix Carousel Overflow */
 .about-skills-preview {
-  min-width: 0;
-  /* Critical for grid items to shrink */
-  overflow: hidden;
-  /* Prevent spillover */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartir l'espace entre les sous-parties */
+  height: 100%;
+  gap: 3rem;
 }
+
 
 .skills-carousel-container {
   width: 100%;

@@ -123,7 +123,7 @@
                     <div class="glass-stat-card">
                         <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
                         <div class="stat-data">
-                            <span class="stat-nb">3 Mois</span>
+                            <span class="stat-nb">3 Semaines</span>
                             <span class="stat-txt">Cycle Développement</span>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                 <div class="sidebar-box">
                     <div class="sidebar-item">
                         <span class="sidebar-label">Rôles</span>
-                        <span class="sidebar-value">Dev Fullstack, Scrum Master</span>
+                        <a href="#roles" class="sidebar-value">Dev Fullstack, Scrum Master et Product Owner</a>
                     </div>
                     <div class="sidebar-item">
                         <span class="sidebar-label">Type</span>
@@ -280,7 +280,7 @@
                 <p>Double casquette : Direction technique et relation client</p>
             </div>
 
-            <div class="roles-grid" style="margin-bottom: 0;">
+            <div class="roles-grid" id="roles" style="margin-bottom: 0;">
                 <div class="role-card">
                     <div class="role-title">
                         <i class="fas fa-user-tie"></i>
@@ -508,11 +508,25 @@
     </div>
 
 
-    <footer>
+   <footer>
         <div class="container">
-            <p>&copy; 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <a href="https://github.com/RuddyAudigier" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ruddy-audigier/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ruddy.audigier@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p>© 2025 Ruddy Audigier. Portfolio conçu et développé par mes soins.</p>
+            </div>
         </div>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
