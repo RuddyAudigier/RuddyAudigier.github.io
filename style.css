@@ -4749,6 +4749,7 @@ footer {
 
 .pokemon-card {
     position: relative;
+    left: 100px;
     width: 100%;
     max-width: 360px;
     aspect-ratio: 2.5/3.5;
