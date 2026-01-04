@@ -138,70 +138,81 @@
                     </div>
 
                     <div class="intro-sidebar-stats">
-                                                <!-- Pokémon Card Profile -->
-                                                <div class="pokemon-card">
-                                                        <!-- SVG overlay producing holographic noise + color shifts (inspired by provided card) -->
-                                                        <svg class="card-glitter-svg" aria-hidden="true" viewBox="0 0 800 1100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <defs>
-                                                                <filter id="noiseFilter">
-                                                                    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="t" />
-                                                                    <feColorMatrix type="hueRotate" values="0">
-                                                                    </feColorMatrix>
-                                                                    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" />
-                                                                    <feBlend in="SourceGraphic" in2="t" mode="screen" />
-                                                                </filter>
-                                                                <linearGradient id="edgeGrad" x1="0" x2="1">
-                                                                    <stop offset="0" stop-color="#7ecbff" stop-opacity="0.35"/>
-                                                                    <stop offset="0.5" stop-color="#ffd24d" stop-opacity="0.25"/>
-                                                                    <stop offset="1" stop-color="#ff6b6b" stop-opacity="0.18"/>
-                                                                </linearGradient>
-                                                                <radialGradient id="sparkGrad" cx="50%" cy="10%" r="60%">
-                                                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-                                                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-                                                                </radialGradient>
-                                                            </defs>
+                        <!-- Pokémon Card Profile -->
+                        <div class="pokemon-card">
+                            <!-- SVG overlay producing holographic noise + color shifts (inspired by provided card) -->
+                            <svg class="card-glitter-svg" aria-hidden="true" viewBox="0 0 800 1100"
+                                preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="noiseFilter">
+                                        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"
+                                            stitchTiles="stitch" result="t" />
+                                        <feColorMatrix type="hueRotate" values="0">
+                                        </feColorMatrix>
+                                        <feColorMatrix type="matrix"
+                                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" />
+                                        <feBlend in="SourceGraphic" in2="t" mode="screen" />
+                                    </filter>
+                                    <linearGradient id="edgeGrad" x1="0" x2="1">
+                                        <stop offset="0" stop-color="#7ecbff" stop-opacity="0.35" />
+                                        <stop offset="0.5" stop-color="#ffd24d" stop-opacity="0.25" />
+                                        <stop offset="1" stop-color="#ff6b6b" stop-opacity="0.18" />
+                                    </linearGradient>
+                                    <radialGradient id="sparkGrad" cx="50%" cy="10%" r="60%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
 
-                                                            <!-- subtle color wash -->
-                                                            <rect x="0" y="0" width="100%" height="100%" fill="url(#edgeGrad)" opacity="0.06" filter="url(#noiseFilter)" />
+                                <!-- subtle color wash -->
+                                <rect x="0" y="0" width="100%" height="100%" fill="url(#edgeGrad)" opacity="0.06"
+                                    filter="url(#noiseFilter)" />
 
-                                                            <!-- animated shards for sparkle -->
-                                                            <g fill="white" fill-opacity="0.12" transform="translate(0,40)">
-                                                                <polygon points="60,30 70,48 50,48" transform="rotate(-10 60 40)">
-                                                                    <animate attributeName="opacity" values="0.08;0.22;0.08" dur="3.4s" repeatCount="indefinite"/>
-                                                                </polygon>
-                                                                <polygon points="330,160 345,190 315,190" transform="rotate(10 330 175)">
-                                                                    <animate attributeName="opacity" values="0.04;0.18;0.04" dur="4.2s" repeatCount="indefinite"/>
-                                                                </polygon>
-                                                                <polygon points="520,90 540,120 500,120" transform="rotate(-18 520 105)">
-                                                                    <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3.8s" repeatCount="indefinite"/>
-                                                                </polygon>
-                                                            </g>
-                                                        </svg>
-                                                        <div class="card-border-edge" aria-hidden="true"></div>
-                                                        <div class="card-corner-sparkle top-left" aria-hidden="true"></div>
-                                                        <div class="card-corner-sparkle top-right" aria-hidden="true"></div>
-                                                        <div class="card-corner-sparkle bottom-left" aria-hidden="true"></div>
-                                                        <div class="card-corner-sparkle bottom-right" aria-hidden="true"></div>
+                                <!-- animated shards for sparkle -->
+                                <g fill="white" fill-opacity="0.12" transform="translate(0,40)">
+                                    <polygon points="60,30 70,48 50,48" transform="rotate(-10 60 40)">
+                                        <animate attributeName="opacity" values="0.08;0.22;0.08" dur="3.4s"
+                                            repeatCount="indefinite" />
+                                    </polygon>
+                                    <polygon points="330,160 345,190 315,190" transform="rotate(10 330 175)">
+                                        <animate attributeName="opacity" values="0.04;0.18;0.04" dur="4.2s"
+                                            repeatCount="indefinite" />
+                                    </polygon>
+                                    <polygon points="520,90 540,120 500,120" transform="rotate(-18 520 105)">
+                                        <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3.8s"
+                                            repeatCount="indefinite" />
+                                    </polygon>
+                                </g>
+                            </svg>
+                            <div class="card-border-edge" aria-hidden="true"></div>
+                            <div class="card-corner-sparkle top-left" aria-hidden="true"></div>
+                            <div class="card-corner-sparkle top-right" aria-hidden="true"></div>
+                            <div class="card-corner-sparkle bottom-left" aria-hidden="true"></div>
+                            <div class="card-corner-sparkle bottom-right" aria-hidden="true"></div>
                             <div class="card-pokemon-header">
                                 <span class="card-pokemon-name">Ruddy Audigier</span>
                                 <span class="card-pokemon-hp">LVL 2</span>
                             </div>
                             <div class="card-image-frame">
                                 <img src="img/photoMoi.png" alt="Ruddy Audigier">
-                                                                <!-- holographic sparkle SVG overlay -->
-                                                                <svg aria-hidden="true" viewBox="0 0 200 80" style="position:absolute;right:8px;top:8px;width:110px;opacity:0.9;mix-blend-mode:screen;pointer-events:none;z-index:6">
-                                                                    <defs>
-                                                                        <linearGradient id="spark" x1="0" x2="1">
-                                                                            <stop offset="0" stop-color="#fff" stop-opacity="0.9"/>
-                                                                            <stop offset="1" stop-color="#ffd24d" stop-opacity="0.6"/>
-                                                                        </linearGradient>
-                                                                    </defs>
-                                                                    <g fill="url(#spark)">
-                                                                        <ellipse cx="30" cy="20" rx="6" ry="14" opacity="0.18" />
-                                                                        <ellipse cx="60" cy="12" rx="4" ry="10" opacity="0.22" transform="rotate(-20 60 12)"/>
-                                                                        <path d="M110 8 L116 20 L128 22 L118 28 L120 40 L110 32 L100 40 L102 28 L92 22 L104 20 Z" opacity="0.25"/>
-                                                                    </g>
-                                                                </svg>
+                                <!-- holographic sparkle SVG overlay -->
+                                <svg aria-hidden="true" viewBox="0 0 200 80"
+                                    style="position:absolute;right:8px;top:8px;width:110px;opacity:0.9;mix-blend-mode:screen;pointer-events:none;z-index:6">
+                                    <defs>
+                                        <linearGradient id="spark" x1="0" x2="1">
+                                            <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+                                            <stop offset="1" stop-color="#ffd24d" stop-opacity="0.6" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#spark)">
+                                        <ellipse cx="30" cy="20" rx="6" ry="14" opacity="0.18" />
+                                        <ellipse cx="60" cy="12" rx="4" ry="10" opacity="0.22"
+                                            transform="rotate(-20 60 12)" />
+                                        <path
+                                            d="M110 8 L116 20 L128 22 L118 28 L120 40 L110 32 L100 40 L102 28 L92 22 L104 20 Z"
+                                            opacity="0.25" />
+                                    </g>
+                                </svg>
                             </div>
                             <div class="card-pokemon-body">
                                 <div class="card-attack">
@@ -219,7 +230,8 @@
                                     </div>
                                     <p class="attack-desc">Maitrise des moteurs Unity et Unreal Engine.</p>
                                 </div>
-                                <div class="card-phrase">Mr Roboto: Sometimes i dream of saving the world, saving everyone from the invisible hand</div>
+                                <div class="card-phrase">Mr Roboto: Sometimes i dream of saving the world, saving
+                                    everyone from the invisible hand</div>
                             </div>
                             <div class="card-pokemon-footer">
                                 <span>Type: Informatique</span>
@@ -250,7 +262,10 @@
                             <h4>Développeur Gameplay / Logiciel</h4>
                         </div>
                         <p class="objectif-desc">
-                            Ce qui m’anime et me motive dans ces deux professions, c’est avant tout le plaisir d’aider les gens, mais surtout de les voir s’amuser, partager des moments de bonheur et jouer à mes jeux vidéo avec leurs proches. Mon projet à long terme serait de m’épanouir en voyant mes jeux vidéo et logiciels diffusés largement, et utilisés par le plus grand nombre.
+                            Ce qui m’anime et me motive dans ces deux professions, c’est avant tout le plaisir d’aider
+                            les gens, mais surtout de les voir s’amuser, partager des moments de bonheur et jouer à mes
+                            jeux vidéo avec leurs proches. Mon projet à long terme serait de m’épanouir en voyant mes
+                            jeux vidéo et logiciels diffusés largement, et utilisés par le plus grand nombre.
                         </p>
                         <div class="objectif-details">
                             <div class="detail-item">
@@ -780,6 +795,31 @@
                     <div class="skill-item" style="--i:9; --color: #f29111;">
                         <i class="fas fa-table"></i>
                         <span>PhpMyAdmin</span>
+                    </div>
+                </div>
+
+                <!-- Catégorie 4 : IA -->
+                <h4 class="category-title" style="--d: 0.6s">Intelligence Artificielle</h4>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:10; --color: #10a37f;">
+                        <i class="fas fa-brain"></i>
+                        <span>ChatGPT</span>
+                    </div>
+                    <div class="skill-item" style="--i:11; --color: #4285f4;">
+                        <i class="fas fa-robot"></i>
+                        <span>Gemini 3</span>
+                    </div>
+                    <div class="skill-item" style="--i:12; --color: #8e44ad;">
+                        <i class="fas fa-rocket"></i>
+                        <span>Antigravity</span>
+                    </div>
+                    <div class="skill-item" style="--i:13; --color: #ff7f50;">
+                        <i class="fas fa-microchip"></i>
+                        <span>Mistral IA</span>
+                    </div>
+                    <div class="skill-item" style="--i:14; --color: #ea4b71;">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>N8N</span>
                     </div>
                 </div>
             </div>
