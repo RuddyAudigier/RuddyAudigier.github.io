@@ -4749,6 +4749,8 @@ footer {
 
 /* --- STYLE POKÉMON VMAX "ULTRA FLUIDE" --- */
 
+/* --- STYLE POKÉMON VMAX "ULTRA FLUIDE" --- */
+
 .pokemon-card {
   position: relative;
   left: 100px;
@@ -4771,6 +4773,21 @@ footer {
   padding: 6px;
   /* Épaisseur de la bordure colorée + petit espace */
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+  /* NEW: Smooth transition for hover effects */
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+
+  /* FIX: Force border-radius during 3D transform */
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  backface-visibility: hidden;
+}
+
+/* NEW: Hover Effect - Lift & Glow */
+.pokemon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 /* 1. LA BORDURE LUMINEUSE ET FLUIDE */
@@ -4789,6 +4806,9 @@ footer {
 
   /* On laisse le mask pour ne garder que le contour */
   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -4813,8 +4833,6 @@ footer {
   animation: holoFlow 6s ease infinite;
 }
 
-/* ... (Le reste du CSS reste identique) ... */
-
 /* 3. L'IMAGE EN FOND (FULL ART) */
 .card-image-frame {
   position: absolute;
@@ -4823,6 +4841,227 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 0;
+  overflow: hidden;
+  /* Ensure sheen stays inside */
+}
+
+/* NEW: Holo Sheen Overlay */
+.card-image-frame::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.1) 48%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.1) 52%,
+      transparent 55%);
+  transform: rotate(30deg) translateY(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.pokemon-card:hover .card-image-frame::after {
+  opacity: 1;
+  animation: holoSheen 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+@keyframes holoSheen {
+  0% {
+    transform: rotate(30deg) translateY(-20%);
+  }
+
+  100% {
+    transform: rotate(30deg) translateY(20%);
+  }
+}
+
+/* --- PERMANENT EFFECTS --- */
+
+/* 1. Fsociety Mask Badge (Mr Robot Theme - True Glitch) */
+.fsociety-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  /* Background Image Setup */
+  background: url('img/fsociety_clean.jpg') no-repeat center -5px;
+  background-size: 110%;
+  /* Zoom effect */
+  background-color: black;
+
+  /* Glitch Container Logic */
+  overflow: hidden;
+  animation: badgeGlitchShake 4s infinite linear alternate-reverse;
+}
+
+/* Pseudo-elements for the "Slicing/Tearing" effect */
+.fsociety-badge::before,
+.fsociety-badge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  /* Copies the main image */
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.fsociety-badge::before {
+  animation: glitchSliceA 3s infinite linear alternate-reverse;
+  clip-path: inset(0 0 0 0);
+  transform: translate(0, 0);
+}
+
+.fsociety-badge::after {
+  animation: glitchSliceB 2.5s infinite linear alternate-reverse;
+  clip-path: inset(0 0 0 0);
+  transform: translate(0, 0);
+}
+
+/* 1. SHAKE (Whole Badge) */
+@keyframes badgeGlitchShake {
+
+  0%,
+  90% {
+    transform: translate(0, 0);
+  }
+
+  91% {
+    transform: translate(-2px, 1px);
+  }
+
+  92% {
+    transform: translate(1px, -1px);
+  }
+
+  93% {
+    transform: translate(0, 2px);
+  }
+
+  94% {
+    transform: translate(-2px, -1px);
+  }
+
+  95% {
+    transform: translate(2px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* 2. SLICE A (Random full-height slices) */
+@keyframes glitchSliceA {
+
+  0%,
+  88% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+    opacity: 0;
+  }
+
+  90% {
+    transform: translate(-5px, 0);
+    clip-path: inset(20% 0 50% 0);
+    opacity: 1;
+  }
+
+  91% {
+    transform: translate(5px, 0);
+    clip-path: inset(60% 0 10% 0);
+  }
+
+  92% {
+    transform: translate(-5px, 0);
+    clip-path: inset(40% 0 40% 0);
+  }
+
+  93% {
+    transform: translate(5px, 0);
+    clip-path: inset(10% 0 80% 0);
+  }
+
+  94% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+/* 3. SLICE B (Different random full-height slices) */
+@keyframes glitchSliceB {
+
+  0%,
+  85% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+    opacity: 0;
+  }
+
+  87% {
+    transform: translate(5px, 0);
+    clip-path: inset(10% 0 70% 0);
+    opacity: 1;
+  }
+
+  89% {
+    transform: translate(-5px, 0);
+    clip-path: inset(70% 0 10% 0);
+  }
+
+  91% {
+    transform: translate(5px, 0);
+    clip-path: inset(50% 0 30% 0);
+  }
+
+  93% {
+    transform: translate(-5px, 0);
+    clip-path: inset(0% 0 90% 0);
+  }
+
+  95% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+/* 2. Holo Foil Pattern (Pokemon Rarity) */
+.card-holofoil-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  opacity: 0.15;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at center, white 1px, transparent 1.5px),
+    radial-gradient(circle at center, white 1px, transparent 1.5px);
+  background-size: 20px 20px, 15px 15px;
+  background-position: 0 0, 10px 10px;
+  mix-blend-mode: overlay;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
 }
 
 .card-image-frame img {
@@ -4846,7 +5085,7 @@ footer {
   pointer-events: none;
 }
 
-/* --- LE HEADER (Nom) --- */
+/* --- LE HEADER style "Transparent" (Restored) --- */
 .card-pokemon-header {
   position: relative;
   z-index: 2;
@@ -4860,7 +5099,8 @@ footer {
 .card-pokemon-name {
   font-family: sans-serif;
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  /* Slightly reduced as per Step 32 */
   font-style: italic;
   color: #fff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
@@ -4874,7 +5114,7 @@ footer {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-/* --- LE CORPS (Attaques) --- */
+/* --- LE CORPS style "High Visibility" (Step 25) --- */
 .card-pokemon-body {
   position: relative;
   z-index: 2;
@@ -4893,44 +5133,55 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.6);
+  /* Darker background for better contrast */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   padding: 8px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .attack-name {
   font-weight: 700;
   font-size: 1rem;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  /* Stronger shadow */
 }
 
 .attack-dmg {
   font-weight: 800;
   font-size: 1.1rem;
   color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
 .attack-desc {
-  font-size: 0.7rem;
-  color: #ccc;
+  font-size: 0.85rem;
+  /* Increased size */
+  color: #fff;
+  /* Struck white for max visibility */
   margin-top: 4px;
   padding-left: 8px;
   font-style: italic;
-  text-shadow: 0 1px 2px black;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  /* Stronger shadow */
+  line-height: 1.3;
 }
 
 /* Phrase Robot */
 .card-phrase {
   font-style: italic;
-  font-size: 0.65rem;
-  color: #aebfd6;
+  font-size: 0.75rem;
+  /* Increased size */
+  color: #fff;
+  /* Whiter */
   text-align: center;
-  margin-top: 5px;
-  opacity: 0.8;
+  margin-top: 8px;
+  opacity: 1;
+  /* Full opacity */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
 /* Footer */
@@ -4944,6 +5195,8 @@ footer {
   color: #888;
   background: black;
 }
+
+/* Kali Dragon and others (keep existing) */
 
 .btn-white-halo {
   background: #ffffff !important;

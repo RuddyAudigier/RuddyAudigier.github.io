@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroAnimations();
     initCustomCursor();
     init3DTilt();
+    initPokemonCard();
 });
 
 // ========================================
@@ -583,7 +584,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(startSequence, 1000);
 
     // 4. Deploy Interaction
-    // 4. Deploy Interaction
     if (deployBtn) {
         deployBtn.addEventListener('click', () => {
             // Visual feedback
@@ -602,3 +602,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// ========================================
+// POKEMON CARD 3D LOGIC
+// ========================================
+function initPokemonCard() {
+    const card = document.querySelector('.pokemon-card');
+    if (!card) return;
+
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Tilt Effect
+        const rotateX = ((y - centerY) / centerY) * -14; // Max 14deg tilt
+        const rotateY = ((x - centerX) / centerX) * 14;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+
+        // Update CSS variables for sheen
+        const percentX = (x / rect.width) * 100;
+        const percentY = (y / rect.height) * 100;
+        card.style.setProperty('--mouse-x', `${percentX}%`);
+        card.style.setProperty('--mouse-y', `${percentY}%`);
+        card.style.setProperty('--opacity-sheen', '1');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        // Reset position
+        card.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        card.style.setProperty('--opacity-sheen', '0');
+
+        // Remove transition after it resets so mousemove is instant
+        setTimeout(() => {
+            card.style.transition = '';
+        }, 600);
+    });
+
+    // Smooth entry
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s ease';
+    });
+}
