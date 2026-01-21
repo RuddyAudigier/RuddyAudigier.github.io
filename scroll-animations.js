@@ -19,43 +19,43 @@
     function updateAnimations() {
         const scrollY = window.scrollY;
 
-        // 1. Navbar Shrink
+        // 1. Navbar Shrink (Always active)
         if (scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
 
-        // 2. Hero Animations
+        // 2. Hero Animations - Only on Desktop (> 768px)
+        if (window.innerWidth > 768) {
+            // A. Project Hero: Parallax Scale Down
+            if (projectHero) {
+                const progress = scrollY;
+                const scale = Math.max(0.8, 1 - (progress * 0.0002));
+                const opacity = Math.max(0, 1 - (progress * 0.0015));
+                projectHero.style.transform = `scale(${scale})`;
+                projectHero.style.opacity = opacity;
+            }
 
-        // A. Project Hero: Parallax Scale Down (Inception Effect)
-        if (projectHero) {
-            // Since hero is sticky, we just scale it down as content scrolls over it
-            const progress = scrollY;
-
-            // Scale down slowly (1 -> 0.8 at 1000px scroll)
-            const scale = Math.max(0.8, 1 - (progress * 0.0002));
-
-            // Fade out slowly (1 -> 0 at 800px scroll)
-            const opacity = Math.max(0, 1 - (progress * 0.0015));
-
-            projectHero.style.transform = `scale(${scale})`;
-            projectHero.style.opacity = opacity;
-        }
-
-        // B. Index Hero: Visual Scale Shrink (Parallax)
-        if (indexHero) {
-            const limit = 400;
-            const progress = Math.min(scrollY / limit, 1);
-
-            // Scale down slightly (1 -> 0.9)
-            const scale = 1 - (progress * 0.1);
-
-            // Fade out slightly (1 -> 0.5)
-            const opacity = 1 - (progress * 0.5);
-
-            indexHero.style.transform = `scale(${scale})`;
-            indexHero.style.opacity = opacity;
+            // B. Index Hero: Visual Scale Shrink
+            if (indexHero) {
+                const limit = 400;
+                const progress = Math.min(scrollY / limit, 1);
+                const scale = 1 - (progress * 0.1);
+                const opacity = 1 - (progress * 0.5);
+                indexHero.style.transform = `scale(${scale})`;
+                indexHero.style.opacity = opacity;
+            }
+        } else {
+            // Reset styles on mobile
+            if (projectHero) {
+                projectHero.style.transform = 'none';
+                projectHero.style.opacity = 1;
+            }
+            if (indexHero) {
+                indexHero.style.transform = 'none';
+                indexHero.style.opacity = 1;
+            }
         }
 
         lastScrollY = scrollY;
@@ -68,8 +68,8 @@
 
     let isSnapping = false;
 
-    // Apply scroll snap to both project hero and index hero
-    if (projectHero || indexHero) {
+    // Apply scroll snap to both project hero and index hero (Desktop Only)
+    if ((projectHero || indexHero) && window.innerWidth > 900) {
         window.addEventListener('wheel', (e) => {
             // Trigger with minimal scroll down (threshold reduced to 5)
             if (window.scrollY < 50 && e.deltaY > 5 && !isSnapping) {
