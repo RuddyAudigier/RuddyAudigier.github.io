@@ -21,21 +21,20 @@
 			/* outer holographic rim */
 			.vcard::before{
 				content:"";position:absolute;inset:-6px;border-radius:16px;pointer-events:none;
-				background:conic-gradient(from 200deg at 20% 20%, rgba(126,203,255,.14), rgba(94,151,255,.10), rgba(62,124,255,.08), rgba(30,88,255,.06));
-				mix-blend-mode:screen;filter:blur(7px) saturate(1.1);z-index:2
+				background:conic-gradient(from 200deg at 20% 20%, rgba(126,203,255,.12), rgba(255,109,129,.12), rgba(255,210,77,.12), rgba(123,255,158,.12));
+				mix-blend-mode:screen;filter:blur(6px);z-index:2
 			}
 
 			/* header */
 			.vhead{display:flex;align-items:center;justify-content:space-between;z-index:3}
 			.vleft{display:flex;align-items:center;gap:10px}
-			.badge-vmax{background:linear-gradient(90deg,#7ecbff,#4da6ff);padding:6px 10px;border-radius:8px;font-weight:800;color:#041022}
-			.badge-vmax{background:linear-gradient(90deg,#9ad7ff,#5ea9ff);padding:6px 10px;border-radius:8px;font-weight:800;color:#041022}
+			.badge-vmax{background:linear-gradient(90deg,#ffd24d,#ff6b6b);padding:6px 10px;border-radius:8px;font-weight:800;color:#111}
 			.vname{font-weight:900;font-size:18px;letter-spacing:.6px}
 			.vhp{font-weight:900;background:linear-gradient(90deg,#0ea5a5,#06b6d4);padding:6px 10px;border-radius:10px}
 
 			/* art area */
 			.art{
-				position:relative;flex:1;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#050b17,#07102a);
+				position:relative;flex:1;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#2b0b00,#1a0600);
 				box-shadow:inset 0 -30px 120px rgba(0,0,0,.6);z-index:3}
 
 			/* stylized dragon silhouette + flame core */
@@ -78,19 +77,15 @@
 					<svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<defs>
 							<linearGradient id="flameG" x1="0" x2="1">
-								<stop offset="0" stop-color="#7ecbff"/>
-								<stop offset="0.45" stop-color="#4da6ff"/>
-								<stop offset="1" stop-color="#1e6eff"/>
+								<stop offset="0" stop-color="#ffd24d"/>
+								<stop offset="0.45" stop-color="#ff6b6b"/>
+								<stop offset="1" stop-color="#ff9a3c"/>
 							</linearGradient>
 							<radialGradient id="core" cx="50%" cy="55%" r="40%">
-								<stop offset="0%" stop-color="#e7fbff" stop-opacity="1"/>
-								<stop offset="40%" stop-color="#bfefff" stop-opacity="0.95"/>
-								<stop offset="100%" stop-color="#4da6ff" stop-opacity="0.18"/>
+								<stop offset="0%" stop-color="#fff7e6" stop-opacity="1"/>
+								<stop offset="40%" stop-color="#ffd36b" stop-opacity="0.9"/>
+								<stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.18"/>
 							</radialGradient>
-							<clipPath id="photoClip">
-								<!-- enlarged rounded-square clip to fill the central block -->
-								<rect x="200" y="140" width="600" height="520" rx="40" ry="40" />
-							</clipPath>
 							<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
 								<feGaussianBlur stdDeviation="18" result="b" />
 								<feBlend in="SourceGraphic" in2="b" mode="screen"/>
@@ -98,37 +93,30 @@
 						</defs>
 
 						<!-- background nebulas -->
-						<rect width="100%" height="100%" fill="url(#flameG)" opacity="0.14" />
+						<rect width="100%" height="100%" fill="url(#flameG)" opacity="0.12" />
 
-						<!-- dragon silhouette (stylized) placed behind the photo -->
-						<path d="M210 540 C260 380 360 300 520 310 C650 320 770 260 780 150 C790 60 640 80 580 120 C560 80 480 40 420 60 C370 76 310 120 300 170 C270 230 240 300 260 380 C280 460 200 540 210 540 Z" fill="#0c0705" opacity="0.65" />
+						<!-- big glowing core -->
+						<circle cx="520" cy="430" r="130" fill="url(#core)" filter="url(#glow)" />
 
-						<!-- flame accents behind the photo -->
-						<g fill-opacity="0.95" opacity="0.6">
+						<!-- dragon silhouette (stylized) -->
+						<path d="M210 540 C260 380 360 300 520 310 C650 320 770 260 780 150 C790 60 640 80 580 120 C560 80 480 40 420 60 C370 76 310 120 300 170 C270 230 240 300 260 380 C280 460 200 540 210 540 Z" fill="#1b0a00" opacity="0.9" />
+
+						<!-- flame accents -->
+						<g fill-opacity="0.95" opacity="0.95">
 							<path d="M480 360 C520 300 600 260 700 240 C640 320 580 350 520 380 C480 400 460 390 480 360 Z" fill="url(#flameG)" filter="url(#glow)"/>
-							<path d="M360 420 C420 360 480 340 540 360 C500 420 420 460 360 420 Z" fill="#cfeeff" opacity="0.22"/>
+							<path d="M360 420 C420 360 480 340 540 360 C500 420 420 460 360 420 Z" fill="#ffefc8" opacity="0.6"/>
 						</g>
-                        
-
-						<!-- soft glow behind photo to maintain holo feel (larger radius) -->
-						<circle cx="500" cy="400" r="300" fill="url(#core)" filter="url(#glow)" opacity="0.7" />
-
-						<!-- photo in the core (clipped enlarged square) placed above silhouette -->
-						<image href="img/photoMoi.png" x="200" y="140" width="600" height="520" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)" style="pointer-events:none;" />
-
-						<!-- framed rounded-rectangle around photo -->
-						<rect x="194" y="134" width="612" height="532" rx="44" ry="44" fill="none" stroke="rgba(143,226,255,0.48)" stroke-width="10"/>
 					</svg>
 
 					<!-- holographic overlay: animated wash + micro-sparkles -->
 					<div class="holo-overlay" aria-hidden="true">
 						<svg viewBox="0 0 1000 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 							<defs>
-									<linearGradient id="wash" x1="0" x2="1">
-										<stop offset="0" stop-color="#8fe2ff" stop-opacity="0.10"/>
-										<stop offset="0.45" stop-color="#5fb8ff" stop-opacity="0.08"/>
-										<stop offset="1" stop-color="#2f8aff" stop-opacity="0.05"/>
-									</linearGradient>
+								<linearGradient id="wash" x1="0" x2="1">
+									<stop offset="0" stop-color="#7ecbff" stop-opacity="0.06"/>
+									<stop offset="0.4" stop-color="#ffd24d" stop-opacity="0.05"/>
+									<stop offset="1" stop-color="#ff9a3c" stop-opacity="0.04"/>
+								</linearGradient>
 							</defs>
 							<rect class="wash" x="-20%" y="0" width="140%" height="100%" fill="url(#wash)" />
 							<g>
